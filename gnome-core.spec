@@ -36,13 +36,13 @@ BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	esound-devel
 BuildRequires:	flex
 BuildRequires:	freetype-devel >= 2.0.0
-BuildRequires:	gdk-pixbuf-devel >= 0.7.0
+BuildRequires:	gdk-pixbuf-gnome-devel >= 0.7.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.2.13
 BuildRequires:	gtk+-devel >= 1.2.5
 BuildRequires:	gtkhtml-devel >= 0.2
 BuildRequires:	intltool
-BuildRequires:	libglade-devel >= 0.14
+BuildRequires:	libglade-gnome-devel >= 0.14
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
