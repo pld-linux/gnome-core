@@ -1,57 +1,5 @@
-diff -ruN gnome-core-1.1.1.orig/desktop-links/Makefile.am gnome-core-1.1.1/desktop-links/Makefile.am
---- gnome-core-1.1.1.orig/desktop-links/Makefile.am	Tue Sep 21 20:01:33 1999
-+++ gnome-core-1.1.1/desktop-links/Makefile.am	Sun Jan 30 10:25:27 2000
-@@ -1,4 +1,4 @@
--appsdir = $(datadir)/gnome/apps
-+appsdir = $(datadir)/applnk
- 
- Rootdir           = $(appsdir)
- Applicationsdir   = $(appsdir)/Applications
-diff -ruN gnome-core-1.1.1.orig/gmenu/Makefile.am gnome-core-1.1.1/gmenu/Makefile.am
---- gnome-core-1.1.1.orig/gmenu/Makefile.am	Fri Mar 26 23:31:56 1999
-+++ gnome-core-1.1.1/gmenu/Makefile.am	Sun Jan 30 10:25:27 2000
-@@ -26,5 +26,5 @@
- 
- EXTRA_DIST = gmenu.desktop top.xpm unknown.xpm
- 
--sysdir = $(datadir)/gnome/apps/Settings
-+sysdir = $(datadir)/applnk/Settings
- sys_DATA = gmenu.desktop
-diff -ruN gnome-core-1.1.1.orig/gmenu/main.c gnome-core-1.1.1/gmenu/main.c
---- gnome-core-1.1.1.orig/gmenu/main.c	Thu Oct 21 07:40:39 1999
-+++ gnome-core-1.1.1/gmenu/main.c	Sun Jan 30 10:26:39 2000
-@@ -269,7 +269,7 @@
- 
- 	gnome_init ("GNOME menu editor", VERSION, argc, argv);
- 
--	system_apps_dir = gnome_unconditional_datadir_file("gnome/apps");
-+	system_apps_dir = gnome_unconditional_datadir_file("applnk");
- 	system_pixmap_dir = gnome_unconditional_datadir_file("pixmaps");
- 	if (!g_file_exists(system_apps_dir) || !g_file_exists(system_pixmap_dir))
- 		{
-diff -ruN gnome-core-1.1.1.orig/gnome-hint/Makefile.am gnome-core-1.1.1/gnome-hint/Makefile.am
---- gnome-core-1.1.1.orig/gnome-hint/Makefile.am	Sun Nov 28 23:16:32 1999
-+++ gnome-core-1.1.1/gnome-hint/Makefile.am	Sun Jan 30 10:25:27 2000
-@@ -37,5 +37,5 @@
- pixmaps_DATA = gnome-hint.png
- 
- install-data-local:
--	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/gnome/apps/Settings/gnome-hint-properties.desktop
-+	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-hint-properties.desktop
- 
-diff -ruN gnome-core-1.1.1.orig/gnome-terminal/Makefile.am gnome-core-1.1.1/gnome-terminal/Makefile.am
---- gnome-core-1.1.1.orig/gnome-terminal/Makefile.am	Sat Jan  8 19:13:05 2000
-+++ gnome-core-1.1.1/gnome-terminal/Makefile.am	Sun Jan 30 10:25:27 2000
-@@ -46,5 +46,5 @@
- gnorbadir = $(sysconfdir)/CORBA/servers
- gnorba_DATA = gnome-terminal.gnorba
- 
--utildir = $(datadir)/gnome/apps/Utilities
-+utildir = $(datadir)/applnk/Utilities
- util_DATA = gnome-terminal.desktop
-diff -ruN gnome-core-1.1.1.orig/gsm/Makefile.am gnome-core-1.1.1/gsm/Makefile.am
---- gnome-core-1.1.1.orig/gsm/Makefile.am	Thu Jan  6 17:23:27 2000
-+++ gnome-core-1.1.1/gsm/Makefile.am	Sun Jan 30 10:25:27 2000
+--- gnome-core-1.1.2/gsm/Makefile.am.wiget	Thu Jan 27 05:04:03 2000
++++ gnome-core-1.1.2/gsm/Makefile.am	Tue Feb  1 23:44:50 2000
 @@ -9,7 +9,7 @@
  
  LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
@@ -65,14 +13,21 @@ diff -ruN gnome-core-1.1.1.orig/gsm/Makefile.am gnome-core-1.1.1/gsm/Makefile.am
  
  default_DATA = default.session default.wm
  
--desktopdir = $(datadir)/gnome/apps/Settings
-+desktopdir = $(datadir)/applnk/Settings
+-desktopdir = $(datadir)/gnome/apps/Settings/Session
++desktopdir = $(datadir)/applnk/Settings/Session
  desktop_DATA = save-session.desktop session.desktop
  
  default.session: default.in ../config.status
-diff -ruN gnome-core-1.1.1.orig/help-browser/Makefile.am gnome-core-1.1.1/help-browser/Makefile.am
---- gnome-core-1.1.1.orig/help-browser/Makefile.am	Mon Jan 24 08:23:59 2000
-+++ gnome-core-1.1.1/help-browser/Makefile.am	Sun Jan 30 10:25:27 2000
+--- gnome-core-1.1.2/desktop-links/Makefile.am.wiget	Tue Sep 21 20:01:33 1999
++++ gnome-core-1.1.2/desktop-links/Makefile.am	Tue Feb  1 23:42:16 2000
+@@ -1,4 +1,4 @@
+-appsdir = $(datadir)/gnome/apps
++appsdir = $(datadir)/applnk
+ 
+ Rootdir           = $(appsdir)
+ Applicationsdir   = $(appsdir)/Applications
+--- gnome-core-1.1.2/help-browser/Makefile.am.wiget	Thu Jan 27 04:24:28 2000
++++ gnome-core-1.1.2/help-browser/Makefile.am	Tue Feb  1 23:42:16 2000
 @@ -77,7 +77,7 @@
  gnorbadir = $(sysconfdir)/CORBA/servers
  gnorba_DATA = help-browser.gnorba
@@ -82,9 +37,46 @@ diff -ruN gnome-core-1.1.1.orig/help-browser/Makefile.am gnome-core-1.1.1/help-b
  sys_DATA = gnome-help.desktop
  
  install-exec-local:
-diff -ruN gnome-core-1.1.1.orig/panel/Makefile.am gnome-core-1.1.1/panel/Makefile.am
---- gnome-core-1.1.1.orig/panel/Makefile.am	Thu Jan 13 11:21:41 2000
-+++ gnome-core-1.1.1/panel/Makefile.am	Sun Jan 30 10:25:27 2000
+--- gnome-core-1.1.2/gnome-terminal/Makefile.am.wiget	Sun Jan  9 20:52:53 2000
++++ gnome-core-1.1.2/gnome-terminal/Makefile.am	Tue Feb  1 23:42:16 2000
+@@ -46,5 +46,5 @@
+ gnorbadir = $(sysconfdir)/CORBA/servers
+ gnorba_DATA = gnome-terminal.gnorba
+ 
+-utildir = $(datadir)/gnome/apps/Utilities
++utildir = $(datadir)/applnk/Utilities
+ util_DATA = gnome-terminal.desktop
+--- gnome-core-1.1.2/gmenu/Makefile.am.wiget	Fri Mar 26 23:31:56 1999
++++ gnome-core-1.1.2/gmenu/Makefile.am	Tue Feb  1 23:42:16 2000
+@@ -26,5 +26,5 @@
+ 
+ EXTRA_DIST = gmenu.desktop top.xpm unknown.xpm
+ 
+-sysdir = $(datadir)/gnome/apps/Settings
++sysdir = $(datadir)/applnk/Settings
+ sys_DATA = gmenu.desktop
+--- gnome-core-1.1.2/gmenu/main.c.wiget	Thu Oct 21 07:40:39 1999
++++ gnome-core-1.1.2/gmenu/main.c	Tue Feb  1 23:42:16 2000
+@@ -269,7 +269,7 @@
+ 
+ 	gnome_init ("GNOME menu editor", VERSION, argc, argv);
+ 
+-	system_apps_dir = gnome_unconditional_datadir_file("gnome/apps");
++	system_apps_dir = gnome_unconditional_datadir_file("applnk");
+ 	system_pixmap_dir = gnome_unconditional_datadir_file("pixmaps");
+ 	if (!g_file_exists(system_apps_dir) || !g_file_exists(system_pixmap_dir))
+ 		{
+--- gnome-core-1.1.2/gnome-hint/Makefile.am.wiget	Sat Nov 27 18:45:46 1999
++++ gnome-core-1.1.2/gnome-hint/Makefile.am	Tue Feb  1 23:42:16 2000
+@@ -37,5 +37,5 @@
+ pixmaps_DATA = gnome-hint.png
+ 
+ install-data-local:
+-	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/gnome/apps/Settings/gnome-hint-properties.desktop
++	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-hint-properties.desktop
+ 
+--- gnome-core-1.1.2/panel/Makefile.am.wiget	Thu Jan 13 11:21:41 2000
++++ gnome-core-1.1.2/panel/Makefile.am	Tue Feb  1 23:42:16 2000
 @@ -85,8 +85,6 @@
  	menu.h  		\
  	menu-fentry.c  		\
@@ -102,9 +94,8 @@ diff -ruN gnome-core-1.1.1.orig/panel/Makefile.am gnome-core-1.1.1/panel/Makefil
 +	$(INSTALL_DATA) $(srcdir)/gnome-panel-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-panel-properties.desktop
  
  $(srcdir)/panel-util.c: $(CORBA_SRCLIST)
-diff -ruN gnome-core-1.1.1.orig/panel/menu-properties.c gnome-core-1.1.1/panel/menu-properties.c
---- gnome-core-1.1.1.orig/panel/menu-properties.c	Tue Jan 11 03:35:55 2000
-+++ gnome-core-1.1.1/panel/menu-properties.c	Sun Jan 30 10:25:27 2000
+--- gnome-core-1.1.2/panel/menu-properties.c.wiget	Tue Jan 11 03:35:55 2000
++++ gnome-core-1.1.2/panel/menu-properties.c	Tue Feb  1 23:42:16 2000
 @@ -94,12 +94,6 @@
  	GtkWidget *user_sub = gtk_object_get_data(GTK_OBJECT(widget), "user_sub");
  	GtkWidget *applets = gtk_object_get_data(GTK_OBJECT(widget), "applets");
@@ -168,9 +159,8 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu-properties.c gnome-core-1.1.1/panel/m
  	add_menu_type_options(GTK_OBJECT(dialog),GTK_TABLE(table),6,
  			      _("Panel menu: "),"panel",
  			      menu->main_menu_flags&MAIN_MENU_PANEL,
-diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
---- gnome-core-1.1.1.orig/panel/menu.c	Tue Jan 25 00:57:09 2000
-+++ gnome-core-1.1.1/panel/menu.c	Sun Jan 30 10:25:27 2000
+--- gnome-core-1.1.2/panel/menu.c.wiget	Sun Jan 30 11:01:26 2000
++++ gnome-core-1.1.2/panel/menu.c	Tue Feb  1 23:42:16 2000
 @@ -82,7 +82,7 @@
  	/*just load the menus from disk, don't make the widgets
  	  this just reads the .desktops of the top most directory
@@ -204,7 +194,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	s = g_strdup_printf("cp -r -f '%s' '%s'",item_loc,p);
  	g_free(p);
  	system(s);
-@@ -460,18 +457,6 @@
+@@ -466,18 +463,6 @@
  		MAIN_MENU_APPLETS_SUB | MAIN_MENU_PANEL_SUB |
  		MAIN_MENU_DESKTOP_SUB;
  	
@@ -223,7 +213,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	if(mf)
  		load_menu_applet(mf->menudir, flags, current_panel, 0, FALSE);
  	else
-@@ -743,7 +728,7 @@
+@@ -749,7 +734,7 @@
  						   GTK_SIGNAL_FUNC(add_app_to_personal),
  						   sim->item_loc);
  				/*ummmm slightly ugly but should work 99% of time*/
@@ -232,7 +222,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  					gtk_widget_set_sensitive(menuitem,FALSE);
  			}
  
-@@ -786,7 +771,7 @@
+@@ -792,7 +777,7 @@
  					   GTK_SIGNAL_FUNC(add_app_to_personal),
  					   sim->mf->menudir);
  			/*ummmm slightly ugly but should work 99% of time*/
@@ -241,7 +231,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  				gtk_widget_set_sensitive(menuitem,FALSE);
  
  			menuitem = gtk_menu_item_new ();
-@@ -829,9 +814,6 @@
+@@ -835,9 +820,6 @@
  	
  	gtk_widget_set_sensitive(sim->prop_item,FALSE);
  	if(sim->item_loc &&
@@ -251,7 +241,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	   /*if it's a kdelnk file, don't let it be editted*/
  	   !is_ext(sim->item_loc,".kdelnk") &&
  	   access(sim->item_loc,W_OK)==0) {
-@@ -843,10 +825,7 @@
+@@ -849,10 +831,7 @@
  	} else if(!sim->item_loc || errno==ENOENT) {
  		/*the dentry isn't there, check if we can write the
  		  directory*/
@@ -263,7 +253,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  			gtk_widget_set_sensitive(sim->prop_item,TRUE);
  	}
  	
-@@ -2255,7 +2234,7 @@
+@@ -2281,7 +2260,7 @@
  static GtkWidget *
  create_system_menu(GtkWidget *menu, int fake_submenus, int fake)
  {
@@ -272,7 +262,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	char *menudir;
  
  	menudir = g_concat_dir_and_file (menu_base, ".");
-@@ -2307,45 +2286,6 @@
+@@ -2333,45 +2312,6 @@
  	return menu;
  }
  
@@ -318,7 +308,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  static void
  status_unparent(GtkWidget *widget)
  {
-@@ -3443,12 +3383,10 @@
+@@ -3472,12 +3412,10 @@
  	GtkWidget *menuitem;
  
  	int has_inline = (flags & (MAIN_MENU_SYSTEM | MAIN_MENU_USER |
@@ -333,7 +323,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  
  	int has_inline2 = (flags & (MAIN_MENU_DESKTOP | MAIN_MENU_PANEL));
  	int has_subs2 = (flags & (MAIN_MENU_DESKTOP_SUB|MAIN_MENU_PANEL_SUB));
-@@ -3471,24 +3409,12 @@
+@@ -3500,24 +3438,12 @@
  	if (flags & MAIN_MENU_SYSTEM)
  		create_system_menu(root_menu,fake_submenus,FALSE);
  	if (flags & MAIN_MENU_USER)
@@ -359,7 +349,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	/*others here*/
  
  	if (has_subs && has_inline)
-@@ -3512,7 +3438,7 @@
+@@ -3541,7 +3467,7 @@
  	}
  
  	if (flags & MAIN_MENU_USER_SUB) {
@@ -368,7 +358,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  					"gnome-favorites.png",
  					fake_submenus, TRUE, TRUE);
  		menuitem = gtk_menu_item_new ();
-@@ -3539,59 +3465,6 @@
+@@ -3568,59 +3494,6 @@
  				   GTK_SIGNAL_FUNC(submenu_to_display),
  				   menuitem);
  	}
@@ -428,7 +418,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  
  	menuitem = gtk_menu_item_new ();
  	setup_menuitem_try_pixmap (menuitem, "gnome-tigert.png", 
-@@ -3680,7 +3553,7 @@
+@@ -3709,7 +3582,7 @@
  	current_panel = PANEL_WIDGET(menu->button->parent);
  
  	if(!menu->menu) {
@@ -437,7 +427,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  		char *this_menu = get_real_menu_path(menu->path,menu_base);
  		GSList *list = g_slist_append(NULL,this_menu);
  		
-@@ -3690,12 +3563,6 @@
+@@ -3719,12 +3592,6 @@
  		g_free(this_menu);
  
  		g_slist_free(list);
@@ -450,7 +440,7 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	}
  
  	/*so that the panel doesn't pop down until we're
-@@ -3758,7 +3625,7 @@
+@@ -3787,7 +3654,7 @@
  	Menu *menu;
  	int main_menu;
  
@@ -459,10 +449,9 @@ diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
  	char *this_menu = get_real_menu_path(arguments,menu_base);
  
  	if (!this_menu) {
-diff -ruN gnome-core-1.1.1.orig/panel/session.c gnome-core-1.1.1/panel/session.c
---- gnome-core-1.1.1.orig/panel/session.c	Mon Jan 24 22:45:05 2000
-+++ gnome-core-1.1.1/panel/session.c	Sun Jan 30 10:25:27 2000
-@@ -717,10 +717,10 @@
+--- gnome-core-1.1.2/panel/session.c.wiget	Sun Jan 30 10:18:26 2000
++++ gnome-core-1.1.2/panel/session.c	Tue Feb  1 23:42:16 2000
+@@ -714,10 +714,10 @@
  load_default_applets1(PanelWidget *panel)
  {
  	char *def_launchers[] =
