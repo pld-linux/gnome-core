@@ -28,8 +28,7 @@ Patch10:	%{name}-gnome-terminal.desktop.patch
 Patch11:	%{name}-am16.patch
 Patch12:	%{name}-omf.patch
 Patch13:	%{name}-avoid-version.patch
-Patch14:	%{name}-applnkdir.patch
-Patch15:	%{name}-locale-sp.patch
+Patch14:	%{name}-desktop.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -37,7 +36,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	bzip2-devel >= 1.0.1
-BuildRequires:	control-center1-devel >= 1.4.0
+BuildRequires:	control-center-devel >= 1.4.0
 BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	esound-devel
 BuildRequires:	flex
@@ -57,12 +56,16 @@ BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
-Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
+BuildRequires:	db3-devel
+Prereq:		/sbin/ldconfig
+Prereq:		scrollkeeper
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_sysconfdir	/etc/X11/GNOME
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 %define		_gtkdocdir	%{_defaultdocdir}/gtk-doc/html
 
@@ -110,26 +113,13 @@ oudoben KDE, mins GNOME est tot etîr basé so des libes programes èt
 lîvreyes. Ci paketaedje chal a les maisses programes èt lîvreyes k' i
 gn a dadnjî po-z astaler GNOME.
 
-%package libs
-Summary:	GNOME core panel libraries
-Summary(pl):	Biblioteki panelu z GNOME core
-Group:		X11/Libraries
-Conflicts:	gnome-core < 1:1.4.2-3
-
-%description libs
-Panel libraries from GNOME core package.
-
-%description libs -l pl
-Biblioteki panelu z pakietu GNOME core.
-
 %package devel
-Summary:	GNOME core includes, etc
-Summary(es):	Includes, etc de la base de gnome-core
+Summary:	GNOME core libraries, includes, etc
+Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe itp
 Group:		X11/Development/Libraries
-Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
-Requires:	ORBit-devel
+Requires:	%{name} = %{version}
 Requires:	gtk-doc-common
 
 %description devel
@@ -148,7 +138,7 @@ Pliki nag³ówkowe itp. do GNOME core.
 Summary:	GNOME core static libraries
 Summary(pl):	Biblioteki statyczne GNOME core
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
+Requires:	%{name}-devel = %{version}
 
 %description static
 GNOME core static libraries.
@@ -173,14 +163,12 @@ Statyczne biblioteki GNOME core.
 %patch12 -p1
 %patch13 -p1
 %patch14 -p1
-%patch15 -p1
-
-mv -f po/{sp.po,sr@cyrillic.po}
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
 mv -f configure.in.tmp configure.in
-rm -f missing acinclude.m4
+rm -f missing
+# acinclude.m4
 %{__libtoolize}
 xml-i18n-toolize --copy --force
 %{__gettextize}
@@ -204,26 +192,24 @@ install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	omf_dest_dir=%{_omf_dest_dir}/%{name} \
-	HTML_DIR=%{_gtkdocdir} \
-	applnkdir=%{_applnkdir}
+	HTML_DIR=%{_gtkdocdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
 install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
 
-%find_lang %{name}-tmp --with-gnome --all-name
-
-grep 'gnome-core\.mo\|gnome/help/panel' %{name}-tmp.lang > %{name}-libs.lang
-grep -v 'gnome-core\.mo\|gnome/help/panel' %{name}-tmp.lang > %{name}.lang
+%find_lang %{name} --with-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /usr/bin/scrollkeeper-update
-%postun	-p /usr/bin/scrollkeeper-update
+%post
+/sbin/ldconfig
+/usr/bin/scrollkeeper-update
 
-%post	libs -p /sbin/ldconfig
-%postun	libs -p /sbin/ldconfig
+%postun
+/sbin/ldconfig
+/usr/bin/scrollkeeper-update
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -236,6 +222,7 @@ rm -rf $RPM_BUILD_ROOT
 %config %{_sysconfdir}/sound/events/*
 
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/libpanel_*.so.*.*
 %attr(755,root,root) %{_libdir}/libfish_applet.so
 %attr(755,root,root) %{_libdir}/libgen_util_applet.so
 
@@ -265,10 +252,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man?/*
 %lang(da) %{_mandir}/da/man?/*
-
-%files libs -f %{name}-libs.lang
-%defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libpanel_*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
