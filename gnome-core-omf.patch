@@ -1,0 +1,1512 @@
+diff -ur gnome-core-1.4.0.8.orig/applets/desk-guide/help/C/desk-guide_applet-C.omf gnome-core-1.4.0.8/applets/desk-guide/help/C/desk-guide_applet-C.omf
+--- gnome-core-1.4.0.8.orig/applets/desk-guide/help/C/desk-guide_applet-C.omf	Fri Oct 26 11:12:44 2001
++++ gnome-core-1.4.0.8/applets/desk-guide/help/C/desk-guide_applet-C.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Desk Guide Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="desk-guide_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="470ed4c2-d79a-11d6-99fa-f31049507b2c"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/desk-guide/help/de/desk-guide_applet-de.omf gnome-core-1.4.0.8/applets/desk-guide/help/de/desk-guide_applet-de.omf
+--- gnome-core-1.4.0.8.orig/applets/desk-guide/help/de/desk-guide_applet-de.omf	Fri Oct 26 11:12:45 2001
++++ gnome-core-1.4.0.8/applets/desk-guide/help/de/desk-guide_applet-de.omf	Fri Oct  4 15:08:53 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Desktop-Überblick-Applet
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="desk-guide_applet.sgml"/>
+     <language code="de"/>
++    <relation seriesid="470ed4c2-d79a-11d6-99fa-f31049507b2c"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/desk-guide/help/es/desk-guide_applet-es.omf gnome-core-1.4.0.8/applets/desk-guide/help/es/desk-guide_applet-es.omf
+--- gnome-core-1.4.0.8.orig/applets/desk-guide/help/es/desk-guide_applet-es.omf	Fri Oct 26 11:12:45 2001
++++ gnome-core-1.4.0.8/applets/desk-guide/help/es/desk-guide_applet-es.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Aplique Desk Guide
+     </title>
+-    <subject>
+-      <category>GNOME|Apliques|Utilitarios</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Apliques|Utilitarios"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="desk-guide_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="470ed4c2-d79a-11d6-99fa-f31049507b2c"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/desk-guide/help/eu/desk-guide_applet-eu.omf gnome-core-1.4.0.8/applets/desk-guide/help/eu/desk-guide_applet-eu.omf
+--- gnome-core-1.4.0.8.orig/applets/desk-guide/help/eu/desk-guide_applet-eu.omf	Mon Feb 25 22:13:09 2002
++++ gnome-core-1.4.0.8/applets/desk-guide/help/eu/desk-guide_applet-eu.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Desk Guide Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="desk-guide_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="470ed4c2-d79a-11d6-99fa-f31049507b2c"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/desk-guide/help/it/desk-guide_applet-it.omf gnome-core-1.4.0.8/applets/desk-guide/help/it/desk-guide_applet-it.omf
+--- gnome-core-1.4.0.8.orig/applets/desk-guide/help/it/desk-guide_applet-it.omf	Fri Oct 26 11:12:46 2001
++++ gnome-core-1.4.0.8/applets/desk-guide/help/it/desk-guide_applet-it.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Applet Desk Guide
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="desk-guide_applet.sgml"/>
+     <language code="it"/>
++    <relation seriesid="470ed4c2-d79a-11d6-99fa-f31049507b2c"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/fish/help/C/fish_applet-C.omf gnome-core-1.4.0.8/applets/fish/help/C/fish_applet-C.omf
+--- gnome-core-1.4.0.8.orig/applets/fish/help/C/fish_applet-C.omf	Fri Oct 26 11:12:49 2001
++++ gnome-core-1.4.0.8/applets/fish/help/C/fish_applet-C.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Fish Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Amusement</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Amusement"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="fish_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="47440e8a-d79a-11d6-8258-8a2dfdac9758"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/fish/help/da/fish_applet-da.omf gnome-core-1.4.0.8/applets/fish/help/da/fish_applet-da.omf
+--- gnome-core-1.4.0.8.orig/applets/fish/help/da/fish_applet-da.omf	Fri Oct 26 11:12:49 2001
++++ gnome-core-1.4.0.8/applets/fish/help/da/fish_applet-da.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Manual til Fisk-appletten
+     </title>
+-    <subject>
+-      <category>Gnome|Appletter|Underholdning</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Gnome|Appletter|Underholdning"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="fish_applet.sgml"/>
+     <language code="da"/>
++    <relation seriesid="47440e8a-d79a-11d6-8258-8a2dfdac9758"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/fish/help/eu/fish_applet-eu.omf gnome-core-1.4.0.8/applets/fish/help/eu/fish_applet-eu.omf
+--- gnome-core-1.4.0.8.orig/applets/fish/help/eu/fish_applet-eu.omf	Mon Feb 25 22:13:10 2002
++++ gnome-core-1.4.0.8/applets/fish/help/eu/fish_applet-eu.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Fish Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Amusement</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Amusement"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="fish_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="47440e8a-d79a-11d6-8258-8a2dfdac9758"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/fish/help/it/fish_applet-it.omf gnome-core-1.4.0.8/applets/fish/help/it/fish_applet-it.omf
+--- gnome-core-1.4.0.8.orig/applets/fish/help/it/fish_applet-it.omf	Fri Oct 26 11:12:51 2001
++++ gnome-core-1.4.0.8/applets/fish/help/it/fish_applet-it.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Applet Pesce
+     </title>	
+-    <subject>	
+-      <category>GNOME|Applets|Amusement</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Amusement"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="fish_applet.sgml"/>
+     <language code="it"/>
++    <relation seriesid="47440e8a-d79a-11d6-8258-8a2dfdac9758"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/fish/help/no/fish_applet-no.omf gnome-core-1.4.0.8/applets/fish/help/no/fish_applet-no.omf
+--- gnome-core-1.4.0.8.orig/applets/fish/help/no/fish_applet-no.omf	Fri Oct 26 11:12:50 2001
++++ gnome-core-1.4.0.8/applets/fish/help/no/fish_applet-no.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNOME fisken
+     </title>
+-    <subject>
+-      <category>GNOME|Appleter|Underholdning</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Appleter|Underholdning"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="fish_applet.sgml"/>
+     <language code="no"/>
++    <relation seriesid="47440e8a-d79a-11d6-8258-8a2dfdac9758"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/C/clock/clock_applet-C.omf gnome-core-1.4.0.8/applets/gen_util/help/C/clock/clock_applet-C.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/C/clock/clock_applet-C.omf	Fri Oct 26 11:12:52 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/C/clock/clock_applet-C.omf	Fri Oct  4 15:12:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Clock Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Clock</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Clock"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="clock_applet.sgml"/>
+     <language code="en_US"/>
++    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/C/mailcheck/mailcheck_applet-C.omf gnome-core-1.4.0.8/applets/gen_util/help/C/mailcheck/mailcheck_applet-C.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/C/mailcheck/mailcheck_applet-C.omf	Fri Oct 26 11:12:52 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/C/mailcheck/mailcheck_applet-C.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Mail Check Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Network</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Network"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="mailcheck_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/C/printer/printer_applet-C.omf gnome-core-1.4.0.8/applets/gen_util/help/C/printer/printer_applet-C.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/C/printer/printer_applet-C.omf	Fri Oct 26 11:12:53 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/C/printer/printer_applet-C.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Printer Applet Manual
+     </title>
+-    <subject>
+-     <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="printer_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="e5329774-d79a-11d6-9e35-e3c9f01567c4"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/da/clock/clock_applet-da.omf gnome-core-1.4.0.8/applets/gen_util/help/da/clock/clock_applet-da.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/da/clock/clock_applet-da.omf	Fri Oct 26 11:12:54 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/da/clock/clock_applet-da.omf	Fri Oct  4 15:12:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Clock Applet Manual
+     </title>
+-    <subject>
+-      <category>Gnome|Appletter|Ure</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Gnome|Appletter|Ure"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="clock_applet.sgml"/>
+     <language code="da"/>
++    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/da/mailcheck/mailcheck_applet-da.omf gnome-core-1.4.0.8/applets/gen_util/help/da/mailcheck/mailcheck_applet-da.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/da/mailcheck/mailcheck_applet-da.omf	Fri Oct 26 11:12:54 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/da/mailcheck/mailcheck_applet-da.omf	Fri Oct  4 15:17:06 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Posttjeks-applet
+     </title>
+-    <subject>
+-      <category>Gnome|Appletter|Netværk</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Gnome|Appletter|Netværk"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="mailcheck_applet.sgml"/>
+     <language code="da"/>
++    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/da/printer/printer_applet-da.omf gnome-core-1.4.0.8/applets/gen_util/help/da/printer/printer_applet-da.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/da/printer/printer_applet-da.omf	Fri Oct 26 11:12:55 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/da/printer/printer_applet-da.omf	Fri Oct  4 15:17:08 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Printer-appletten
+     </title>
+-    <subject>
+-      <category>Gnome|Appletter|Værktøjer</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Gnome|Appletter|Værktøjer"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="printer_applet.sgml"/>
+     <language code="da"/>
++    <relation seriesid="e5329774-d79a-11d6-9e35-e3c9f01567c4"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/de/gen_util_applet-de.omf gnome-core-1.4.0.8/applets/gen_util/help/de/gen_util_applet-de.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/de/gen_util_applet-de.omf	Fri Oct 26 11:12:55 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/de/gen_util_applet-de.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Das Postkontroll-Applet
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Network</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Network"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gen_util_applet.sgml"/>
+     <language code="de"/>
++    <relation seriesid="4775c132-d79a-11d6-8f05-b84d0c96f641"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/es/mailcheck/mailcheck_applet-es.omf gnome-core-1.4.0.8/applets/gen_util/help/es/mailcheck/mailcheck_applet-es.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/es/mailcheck/mailcheck_applet-es.omf	Fri Oct 26 11:13:00 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/es/mailcheck/mailcheck_applet-es.omf	Fri Oct  4 15:14:28 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Manual del aplique de revisión del correo
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Network</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Network"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="mailcheck_applet.sgml"/>
+     <language code="es"/>
++    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/es/printer/printer_applet-es.omf gnome-core-1.4.0.8/applets/gen_util/help/es/printer/printer_applet-es.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/es/printer/printer_applet-es.omf	Fri Oct 26 11:12:59 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/es/printer/printer_applet-es.omf	Fri Oct  4 15:13:54 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Manual del aplique de impresión
+     </title>
+-    <subject>
+-     <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="printer_applet.sgml"/>
+     <language code="es"/>
++    <relation seriesid="e5329774-d79a-11d6-9e35-e3c9f01567c4"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/clock/clock_applet-eu.omf gnome-core-1.4.0.8/applets/gen_util/help/eu/clock/clock_applet-eu.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/clock/clock_applet-eu.omf	Mon Feb 25 22:14:30 2002
++++ gnome-core-1.4.0.8/applets/gen_util/help/eu/clock/clock_applet-eu.omf	Fri Oct  4 15:12:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Clock Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Clock</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Clock"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="clock_applet.sgml"/>
+     <language code="en_US"/>
++    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/mailcheck/mailcheck_applet-eu.omf gnome-core-1.4.0.8/applets/gen_util/help/eu/mailcheck/mailcheck_applet-eu.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/mailcheck/mailcheck_applet-eu.omf	Mon Feb 25 22:14:30 2002
++++ gnome-core-1.4.0.8/applets/gen_util/help/eu/mailcheck/mailcheck_applet-eu.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Mail Check Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Network</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Network"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="mailcheck_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/printer/printer_applet-eu.omf gnome-core-1.4.0.8/applets/gen_util/help/eu/printer/printer_applet-eu.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/printer/printer_applet-eu.omf	Mon Feb 25 22:14:31 2002
++++ gnome-core-1.4.0.8/applets/gen_util/help/eu/printer/printer_applet-eu.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Printer Applet Manual
+     </title>
+-    <subject>
+-     <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="printer_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="e5329774-d79a-11d6-9e35-e3c9f01567c4"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/it/clock/clock_applet-it.omf gnome-core-1.4.0.8/applets/gen_util/help/it/clock/clock_applet-it.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/it/clock/clock_applet-it.omf	Fri Oct 26 11:13:00 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/it/clock/clock_applet-it.omf	Fri Oct  4 15:12:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Applet Orologio
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Clock</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Clock"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="clock_applet.sgml"/>
+     <language code="it"/>
++    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/it/mailcheck/mailcheck_applet-it.omf gnome-core-1.4.0.8/applets/gen_util/help/it/mailcheck/mailcheck_applet-it.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/it/mailcheck/mailcheck_applet-it.omf	Fri Oct 26 11:13:01 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/it/mailcheck/mailcheck_applet-it.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Applet Controllo Posta
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Network</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Network"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="mailcheck_applet.sgml"/>
+     <language code="it"/>
++    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/it/printer/printer_applet-it.omf gnome-core-1.4.0.8/applets/gen_util/help/it/printer/printer_applet-it.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/it/printer/printer_applet-it.omf	Fri Oct 26 11:13:01 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/it/printer/printer_applet-it.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Applet Stampante
+     </title>
+-    <subject>
+-     <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="printer_applet.sgml"/>
+     <language code="it"/>
++    <relation seriesid="e5329774-d79a-11d6-9e35-e3c9f01567c4"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/no/clock/clock_applet-no.omf gnome-core-1.4.0.8/applets/gen_util/help/no/clock/clock_applet-no.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/no/clock/clock_applet-no.omf	Fri Oct 26 11:12:56 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/no/clock/clock_applet-no.omf	Fri Oct  4 15:12:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Clock Applet Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Clock</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Clock"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="clock_applet.sgml"/>
+     <language code="en_US"/>
++    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/no/mailcheck/mailcheck_applet-no.omf gnome-core-1.4.0.8/applets/gen_util/help/no/mailcheck/mailcheck_applet-no.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/no/mailcheck/mailcheck_applet-no.omf	Fri Oct 26 11:12:56 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/no/mailcheck/mailcheck_applet-no.omf	Fri Oct  4 15:12:12 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       E-postsjekk applet
+     </title>
+-    <subject>
+-        <category>GNOME|Appleter|Nettverk</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Appleter|Nettverk"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="mailcheck_applet.sgml"/>
+     <language code="no"/>
++    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/no/printer/printer_applet-no.omf gnome-core-1.4.0.8/applets/gen_util/help/no/printer/printer_applet-no.omf
+--- gnome-core-1.4.0.8.orig/applets/gen_util/help/no/printer/printer_applet-no.omf	Fri Oct 26 11:12:57 2001
++++ gnome-core-1.4.0.8/applets/gen_util/help/no/printer/printer_applet-no.omf	Fri Oct  4 15:17:10 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Skriver-applet håndbok
+     </title>
+-    <subject>
+-     <category>GNOME|Appleter|Verktøy</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Appleter|Verktøy"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="printer_applet.sgml"/>
+     <language code="no"/>
++    <relation seriesid="e5329774-d79a-11d6-9e35-e3c9f01567c4"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/tasklist/help/C/tasklist_applet-C.omf gnome-core-1.4.0.8/applets/tasklist/help/C/tasklist_applet-C.omf
+--- gnome-core-1.4.0.8.orig/applets/tasklist/help/C/tasklist_applet-C.omf	Fri Oct 26 11:13:04 2001
++++ gnome-core-1.4.0.8/applets/tasklist/help/C/tasklist_applet-C.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Tasklist Applet Manual 
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="tasklist_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="4783d236-d79a-11d6-9cf7-98923d6376e5"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/tasklist/help/es/tasklist_applet-es.omf gnome-core-1.4.0.8/applets/tasklist/help/es/tasklist_applet-es.omf
+--- gnome-core-1.4.0.8.orig/applets/tasklist/help/es/tasklist_applet-es.omf	Fri Oct 26 11:13:04 2001
++++ gnome-core-1.4.0.8/applets/tasklist/help/es/tasklist_applet-es.omf	Fri Oct  4 15:07:47 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Manual del aplique lista de tareas 
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="tasklist_applet.sgml"/>
+     <language code="es"/>
++    <relation seriesid="4783d236-d79a-11d6-9cf7-98923d6376e5"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/applets/tasklist/help/eu/tasklist_applet-eu.omf gnome-core-1.4.0.8/applets/tasklist/help/eu/tasklist_applet-eu.omf
+--- gnome-core-1.4.0.8.orig/applets/tasklist/help/eu/tasklist_applet-eu.omf	Mon Feb 25 22:14:31 2002
++++ gnome-core-1.4.0.8/applets/tasklist/help/eu/tasklist_applet-eu.omf	Fri Oct  4 15:07:48 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Tasklist Applet Manual 
+     </title>
+-    <subject>
+-      <category>GNOME|Applets|Utility</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Applets|Utility"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="tasklist_applet.sgml"/>
+     <language code="C"/>
++    <relation seriesid="4783d236-d79a-11d6-9cf7-98923d6376e5"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/core-docs/fdl/C/fdl-C.omf gnome-core-1.4.0.8/core-docs/fdl/C/fdl-C.omf
+--- gnome-core-1.4.0.8.orig/core-docs/fdl/C/fdl-C.omf	Fri Oct 26 11:13:06 2001
++++ gnome-core-1.4.0.8/core-docs/fdl/C/fdl-C.omf	Fri Oct  4 15:01:32 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNU Free Documentation License
+     </title>
+-    <subject>
+-      <category>General|Licenses</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="General|Licenses"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="fdl.sgml"/>
+     <language code="C"/>
++    <relation seriesid="67c5b128-d799-11d6-91e0-f544cc8d20aa"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/core-docs/gnome-feedback/C/gnome-feedback-C.omf gnome-core-1.4.0.8/core-docs/gnome-feedback/C/gnome-feedback-C.omf
+--- gnome-core-1.4.0.8.orig/core-docs/gnome-feedback/C/gnome-feedback-C.omf	Fri Oct 26 11:13:08 2001
++++ gnome-core-1.4.0.8/core-docs/gnome-feedback/C/gnome-feedback-C.omf	Fri Oct  4 14:59:34 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Reporting GNOME Bugs and Other Feedback
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-feedback.sgml"/>
+     <language code="C"/>
++    <relation seriesid="214a8502-d799-11d6-974f-b849f5e54333"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/core-docs/gnome-feedback/no/gnome-feedback-no.omf gnome-core-1.4.0.8/core-docs/gnome-feedback/no/gnome-feedback-no.omf
+--- gnome-core-1.4.0.8.orig/core-docs/gnome-feedback/no/gnome-feedback-no.omf	Fri Oct 26 11:13:09 2001
++++ gnome-core-1.4.0.8/core-docs/gnome-feedback/no/gnome-feedback-no.omf	Fri Oct  4 14:59:34 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Feilrapportering og andre tilbakemeldinger for GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Skrivebord</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Skrivebord"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-feedback.sgml"/>
+     <language code="no"/>
++    <relation seriesid="214a8502-d799-11d6-974f-b849f5e54333"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/core-docs/gpl/C/gpl-C.omf gnome-core-1.4.0.8/core-docs/gpl/C/gpl-C.omf
+--- gnome-core-1.4.0.8.orig/core-docs/gpl/C/gpl-C.omf	Fri Oct 26 11:13:07 2001
++++ gnome-core-1.4.0.8/core-docs/gpl/C/gpl-C.omf	Fri Oct  4 15:01:32 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNU General Public License
+     </title>
+-    <subject>
+-      <category>General|Licenses</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="General|Licenses"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gpl.sgml"/>
+     <language code="C"/>
++    <relation seriesid="67d174e0-d799-11d6-8d1e-ab588778e1ee"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/core-docs/lgpl/C/lgpl-C.omf gnome-core-1.4.0.8/core-docs/lgpl/C/lgpl-C.omf
+--- gnome-core-1.4.0.8.orig/core-docs/lgpl/C/lgpl-C.omf	Fri Oct 26 11:13:07 2001
++++ gnome-core-1.4.0.8/core-docs/lgpl/C/lgpl-C.omf	Fri Oct  4 15:01:32 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNU Lesser General Public License
+     </title>
+-    <subject>
+-      <category>General|Licenses</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="General|Licenses"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="lgpl.sgml"/>
+     <language code="C"/>
++    <relation seriesid="67de5d40-d799-11d6-8b23-f7539699199d"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gnome-terminal/C/gnome-terminal-C.omf gnome-core-1.4.0.8/gnome-terminal/C/gnome-terminal-C.omf
+--- gnome-core-1.4.0.8.orig/gnome-terminal/C/gnome-terminal-C.omf	Fri Oct 26 11:13:14 2001
++++ gnome-core-1.4.0.8/gnome-terminal/C/gnome-terminal-C.omf	Fri Oct  4 15:04:49 2002
+@@ -1,15 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNOME Terminal User's Guide
+     </title>
+-    <subject>
+-      <category>Applications|Utilities|Terminals</category>
+-      <category>GNOME|System</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Applications|Utilities|Terminals"/>
++    <subject category="GNOME|System"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-terminal.sgml"/>
+     <language code="C"/>
++    <relation seriesid="1dbf82ec-d73b-11d6-967d-a7e15010dca0"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gnome-terminal/de/gnome-terminal-de.omf gnome-core-1.4.0.8/gnome-terminal/de/gnome-terminal-de.omf
+--- gnome-core-1.4.0.8.orig/gnome-terminal/de/gnome-terminal-de.omf	Fri Oct 26 11:13:16 2001
++++ gnome-core-1.4.0.8/gnome-terminal/de/gnome-terminal-de.omf	Fri Oct  4 15:04:48 2002
+@@ -1,15 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-     GNOME-Terminal Anwenderhandbuch 
++      GNOME-Terminal Anwenderhandbuch 
+     </title>
+-    <subject>
+-      <category>Applications|Utilities|Terminals</category>
+-      <category>GNOME|System</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Applications|Utilities|Terminals"/>
++    <subject category="GNOME|System"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-terminal.sgml"/>
+     <language code="de"/>
++    <relation seriesid="1dbf82ec-d73b-11d6-967d-a7e15010dca0"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gnome-terminal/es/gnome-terminal-es.omf gnome-core-1.4.0.8/gnome-terminal/es/gnome-terminal-es.omf
+--- gnome-core-1.4.0.8.orig/gnome-terminal/es/gnome-terminal-es.omf	Fri Oct 26 11:13:16 2001
++++ gnome-core-1.4.0.8/gnome-terminal/es/gnome-terminal-es.omf	Fri Oct  4 15:04:49 2002
+@@ -1,15 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="ISO=8859-1"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Guía de usuario del terminal de GNOME 
+     </title>
+-    <subject>
+-      <category>Applications|Utilities|Terminals</category>
+-      <category>GNOME|System</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Applications|Utilities|Terminals"/>
++    <subject category="GNOME|System"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-terminal.sgml"/>
+     <language code="es"/>
++    <relation seriesid="1dbf82ec-d73b-11d6-967d-a7e15010dca0"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gnome-terminal/eu/gnome-terminal-eu.omf gnome-core-1.4.0.8/gnome-terminal/eu/gnome-terminal-eu.omf
+--- gnome-core-1.4.0.8.orig/gnome-terminal/eu/gnome-terminal-eu.omf	Mon Feb 25 22:14:32 2002
++++ gnome-core-1.4.0.8/gnome-terminal/eu/gnome-terminal-eu.omf	Fri Oct  4 15:04:48 2002
+@@ -1,15 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNOME Terminal User's Guide
+     </title>
+-    <subject>
+-      <category>Applications|Utilities|Terminals</category>
+-      <category>GNOME|System</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Applications|Utilities|Terminals"/>
++    <subject category="GNOME|System"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-terminal.sgml"/>
+     <language code="C"/>
++    <relation seriesid="1dbf82ec-d73b-11d6-967d-a7e15010dca0"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gnome-terminal/no/gnome-terminal-no.omf gnome-core-1.4.0.8/gnome-terminal/no/gnome-terminal-no.omf
+--- gnome-core-1.4.0.8.orig/gnome-terminal/no/gnome-terminal-no.omf	Fri Oct 26 11:13:18 2001
++++ gnome-core-1.4.0.8/gnome-terminal/no/gnome-terminal-no.omf	Fri Oct  4 15:04:49 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+-     GNOME Terminal brukermanual 
++      GNOME Terminal brukermanual 
+     </title>
+-    <subject>
+-        <category>Applikasjoner</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Applikasjoner"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="gnome-terminal.sgml"/>
+     <language code="no"/>
++    <relation seriesid="1dbf82ec-d73b-11d6-967d-a7e15010dca0"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gsm/help/C/session-C.omf gnome-core-1.4.0.8/gsm/help/C/session-C.omf
+--- gnome-core-1.4.0.8.orig/gsm/help/C/session-C.omf	Fri Oct 26 11:13:21 2001
++++ gnome-core-1.4.0.8/gsm/help/C/session-C.omf	Fri Oct  4 15:03:19 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Session Properties Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="session.sgml"/>
+     <language code="C"/>
++    <relation seriesid="c38abade-d73b-11d6-9bed-9ecfdd6f2b61"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/gsm/help/ja/session-ja.omf gnome-core-1.4.0.8/gsm/help/ja/session-ja.omf
+--- gnome-core-1.4.0.8.orig/gsm/help/ja/session-ja.omf	Fri Oct 26 11:13:21 2001
++++ gnome-core-1.4.0.8/gsm/help/ja/session-ja.omf	Fri Oct  4 15:02:54 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="EUC-JP"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       ¥»¥Ã¥·¥ç¥ó¥×¥í¥Ñ¥Æ¥£¥Þ¥Ë¥å¥¢¥ë
+     </title>
+-    <subject>
+-      <category>GNOME|¥³¥¢¥Ç¥¹¥¯¥È¥Ã¥×</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|¥³¥¢¥Ç¥¹¥¯¥È¥Ã¥×"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="session.sgml"/>
+     <language code="ja"/>
++    <relation seriesid="c38abade-d73b-11d6-9bed-9ecfdd6f2b61"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/C/panel-C.omf gnome-core-1.4.0.8/panel/help/C/panel-C.omf
+--- gnome-core-1.4.0.8.orig/panel/help/C/panel-C.omf	Fri Oct 26 11:13:36 2001
++++ gnome-core-1.4.0.8/panel/help/C/panel-C.omf	Fri Oct  4 15:03:15 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       The GNOME Panel Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="C"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/de/panel-de.omf gnome-core-1.4.0.8/panel/help/de/panel-de.omf
+--- gnome-core-1.4.0.8.orig/panel/help/de/panel-de.omf	Fri Oct 26 11:13:38 2001
++++ gnome-core-1.4.0.8/panel/help/de/panel-de.omf	Fri Oct  4 15:02:50 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Das GNOME-Panel-Handbuch
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="de"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/es/panel-es.omf gnome-core-1.4.0.8/panel/help/es/panel-es.omf
+--- gnome-core-1.4.0.8.orig/panel/help/es/panel-es.omf	Fri Oct 26 11:13:42 2001
++++ gnome-core-1.4.0.8/panel/help/es/panel-es.omf	Fri Oct  4 15:03:11 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Manuel del panel de Gnome
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="es"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/eu/panel-eu.omf gnome-core-1.4.0.8/panel/help/eu/panel-eu.omf
+--- gnome-core-1.4.0.8.orig/panel/help/eu/panel-eu.omf	Mon Feb 25 22:14:33 2002
++++ gnome-core-1.4.0.8/panel/help/eu/panel-eu.omf	Fri Oct  4 15:03:31 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       The GNOME Panel Manual
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="C"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/it/panel-it.omf gnome-core-1.4.0.8/panel/help/it/panel-it.omf
+--- gnome-core-1.4.0.8.orig/panel/help/it/panel-it.omf	Fri Oct 26 11:13:39 2001
++++ gnome-core-1.4.0.8/panel/help/it/panel-it.omf	Fri Oct  4 15:03:07 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       Il pannello di GNOME
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="it"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/ja/panel-ja.omf gnome-core-1.4.0.8/panel/help/ja/panel-ja.omf
+--- gnome-core-1.4.0.8.orig/panel/help/ja/panel-ja.omf	Fri Oct 26 11:13:41 2001
++++ gnome-core-1.4.0.8/panel/help/ja/panel-ja.omf	Fri Oct  4 15:03:27 2002
+@@ -1,14 +1,22 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="EUC-JP"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNOME¥Ñ¥Í¥ë¥Þ¥Ë¥å¥¢¥ë
+     </title>
+-    <subject>
+-      <category>GNOME|Core Desktop</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="GNOME|Core Desktop"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="ja"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
+diff -ur gnome-core-1.4.0.8.orig/panel/help/no/panel-no.omf gnome-core-1.4.0.8/panel/help/no/panel-no.omf
+--- gnome-core-1.4.0.8.orig/panel/help/no/panel-no.omf	Fri Oct 26 11:13:40 2001
++++ gnome-core-1.4.0.8/panel/help/no/panel-no.omf	Fri Oct  4 15:03:01 2002
+@@ -1,15 +1,23 @@
+-<?xml version="1.0" standalone="no"?>
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
+ <omf>
+   <resource>
++    <creator/>
+     <title>
+       GNOME Panelet
+     </title>
+-    <subject>
+-      <category>Applikasjoner</category>
+-      <category>Applikasjoner|X|Skrivebord|GNOME</category>
+-    </subject>
++    <date>
++      2002-10-04
++    </date>
++    <version identifier="1.4.0.8" date="2002-10-04"/>
++    <subject category="Applikasjoner"/>
++    <subject category="Applikasjoner|X|Skrivebord|GNOME"/>
++    <description/>
++    <type/>
+     <format mime="text/sgml"/>
+     <identifier url="panel.sgml"/>
+     <language code="no"/>
++    <relation seriesid="df37da3c-d73b-11d6-9724-d6b66baa3f65"/>
++    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
+   </resource>
+ </omf>
