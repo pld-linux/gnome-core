@@ -102,8 +102,8 @@
  if SESSION
  noinst_DATA = session.desktop
  bin_PROGRAMS = gnome-session save-session gnome-login-check session-properties gnome-libice-check session-properties-capplet
-y--- gnome-core-1.4.0.5/desktop-links/Makefile.am~	Fri Oct 26 11:13:10 2001
-+++ gnome-core-1.4.0.5/desktop-links/Makefile.am	Sat Jan 26 19:38:34 2002
+--- gnome-core-1.4.2/desktop-links/Makefile.am~	Fri Aug 16 18:56:17 2002
++++ gnome-core-1.4.2/desktop-links/Makefile.am	Thu Feb  6 06:41:03 2003
 @@ -79,66 +79,25 @@
  	Development.directory   \
  	Settings.directory
@@ -154,7 +154,7 @@ y--- gnome-core-1.4.0.5/desktop-links/Makefile.am~	Fri Oct 26 11:13:10 2001
 -	Imlib_config.desktop
 -
 -Internet_DATA = \
--	Netscape.desktop	\
+-	Browser.desktop	\
 -	Tkrat.desktop	        \
 -	TkSETI.desktop		\
 -	Tkrat.desktop		\
@@ -165,7 +165,7 @@ y--- gnome-core-1.4.0.5/desktop-links/Makefile.am~	Fri Oct 26 11:13:10 2001
 +
 +Applications_DATA =
 +
-+Graphics_DATA = 
++Graphics_DATA =
  
 -Root_DATA = \
 -	Gmc.desktop

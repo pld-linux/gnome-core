@@ -1,10 +1,9 @@
-diff -urN gnome-core-1.3.1.org/applets/tasklist/tasklist_applet.c gnome-core-1.3.1/applets/tasklist/tasklist_applet.c
---- gnome-core-1.3.1.org/applets/tasklist/tasklist_applet.c	Wed Mar  7 12:52:17 2001
-+++ gnome-core-1.3.1/applets/tasklist/tasklist_applet.c	Wed Mar  7 12:53:08 2001
-@@ -112,7 +112,7 @@
- 
- 	das_string = task->gwmh_task->name;
- 
+--- gnome-core-1.4.2/applets/tasklist/tasklist_applet.c.orig	Thu Aug 15 14:52:58 2002
++++ gnome-core-1.4.2/applets/tasklist/tasklist_applet.c	Thu Feb  6 06:19:19 2003
+@@ -136,7 +136,7 @@
+ 	else if (strlen(das_string) > 512)
+ 		das_string = g_strndup(das_string, 512);
+ 		
 -	label_len = gdk_string_width (tasklist->area->style->font, das_string);
 +	label_len = task->gwmh_task->name ? gdk_string_width (tasklist->area->style->font, das_string) : 0;
  

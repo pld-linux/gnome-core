@@ -1,10 +1,10 @@
---- gnome-core-1.4.0.8/configure.in.orig	Wed May 15 18:39:55 2002
-+++ gnome-core-1.4.0.8/configure.in	Wed May 15 18:40:07 2002
-@@ -203,7 +203,7 @@
+--- gnome-core-1.4.2/configure.in.orig	Mon Sep  9 20:08:21 2002
++++ gnome-core-1.4.2/configure.in	Thu Feb  6 06:23:43 2003
+@@ -206,7 +206,7 @@
  AC_CHECK_LIB(png, png_init_io, [
  	     PNG_LIBS="-lpng -lz"],[
  	     AC_MSG_ERROR(libpng is required for gnome-core)],
--	     -lz])
+-	     -lz)
 +	     [-lz])
  AC_SUBST(PNG_LIBS)
  

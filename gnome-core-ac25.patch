@@ -1,5 +1,5 @@
---- gnome-core-1.4.0.5/configure.in.orig	Fri Dec  7 14:39:52 2001
-+++ gnome-core-1.4.0.5/configure.in	Sat Jan 26 19:19:23 2002
+--- gnome-core-1.4.2/configure.in.orig	Thu Feb  6 06:31:26 2003
++++ gnome-core-1.4.2/configure.in	Thu Feb  6 06:32:10 2003
 @@ -65,9 +65,6 @@
  CFLAGS=$CFLAGS_save
  LIBS=$LIBS_save
@@ -7,6 +7,6 @@
 -dnl utility conditional
 -AM_CONDITIONAL(FALSE, test "x" = "y")
 -
- ALL_LINGUAS="az bg ca cs da de el en_GB es et eu fi fr ga gl hu it ja ko lt lv ms nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk wa zh_CN zh_TW"
+ ALL_LINGUAS="az bg ca cs da de el en_GB es et eu fi fr ga gl hu it ja ko lt lv ms nl nn no pl pt pt_BR ro ru sk sl sp sr sv ta tr uk vi wa zh_CN zh_TW"
  AM_GNOME_GETTEXT
  # AM_GNOME_GETTEXT above substs $DATADIRNAME
