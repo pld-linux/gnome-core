@@ -187,12 +187,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/gnome-help.desktop
 
-%{_datadir}/pixmaps/*xpm
-%{_datadir}/pixmaps/*png
-%{_datadir}/pixmaps/fish
-%{_datadir}/pixmaps/mailcheck
-%{_datadir}/pixmaps/tiles
-%{_datadir}/pixmaps/splash
+%{_pixmapsdir}/*xpm
+%{_pixmapsdir}/*png
+%{_pixmapsdir}/fish
+%{_pixmapsdir}/mailcheck
+%{_pixmapsdir}/tiles
+%{_pixmapsdir}/splash
 
 %config %{_datadir}/gnome/default.session
 %config %{_datadir}/gnome/default.wm
