@@ -13,6 +13,7 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-core/%{name}-%{ver
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
 Patch1:		gnome-core-TERM.patch
+Patch2:		gnome-core-help_paths.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel
@@ -116,6 +117,7 @@ GNOME core static libraries.
 %setup -q
 %patch0 -p1 
 %patch1	-p1
+%patch2	-p1
 
 %build
 
@@ -163,7 +165,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %{_datadir}/applets
-%{_datadir}/control-center/*.desktop
+%{_datadir}/control-center/Desktop
+%{_datadir}/control-center/Session
 
 %dir %{_datadir}/gnome/help/gnome-terminal
 %lang(en) %{_datadir}/gnome/help/gnome-terminal/C
