@@ -41,43 +41,46 @@ Obsoletes:	gnome
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
 applications and desktop tools to be used in conjunction with a window
-manager for the X Window System. GNOME is similar in purpose and scope to
-CDE and KDE, but GNOME is based completely on Open Source software. The
-gnome-core package includes the basic programs and libraries that are
-needed to install GNOME. You should install the gnome-core package if you
-would like to use the GNOME desktop environment. You'll also need to
-install the gnome-libs package. If you want to use linuxconf with a GNOME
-front end, you'll also need to install the gnome-linuxconf package.
+manager for the X Window System. GNOME is similar in purpose and scope
+to CDE and KDE, but GNOME is based completely on Open Source software.
+The gnome-core package includes the basic programs and libraries that
+are needed to install GNOME. You should install the gnome-core package
+if you would like to use the GNOME desktop environment. You'll also
+need to install the gnome-libs package. If you want to use linuxconf
+with a GNOME front end, you'll also need to install the
+gnome-linuxconf package.
 
 %description -l es
 GNOME (Entorno de Modelos Objeto por Red de GNU) es un conjunto de
 aplicaciones y herramientas amistables para el escritorio, que se usan
-junto a un getionario de ventanas para el entorno X11. GNOME es similar en
-su objetivo a otros entorno de escritorio como CDE o KDE, pero GNOME está
-integralmente basado en programas y bibliotecas libres. El paquete
-gnome-core incluye los programas de base y bibliotecas necesarias para
-instalar GNOME.
+junto a un getionario de ventanas para el entorno X11. GNOME es
+similar en su objetivo a otros entorno de escritorio como CDE o KDE,
+pero GNOME está integralmente basado en programas y bibliotecas
+libres. El paquete gnome-core incluye los programas de base y
+bibliotecas necesarias para instalar GNOME.
 
 %description -l fr
 GNOME (Environnement Modèle Objet par Réseau de GNU) est un ensemble
-d'applications et d'outils conviviaux pour le bureau graphique, à utiliser
-conjointemment avec un gestionnaire de fenêtres X11. GNOME est similaire
-dans ses buts et ses fonctionalités à d'autres environnements de bureau
-comme CDE ou KDE, mais GNOME est integralement basé sur des programmes et
-bibliothèques libres. Ce paquetage inclut les programmes et bibliothèques
-de base necessaires pour installer GNOME.
+d'applications et d'outils conviviaux pour le bureau graphique, à
+utiliser conjointemment avec un gestionnaire de fenêtres X11. GNOME
+est similaire dans ses buts et ses fonctionalités à d'autres
+environnements de bureau comme CDE ou KDE, mais GNOME est
+integralement basé sur des programmes et bibliothèques libres. Ce
+paquetage inclut les programmes et bibliothèques de base necessaires
+pour installer GNOME.
 
 %description -l pl
-Podstawowe programy i biblioteki, które s± niezbêdne przy ka¿dej instlacji
-GNOME.
+Podstawowe programy i biblioteki, które s± niezbêdne przy ka¿dej
+instlacji GNOME.
 
 %description -l wa
-GNOME (Evironmint di Modeles Objet pa Rantoele di GNOME) est on insemble di
-programes èt d' usteyes grafikes pol scribanne, a-z eployi avou on
-manaedjeu di purneas do sistinme di purneas X11. Li såme di GNOME est l'
-minme ki d' ôtes evironmints di scribanne come CDE oudoben KDE, mins GNOME
-est tot etîr basé so des libes programes èt lîvreyes. Ci paketaedje chal a
-les maisses programes èt lîvreyes k' i gn a dadnjî po-z astaler GNOME.
+GNOME (Evironmint di Modeles Objet pa Rantoele di GNOME) est on
+insemble di programes èt d' usteyes grafikes pol scribanne, a-z eployi
+avou on manaedjeu di purneas do sistinme di purneas X11. Li såme di
+GNOME est l' minme ki d' ôtes evironmints di scribanne come CDE
+oudoben KDE, mins GNOME est tot etîr basé so des libes programes èt
+lîvreyes. Ci paketaedje chal a les maisses programes èt lîvreyes k' i
+gn a dadnjî po-z astaler GNOME.
 
 %package devel
 Summary:	GNOME core libraries, includes, etc
@@ -205,4 +208,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*
 
 %files static
-%attr(644,root,root) %{_libdir}/lib*.a
+%defattr(644,root,root,755)
+%{_libdir}/lib*.a
