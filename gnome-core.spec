@@ -6,7 +6,7 @@ Release:     1
 Copyright:   LGPL
 Group:       X11/Libraries
 Source:      ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
-Icon:        foot.gif
+Icon:        %{name}.gif
 URL:         http://www.gnome.org/
 Requires:    gtk+ >= 1.1.2, glib >= 1.1.3
 Requires:    xscreensaver, xlockmore
