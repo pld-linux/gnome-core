@@ -1,4 +1,3 @@
-diff -Nru gnome-core-1.0.41/desktop-links/Makefile.am gnome-core-1.0.41.new/desktop-links/Makefile.am
 --- gnome-core-1.0.41/desktop-links/Makefile.am	Fri Feb 26 13:52:03 1999
 +++ gnome-core-1.0.41.new/desktop-links/Makefile.am	Wed Sep 29 05:41:45 1999
 @@ -1,4 +1,4 @@
@@ -7,7 +6,6 @@ diff -Nru gnome-core-1.0.41/desktop-links/Makefile.am gnome-core-1.0.41.new/desk
  
  Rootdir           = $(appsdir)
  Applicationsdir   = $(appsdir)/Applications
-diff -Nru gnome-core-1.0.41/gmenu/Makefile.am gnome-core-1.0.41.new/gmenu/Makefile.am
 --- gnome-core-1.0.41/gmenu/Makefile.am	Fri Mar 26 23:31:56 1999
 +++ gnome-core-1.0.41.new/gmenu/Makefile.am	Wed Sep 29 05:40:36 1999
 @@ -26,5 +26,5 @@
@@ -17,7 +15,6 @@ diff -Nru gnome-core-1.0.41/gmenu/Makefile.am gnome-core-1.0.41.new/gmenu/Makefi
 -sysdir = $(datadir)/gnome/apps/Settings
 +sysdir = $(datadir)/applnk/Settings
  sys_DATA = gmenu.desktop
-diff -Nru gnome-core-1.0.41/gnome-terminal/Makefile.am gnome-core-1.0.41.new/gnome-terminal/Makefile.am
 --- gnome-core-1.0.41/gnome-terminal/Makefile.am	Wed Aug 18 01:48:11 1999
 +++ gnome-core-1.0.41.new/gnome-terminal/Makefile.am	Wed Sep 29 05:42:17 1999
 @@ -28,5 +28,5 @@
@@ -27,7 +24,6 @@ diff -Nru gnome-core-1.0.41/gnome-terminal/Makefile.am gnome-core-1.0.41.new/gno
 -utildir = $(datadir)/gnome/apps/Utilities
 +utildir = $(datadir)/applnk/Utilities
  util_DATA = gnome-terminal.desktop
-diff -Nru gnome-core-1.0.41/gsm/Makefile.am gnome-core-1.0.41.new/gsm/Makefile.am
 --- gnome-core-1.0.41/gsm/Makefile.am	Tue Sep 21 07:40:54 1999
 +++ gnome-core-1.0.41.new/gsm/Makefile.am	Wed Sep 29 05:43:03 1999
 @@ -9,7 +9,7 @@
@@ -39,7 +35,6 @@ diff -Nru gnome-core-1.0.41/gsm/Makefile.am gnome-core-1.0.41.new/gsm/Makefile.a
  
  if SESSION
  bin_PROGRAMS = gnome-session save-session gnome-login-check session-properties
-diff -Nru gnome-core-1.0.41/help-browser/Makefile.am gnome-core-1.0.41.new/help-browser/Makefile.am
 --- gnome-core-1.0.41/help-browser/Makefile.am	Fri Sep 24 02:05:14 1999
 +++ gnome-core-1.0.41.new/help-browser/Makefile.am	Wed Sep 29 05:43:43 1999
 @@ -76,5 +76,5 @@
@@ -49,10 +44,9 @@ diff -Nru gnome-core-1.0.41/help-browser/Makefile.am gnome-core-1.0.41.new/help-
 -sysdir = $(datadir)/gnome/apps
 +sysdir = $(datadir)/applnk
  sys_DATA = gnome-help.desktop
-diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
---- gnome-core-1.0.41/panel/menu.c	Tue Sep 21 01:49:14 1999
-+++ gnome-core-1.0.41.new/panel/menu.c	Wed Sep 29 05:54:14 1999
-@@ -504,7 +504,7 @@
+--- gnome-core-1.0.53/panel/menu.c~	Tue Oct  5 23:34:05 1999
++++ gnome-core-1.0.53/panel/menu.c	Thu Oct 14 15:09:40 1999
+@@ -506,7 +506,7 @@
  	/*just load the menus from disk, don't make the widgets
  	  this just reads the .desktops of the top most directory
  	  and a level down*/
@@ -61,7 +55,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  	if(menu)
  		fr_read_dir(NULL,menu,NULL,2);
  	g_free(menu);
-@@ -512,13 +512,10 @@
+@@ -514,13 +514,10 @@
  	if(menu)
  		fr_read_dir(NULL,menu,NULL,2);
  	g_free(menu);
@@ -76,7 +70,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  }
  
  /*the most important dialog in the whole application*/
-@@ -572,7 +569,7 @@
+@@ -575,7 +572,7 @@
  {
  	char *s;
  	char *p;
@@ -85,7 +79,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  	s = g_strdup_printf("cp -r -f %s %s",item_loc,p);
  	g_free(p);
  	system(s);
-@@ -893,7 +890,7 @@
+@@ -896,7 +893,7 @@
  					   GTK_SIGNAL_FUNC(add_app_to_personal),
  					   sim->item_loc);
  			/*ummmm slightly ugly but should work 99% of time*/
@@ -94,7 +88,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  				gtk_widget_set_sensitive(menuitem,FALSE);
  		} else {
  			menuitem = gtk_menu_item_new ();
-@@ -919,7 +916,7 @@
+@@ -922,7 +919,7 @@
  					   GTK_SIGNAL_FUNC(add_app_to_personal),
  					   sim->mf->menudir);
  			/*ummmm slightly ugly but should work 99% of time*/
@@ -103,7 +97,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  				gtk_widget_set_sensitive(menuitem,FALSE);
  		}
  
-@@ -2078,7 +2075,7 @@
+@@ -2081,7 +2078,7 @@
  static GtkWidget *
  create_system_menu(GtkWidget *menu, int fake_submenus, int fake)
  {
@@ -112,34 +106,34 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  	char *menudir, *pixmap;
  	
  	menudir = g_concat_dir_and_file (menu_base, ".");
-@@ -2190,7 +2187,7 @@
- 				   menuitem);
+@@ -2195,7 +2192,7 @@
  	}
  
--	menu = create_user_menu(_("User menus"),"apps",NULL,TRUE,TRUE,TRUE);
-+	menu = create_user_menu(_("User menus"),"applnk",NULL,TRUE,TRUE,TRUE);
+ 	pixmap = gnome_pixmap_file ("gnome-favorites.png");
+-	menu = create_user_menu(_("User menus"),"apps",NULL,pixmap,TRUE,TRUE,TRUE);
++	menu = create_user_menu(_("User menus"),"applnk",NULL,pixmap,TRUE,TRUE,TRUE);
+ 	g_free (pixmap);
  	if(menu) {
  		menuitem = gtk_menu_item_new ();
- 		setup_menuitem (menuitem, 0, _("User menus"));
-@@ -2954,7 +2951,7 @@
- 		need_separ = TRUE;
+@@ -2986,7 +2983,7 @@
  	}
  	if(flags&MAIN_MENU_USER && !(flags&MAIN_MENU_USER_SUB)) {
--		root_menu = create_user_menu(_("User menus"), "apps",
-+		root_menu = create_user_menu(_("User menus"), "applnk",
- 					     root_menu, fake_submenus, FALSE,
+ 		pixmap = gnome_pixmap_file ("gnome-favorites.png");
+-		root_menu = create_user_menu(_("User menus"), "apps", 
++		root_menu = create_user_menu(_("User menus"), "applnk", 
+ 					     root_menu, pixmap,
+ 					     fake_submenus, FALSE,
  					     FALSE);
- 		need_separ = TRUE;
-@@ -3001,7 +2998,7 @@
- 		if(need_separ)
+@@ -3036,7 +3033,7 @@
  			add_menu_separator(root_menu);
  		need_separ = FALSE;
+ 		pixmap = gnome_pixmap_file ("gnome-favorites.png");
 -		menu = create_user_menu(_("User menus"), "apps", 
 +		menu = create_user_menu(_("User menus"), "applnk", 
- 					NULL, fake_submenus, TRUE, TRUE);
- 		menuitem = gtk_menu_item_new ();
- 		setup_menuitem (menuitem, 0, _("User menus"));
-@@ -3111,7 +3108,7 @@
+ 					NULL, pixmap,
+ 					fake_submenus, TRUE, TRUE);
+ 		g_free (pixmap);
+@@ -3148,7 +3145,7 @@
  	current_panel = PANEL_WIDGET(menu->button->parent);
  
  	if(!menu->menu) {
@@ -148,7 +142,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  		char *this_menu = get_real_menu_path(menu->path,menu_base);
  		GSList *list = g_slist_append(NULL,this_menu);
  		
-@@ -3220,7 +3217,7 @@
+@@ -3257,7 +3254,7 @@
  	Menu *menu;
  	int main_menu;
  
@@ -157,7 +151,7 @@ diff -Nru gnome-core-1.0.41/panel/menu.c gnome-core-1.0.41.new/panel/menu.c
  	char *this_menu = get_real_menu_path(arguments,menu_base);
  
  	if (!this_menu) {
-@@ -3340,7 +3337,7 @@
+@@ -3377,7 +3374,7 @@
  	menu->menu = NULL;
  
  	{
