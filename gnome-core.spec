@@ -1,11 +1,11 @@
 Summary:	The core programs for the GNOME GUI desktop environment
-Summary(es):	Los programas de base del entorno gráfico de Gnome
-Summary(fr):	Les programmes de base de l'environnement graphique Gnome
+Summary(es):	Los programas de base del entorno gráfico de GNOME
+Summary(fr):	Les programmes de base de l'environnement graphique GNOME
 Summary(pl):	Programy podstawowe GNOME'a
-Summary(wa):	Les maisses programes do scribanne grafike Gnome
+Summary(wa):	Les maisses programes do scribanne grafike GNOME
 Name:		gnome-core
 Version:	1.4.2
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
