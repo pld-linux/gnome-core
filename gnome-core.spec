@@ -151,42 +151,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_datadir}/applets
 %{_datadir}/mc
-%dir %{_datadir}/xmodmap
-%lang(be) %{_datadir}/xmodmap/xmodmap.be
-%lang(bg) %{_datadir}/xmodmap/xmodmap.bg
-%lang(ch) %{_datadir}/xmodmap/xmodmap.ch
-%lang(ch) %{_datadir}/xmodmap/xmodmap.cz
-%lang(de) %{_datadir}/xmodmap/xmodmap.de
-%lang(dk) %{_datadir}/xmodmap/xmodmap.dk
-%{_datadir}/xmodmap/xmodmap.dvorak
-%lang(es) %{_datadir}/xmodmap/xmodmap.es
-%lang(fi) %{_datadir}/xmodmap/xmodmap.fi
-%lang(fr) %{_datadir}/xmodmap/xmodmap.fr*
-%lang(gr) %{_datadir}/xmodmap/xmodmap.gr
-%lang(hu) %{_datadir}/xmodmap/xmodmap.hu*
-%lang(il) %{_datadir}/xmodmap/xmodmap.il
-%lang(is) %{_datadir}/xmodmap/xmodmap.is
-%lang(it) %{_datadir}/xmodmap/xmodmap.it
-%lang(la) %{_datadir}/xmodmap/xmodmap.la
-%lang(nl) %{_datadir}/xmodmap/xmodmap.nl
-%lang(no) %{_datadir}/xmodmap/xmodmap.no
-%lang(pl) %{_datadir}/xmodmap/xmodmap.pl
-%lang(pt) %{_datadir}/xmodmap/xmodmap.pt*
-%lang(qc) %{_datadir}/xmodmap/xmodmap.qc
-%lang(ru) %{_datadir}/xmodmap/xmodmap.ru
-%lang(se) %{_datadir}/xmodmap/xmodmap.se
-%lang(sf) %{_datadir}/xmodmap/xmodmap.sf
-%lang(sg) %{_datadir}/xmodmap/xmodmap.sg
-%lang(si) %{_datadir}/xmodmap/xmodmap.si
-%lang(sk) %{_datadir}/xmodmap/xmodmap.sk
-%lang(th) %{_datadir}/xmodmap/xmodmap.th
-%lang(tr) %{_datadir}/xmodmap/xmodmap.tr*
-%lang(uk) %{_datadir}/xmodmap/xmodmap.uk
-%lang(us) %{_datadir}/xmodmap/xmodmap.us*
-%lang(yu) %{_datadir}/xmodmap/xmodmap.yu
-
-%dir %{_datadir}/gnome/help/gnome-intro
-%{_datadir}/gnome/help/gnome-intro/C
 
 %dir %{_datadir}/gnome/help/gnome-terminal
 %{_datadir}/gnome/help/gnome-terminal/C
@@ -200,9 +164,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %{_datadir}/gnome/help/help-browser/it
 %lang(ko) %{_datadir}/gnome/help/help-browser/ko
 %lang(no) %{_datadir}/gnome/help/help-browser/no
-
-%dir %{_datadir}/gnome/help/mini-commander_applet
-%{_datadir}/gnome/help/mini-commander_applet/C
 
 %dir %{_applnkdir}/Applications
 %dir %{_applnkdir}/Games
@@ -220,41 +181,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/*png
 %{_datadir}/pixmaps/fish
 %{_datadir}/pixmaps/mailcheck
-%{_datadir}/pixmaps/mini-commander
 %{_datadir}/pixmaps/tiles
-
-%dir %{_datadir}/pixmaps/gkb
-%lang(at) %{_datadir}/pixmaps/gkb/at.xpm
-%lang(be) %{_datadir}/pixmaps/gkb/be.xpm
-%lang(bg) %{_datadir}/pixmaps/gkb/bg.xpm
-%lang(ca) %{_datadir}/pixmaps/gkb/ca.xpm
-%lang(ch) %{_datadir}/pixmaps/gkb/ch.xpm
-%lang(cz) %{_datadir}/pixmaps/gkb/cz.xpm
-%lang(de) %{_datadir}/pixmaps/gkb/de.xpm
-%lang(dk) %{_datadir}/pixmaps/gkb/dk.xpm
-%lang(es) %{_datadir}/pixmaps/gkb/es.xpm
-%lang(fi) %{_datadir}/pixmaps/gkb/fi.xpm
-%lang(fr) %{_datadir}/pixmaps/gkb/fr.xpm
-%lang(gb) %{_datadir}/pixmaps/gkb/gb.xpm
-%lang(gr) %{_datadir}/pixmaps/gkb/gr.xpm
-%lang(hu) %{_datadir}/pixmaps/gkb/hu.xpm
-%lang(il) %{_datadir}/pixmaps/gkb/il.xpm
-%lang(is) %{_datadir}/pixmaps/gkb/is.xpm
-%lang(it) %{_datadir}/pixmaps/gkb/it.xpm
-%lang(jp) %{_datadir}/pixmaps/gkb/jp.xpm
-%lang(nl) %{_datadir}/pixmaps/gkb/nl.xpm
-%lang(no) %{_datadir}/pixmaps/gkb/no.xpm
-%lang(pl) %{_datadir}/pixmaps/gkb/pl.xpm
-%lang(pt) %{_datadir}/pixmaps/gkb/pt.xpm
-%lang(qc) %{_datadir}/pixmaps/gkb/qc.xpm
-%lang(ru) %{_datadir}/pixmaps/gkb/ru.xpm
-%lang(se) %{_datadir}/pixmaps/gkb/se.xpm
-%lang(si) %{_datadir}/pixmaps/gkb/si.xpm
-%lang(sk) %{_datadir}/pixmaps/gkb/sk.xpm
-%lang(th) %{_datadir}/pixmaps/gkb/th.xpm
-%lang(tr) %{_datadir}/pixmaps/gkb/tr.xpm
-%lang(us) %{_datadir}/pixmaps/gkb/us.xpm
-%lang(yu) %{_datadir}/pixmaps/gkb/yu.xpm
 
 %config %{_datadir}/panelrc
 %config %{_datadir}/gnome/default.session
