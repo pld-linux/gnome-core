@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=GNOME
+Comment=GNOME Desktop settings tools
+Comment[pl]=Narzędzia do konfigurowania GNOME
+Icon=gnome-logo-icon-transparent.png
+Type=Directory
+Encoding=UTF-8
+# vi: encoding=utf-8
