@@ -196,13 +196,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_applnkdir}/Multimedia
 %dir %{_applnkdir}/Settings
 %{_applnkdir}/Settings/gmenu.desktop
-%{_applnkdir}/Settings/gnome-hint-properties.desktop
-%{_applnkdir}/Settings/gnome-panel-properties.desktop
 %{_applnkdir}/Settings/Session
 %{_applnkdir}/Settings/Desktop
 %dir %{_applnkdir}/System
+%{_applnkdir}/System/gnome-terminal.desktop
 %dir %{_applnkdir}/Utilities
-%{_applnkdir}/Utilities/gnome-terminal.desktop
 %{_applnkdir}/.order
 %{_applnkdir}/gnome-help.desktop
 %{_applnkdir}/*/.directory
