@@ -1,15 +1,15 @@
-diff -Nru gnome-core-1.1.1/desktop-links/Makefile.am gnome-core-1.1.1.new/desktop-links/Makefile.am
---- gnome-core-1.1.1/desktop-links/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/desktop-links/Makefile.am	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/desktop-links/Makefile.am gnome-core-1.1.1/desktop-links/Makefile.am
+--- gnome-core-1.1.1.orig/desktop-links/Makefile.am	Tue Sep 21 20:01:33 1999
++++ gnome-core-1.1.1/desktop-links/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -1,4 +1,4 @@
 -appsdir = $(datadir)/gnome/apps
 +appsdir = $(datadir)/applnk
  
  Rootdir           = $(appsdir)
  Applicationsdir   = $(appsdir)/Applications
-diff -Nru gnome-core-1.1.1/gmenu/Makefile.am gnome-core-1.1.1.new/gmenu/Makefile.am
---- gnome-core-1.1.1/gmenu/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/gmenu/Makefile.am	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/gmenu/Makefile.am gnome-core-1.1.1/gmenu/Makefile.am
+--- gnome-core-1.1.1.orig/gmenu/Makefile.am	Fri Mar 26 23:31:56 1999
++++ gnome-core-1.1.1/gmenu/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -26,5 +26,5 @@
  
  EXTRA_DIST = gmenu.desktop top.xpm unknown.xpm
@@ -17,9 +17,21 @@ diff -Nru gnome-core-1.1.1/gmenu/Makefile.am gnome-core-1.1.1.new/gmenu/Makefile
 -sysdir = $(datadir)/gnome/apps/Settings
 +sysdir = $(datadir)/applnk/Settings
  sys_DATA = gmenu.desktop
-diff -Nru gnome-core-1.1.1/gnome-hint/Makefile.am gnome-core-1.1.1.new/gnome-hint/Makefile.am
---- gnome-core-1.1.1/gnome-hint/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/gnome-hint/Makefile.am	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/gmenu/main.c gnome-core-1.1.1/gmenu/main.c
+--- gnome-core-1.1.1.orig/gmenu/main.c	Thu Oct 21 07:40:39 1999
++++ gnome-core-1.1.1/gmenu/main.c	Sun Jan 30 10:26:39 2000
+@@ -269,7 +269,7 @@
+ 
+ 	gnome_init ("GNOME menu editor", VERSION, argc, argv);
+ 
+-	system_apps_dir = gnome_unconditional_datadir_file("gnome/apps");
++	system_apps_dir = gnome_unconditional_datadir_file("applnk");
+ 	system_pixmap_dir = gnome_unconditional_datadir_file("pixmaps");
+ 	if (!g_file_exists(system_apps_dir) || !g_file_exists(system_pixmap_dir))
+ 		{
+diff -ruN gnome-core-1.1.1.orig/gnome-hint/Makefile.am gnome-core-1.1.1/gnome-hint/Makefile.am
+--- gnome-core-1.1.1.orig/gnome-hint/Makefile.am	Sun Nov 28 23:16:32 1999
++++ gnome-core-1.1.1/gnome-hint/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -37,5 +37,5 @@
  pixmaps_DATA = gnome-hint.png
  
@@ -27,9 +39,9 @@ diff -Nru gnome-core-1.1.1/gnome-hint/Makefile.am gnome-core-1.1.1.new/gnome-hin
 -	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/gnome/apps/Settings/gnome-hint-properties.desktop
 +	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-hint-properties.desktop
  
-diff -Nru gnome-core-1.1.1/gnome-terminal/Makefile.am gnome-core-1.1.1.new/gnome-terminal/Makefile.am
---- gnome-core-1.1.1/gnome-terminal/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/gnome-terminal/Makefile.am	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/gnome-terminal/Makefile.am gnome-core-1.1.1/gnome-terminal/Makefile.am
+--- gnome-core-1.1.1.orig/gnome-terminal/Makefile.am	Sat Jan  8 19:13:05 2000
++++ gnome-core-1.1.1/gnome-terminal/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -46,5 +46,5 @@
  gnorbadir = $(sysconfdir)/CORBA/servers
  gnorba_DATA = gnome-terminal.gnorba
@@ -37,9 +49,9 @@ diff -Nru gnome-core-1.1.1/gnome-terminal/Makefile.am gnome-core-1.1.1.new/gnome
 -utildir = $(datadir)/gnome/apps/Utilities
 +utildir = $(datadir)/applnk/Utilities
  util_DATA = gnome-terminal.desktop
-diff -Nru gnome-core-1.1.1/gsm/Makefile.am gnome-core-1.1.1.new/gsm/Makefile.am
---- gnome-core-1.1.1/gsm/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/gsm/Makefile.am	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/gsm/Makefile.am gnome-core-1.1.1/gsm/Makefile.am
+--- gnome-core-1.1.1.orig/gsm/Makefile.am	Thu Jan  6 17:23:27 2000
++++ gnome-core-1.1.1/gsm/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -9,7 +9,7 @@
  
  LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
@@ -58,9 +70,9 @@ diff -Nru gnome-core-1.1.1/gsm/Makefile.am gnome-core-1.1.1.new/gsm/Makefile.am
  desktop_DATA = save-session.desktop session.desktop
  
  default.session: default.in ../config.status
-diff -Nru gnome-core-1.1.1/help-browser/Makefile.am gnome-core-1.1.1.new/help-browser/Makefile.am
---- gnome-core-1.1.1/help-browser/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/help-browser/Makefile.am	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/help-browser/Makefile.am gnome-core-1.1.1/help-browser/Makefile.am
+--- gnome-core-1.1.1.orig/help-browser/Makefile.am	Mon Jan 24 08:23:59 2000
++++ gnome-core-1.1.1/help-browser/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -77,7 +77,7 @@
  gnorbadir = $(sysconfdir)/CORBA/servers
  gnorba_DATA = help-browser.gnorba
@@ -69,10 +81,10 @@ diff -Nru gnome-core-1.1.1/help-browser/Makefile.am gnome-core-1.1.1.new/help-br
 +sysdir = $(datadir)/applnk
  sys_DATA = gnome-help.desktop
  
- gnome_downloaddir = $(bindir)
-diff -Nru gnome-core-1.1.1/panel/Makefile.am gnome-core-1.1.1.new/panel/Makefile.am
---- gnome-core-1.1.1/panel/Makefile.am	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/panel/Makefile.am	Thu Jan 27 20:27:54 2000
+ install-exec-local:
+diff -ruN gnome-core-1.1.1.orig/panel/Makefile.am gnome-core-1.1.1/panel/Makefile.am
+--- gnome-core-1.1.1.orig/panel/Makefile.am	Thu Jan 13 11:21:41 2000
++++ gnome-core-1.1.1/panel/Makefile.am	Sun Jan 30 10:25:27 2000
 @@ -85,8 +85,6 @@
  	menu.h  		\
  	menu-fentry.c  		\
@@ -90,9 +102,9 @@ diff -Nru gnome-core-1.1.1/panel/Makefile.am gnome-core-1.1.1.new/panel/Makefile
 +	$(INSTALL_DATA) $(srcdir)/gnome-panel-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-panel-properties.desktop
  
  $(srcdir)/panel-util.c: $(CORBA_SRCLIST)
-diff -Nru gnome-core-1.1.1/panel/menu-properties.c gnome-core-1.1.1.new/panel/menu-properties.c
---- gnome-core-1.1.1/panel/menu-properties.c	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/panel/menu-properties.c	Thu Jan 27 20:33:41 2000
+diff -ruN gnome-core-1.1.1.orig/panel/menu-properties.c gnome-core-1.1.1/panel/menu-properties.c
+--- gnome-core-1.1.1.orig/panel/menu-properties.c	Tue Jan 11 03:35:55 2000
++++ gnome-core-1.1.1/panel/menu-properties.c	Sun Jan 30 10:25:27 2000
 @@ -94,12 +94,6 @@
  	GtkWidget *user_sub = gtk_object_get_data(GTK_OBJECT(widget), "user_sub");
  	GtkWidget *applets = gtk_object_get_data(GTK_OBJECT(widget), "applets");
@@ -156,9 +168,9 @@ diff -Nru gnome-core-1.1.1/panel/menu-properties.c gnome-core-1.1.1.new/panel/me
  	add_menu_type_options(GTK_OBJECT(dialog),GTK_TABLE(table),6,
  			      _("Panel menu: "),"panel",
  			      menu->main_menu_flags&MAIN_MENU_PANEL,
-diff -Nru gnome-core-1.1.1/panel/menu.c gnome-core-1.1.1.new/panel/menu.c
---- gnome-core-1.1.1/panel/menu.c	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/panel/menu.c	Thu Jan 27 20:30:56 2000
+diff -ruN gnome-core-1.1.1.orig/panel/menu.c gnome-core-1.1.1/panel/menu.c
+--- gnome-core-1.1.1.orig/panel/menu.c	Tue Jan 25 00:57:09 2000
++++ gnome-core-1.1.1/panel/menu.c	Sun Jan 30 10:25:27 2000
 @@ -82,7 +82,7 @@
  	/*just load the menus from disk, don't make the widgets
  	  this just reads the .desktops of the top most directory
@@ -447,9 +459,9 @@ diff -Nru gnome-core-1.1.1/panel/menu.c gnome-core-1.1.1.new/panel/menu.c
  	char *this_menu = get_real_menu_path(arguments,menu_base);
  
  	if (!this_menu) {
-diff -Nru gnome-core-1.1.1/panel/session.c gnome-core-1.1.1.new/panel/session.c
---- gnome-core-1.1.1/panel/session.c	Thu Jan 27 20:28:29 2000
-+++ gnome-core-1.1.1.new/panel/session.c	Thu Jan 27 20:27:54 2000
+diff -ruN gnome-core-1.1.1.orig/panel/session.c gnome-core-1.1.1/panel/session.c
+--- gnome-core-1.1.1.orig/panel/session.c	Mon Jan 24 22:45:05 2000
++++ gnome-core-1.1.1/panel/session.c	Sun Jan 30 10:25:27 2000
 @@ -717,10 +717,10 @@
  load_default_applets1(PanelWidget *panel)
  {
