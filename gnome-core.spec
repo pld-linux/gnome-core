@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.4.0.4
-Release:	43
+Version:	1.4.0.5
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -20,13 +20,11 @@ Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
 Patch3:		%{name}-make.patch
 Patch4:		%{name}-tasklist-ugly.patch
-Patch5:		%{name}-gettext.patch
-Patch6:		%{name}-clockicon.patch
-Patch7:		%{name}-am15.patch
-Patch8:		%{name}-ac25.patch
-Patch9:		%{name}-pixbuf_cflags.patch
-Patch10:	%{name}-make2.patch
-Patch11:	%{name}-help-browser.desktop.patch
+Patch5:		%{name}-clockicon.patch
+Patch6:		%{name}-am15.patch
+Patch7:		%{name}-ac25.patch
+Patch8:		%{name}-make2.patch
+Patch9:		%{name}-help-browser.desktop.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel >= 1.2.13
@@ -155,10 +153,10 @@ Statyczne biblioteki GNOME core.
 %patch7 -p1
 %patch8 -p1
 %patch9 -p1
-%patch10 -p1
-%patch11 -p1
 
 %build
+sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
+mv -f configure.in.tmp configure.in
 rm -f missing acinclude.m4
 libtoolize --copy --force
 xml-i18n-toolize --copy --force
@@ -202,7 +200,6 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/ldconfig
 /usr/bin/scrollkeeper-update
 
-
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,NEWS,README}.gz
@@ -220,20 +217,17 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/control-center/Session/*.desktop
 
 %{_datadir}/gnome/hints
+%{_datadir}/gnome/panel
 %{_datadir}/gnome-about
 %{_datadir}/gnome-terminal
+%{_datadir}/idl/*
 %{_omf_dest_dir}/omf/%{name}
 %{_applnkdir}/Settings/GNOME
 %{_applnkdir}/Terminals/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/Help/gnome-help.desktop
 
-%{_pixmapsdir}/*xpm
-%{_pixmapsdir}/*png
-%{_pixmapsdir}/fish
-%{_pixmapsdir}/mailcheck
-%{_pixmapsdir}/tiles
-%{_pixmapsdir}/splash
+%{_pixmapsdir}/*
 
 %config %{_datadir}/gnome/default.session
 %config %{_datadir}/gnome/default.wm
