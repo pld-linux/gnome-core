@@ -4,18 +4,18 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.2.1
-Release: 3
+Version:	1.2.2.1
+Release:	1
 License:	GPL
-Group:		X11/GNOME
-Group(pl):	X11/GNOME
+Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.gz
-Source1:	gnome-core-Settings.order
-Patch0:		gnome-core-applnk.patch
-Patch1:		gnome-core-TERM.patch
-Patch2:		gnome-core-help_paths.patch
-Patch3:		gnome-core-applet-docs.make.patch
-Patch4:		gnome-core-bzip2.patch
+Source1:	%{name}-Settings.order
+Patch0:		%{name}-applnk.patch
+Patch1:		%{name}-TERM.patch
+Patch2:		%{name}-help_paths.patch
+Patch3:		%{name}-applet-docs.make.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel
@@ -93,8 +93,9 @@ Summary:	GNOME core libraries, includes, etc
 Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe, etc
-Group:		X11/GNOME/Development/Libraries
-Group(pl):	X11/GNOME/Programowanie/Biblioteki
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
@@ -112,8 +113,9 @@ Pliki nag³ówkowe etc do GNOME core.
 %package static
 Summary:	GNOME core static libraries
 Summary(pl):	Biblioteki statyczne GNOME core
-Group:		X11/GNOME/Development/Libraries
-Group(pl):	X11/GNOME/Programowanie/Biblioteki
+Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -125,18 +127,14 @@ GNOME core static libraries.
 %patch1	-p1
 %patch2	-p1
 %patch3	-p1
-%patch4	-p1
 
 %build
-
 gettextize --copy --force
 autoheader
 automake
 autoconf
-CFLAGS="-DHAVE_CONTROL_CENTER $RPM_OPT_FLAGS"
-CXXFLAGS="$RPM_OPT_FLAGS"
-LDFLAGS="-s"
-export CFLAGS CXXFLAGS LDFLAGS
+CFLAGS="-DHAVE_CONTROL_CENTER %{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
+CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
 %configure \
 	--without-included-gettext \
 	--disable-gtkhtml-help
@@ -145,6 +143,7 @@ export CFLAGS CXXFLAGS LDFLAGS
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/.order
