@@ -13,7 +13,7 @@ Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.bz2
 Source1:	%{name}-Settings.order
-Source1:	%{name}-Settings.directory
+Source2:	%{name}-Settings.directory
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
@@ -23,6 +23,8 @@ Patch5:		%{name}-gettext.patch
 Patch6:		%{name}-clockicon.patch
 Patch7:		%{name}-am15.patch
 Patch8:		%{name}-ac25.patch
+Patch9:		%{name}-pixbuf_cflags.patch
+Patch10:	%{name}-make2.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel >= 1.2.13
@@ -150,6 +152,8 @@ Statyczne biblioteki GNOME core.
 %patch6 -p1
 %patch7 -p1
 %patch8 -p1
+%patch9 -p1
+%patch10 -p1
 
 %build
 rm -f missing acinclude.m4

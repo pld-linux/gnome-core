@@ -1,0 +1,11 @@
+--- gnome-core-1.4.0.4/applets/tasklist/Makefile.am~	Sun Nov 25 00:00:54 2001
++++ gnome-core-1.4.0.4/applets/tasklist/Makefile.am	Sun Nov 25 00:01:23 2001
+@@ -35,7 +35,7 @@
+ #	gstc.c 			\
+ #	gwmh.c
+ 
+-#libtasklist_applet_la_LIBADD =				\
++#libtasklist_applet_la_LIBADD =
+ 
+ tasklist_applet_LDADD = 			\
+ 	../../panel/libpanel_applet.la 		\
