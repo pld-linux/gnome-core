@@ -776,7 +776,8 @@ diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/no/clock/clock_applet-no.
 +    <type/>
      <format mime="text/sgml"/>
      <identifier url="clock_applet.sgml"/>
-     <language code="en_US"/>
+-    <language code="en_US"/>
++    <language code="no/>
 +    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
    </resource>
