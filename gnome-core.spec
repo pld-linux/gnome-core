@@ -252,14 +252,14 @@ rm -rf $RPM_BUILD_ROOT
   [0.28-1]
 - more .mo files (sv, pt, ja, fi),
 - added package icon,
-- added /usr/share/default.session %config file in main package,
+- added %{_datadir}/default.session %config file in main package,
 - added /usr/lib/appletsConf.sh to devel,
 - added static subpackage.
 
 * Fri Jul 17 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.20-3]
 - added -q %setup parameter,
-- added %lang macros to /usr/share/locale/cs/LC_MESSAGES/*/gnome-core.mo
+- added %lang macros to %{_datadir}/locale/cs/LC_MESSAGES/*/gnome-core.mo
   files,
 - added dependences to main package "Requires: gtk+ >= 1.0.0",
 - added using %%{name} and %%{version} macros in Source,
@@ -269,7 +269,7 @@ rm -rf $RPM_BUILD_ROOT
   desription,
 - removed Packager field from spec (if you want recompile package and
   redistribute this package later put this in your private .rpmrc). 
-- changes in registering files from /usr/share (not all files an directores
+- changes in registering files from %{_datadir} (not all files an directores
   explicite are from package),
 - Buildroot changed to /tmp/%{name}-%%{version}-root,
 - added stripping binaries and shared libs,
