@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.4.0.2
-Release:	3
+Version:	1.4.0.3
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
