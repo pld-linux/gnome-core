@@ -8,11 +8,20 @@ Group:		X11/Libraries
 Group(pl):	X11/Biblioteki
 Source:		ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
 Icon:		gnome-core.gif
-Requires:	gnome-libs >= 1.0.4 
-Requires:	esound = 0.2.8
-Requires:	libgtop = 1.0.1
-Requires:	gtk+ = 1.2.0
-Requires:	glib = 1.2.0
+BuildPrereq:	xpm-devel
+BuildPrereq:	gnome-devel
+BuildPrereq:	ORBit-devel
+BuildPrereq:	bison
+BuildPrereq:	flex
+BuildPrereq:	gtk+-devel >= 1.2.0
+BuildPrereq:	libghttp-devel
+BuildPrereq:	libgtop-devel >= 1.0.0
+BuildPrereq:	esound-devel >= 0.2.5
+%requires_pkg	gnome-libd
+%requires_pkg	esound
+%requires_pkg	libgtop
+%requires_pkg	gtk+
+%requires_pkg	glib
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	gnome
@@ -141,7 +150,8 @@ rm -rf $RPM_BUILD_ROOT
 /usr/X11R6/include/*
 
 %files static
-%attr(644,root,root) /usr/X11R6/lib/lib*.a
+%defattr(644,root,root,755)
+/usr/X11R6/lib/lib*.a
 
 %changelog
 * Mon Jan 04 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
