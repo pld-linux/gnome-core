@@ -26,30 +26,30 @@ Patch9:		%{name}-help-browser.desktop.patch
 Patch10:	%{name}-gnome-terminal.desktop.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
-BuildRequires:	gnome-libs-devel >= 1.2.13
-BuildRequires:	libgtop-devel >= 1.0.0
-BuildRequires:	gtk+-devel >= 1.2.5
-BuildRequires:	gdk-pixbuf-devel >= 0.7.0
-BuildRequires:	control-center-devel >= 1.4.0
 BuildRequires:	ORBit-devel
-BuildRequires:	gettext-devel
-BuildRequires:	freetype-devel
-BuildRequires:	libxml-devel
-BuildRequires:	zlib-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	bison
+BuildRequires:	bzip2-devel >= 1.0.1
+BuildRequires:	control-center-devel >= 1.4.0
+BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	esound-devel
+BuildRequires:	flex
+BuildRequires:	freetype-devel >= 2.0.0
+BuildRequires:	gdk-pixbuf-devel >= 0.7.0
+BuildRequires:	gettext-devel
+BuildRequires:	gnome-libs-devel >= 1.2.13
+BuildRequires:	gtk+-devel >= 1.2.5
+BuildRequires:	gtkhtml-devel >= 0.2
+BuildRequires:	intltool
+BuildRequires:	libglade-devel >= 0.14
+BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
-BuildRequires:	automake
-BuildRequires:	autoconf
 BuildRequires:	libtool
-BuildRequires:	intltool
-BuildRequires:	docbook-dtd31-sgml
-BuildRequires:	flex
-BuildRequires:	bison
-BuildRequires:	gtkhtml-devel >= 0.2
-BuildRequires:	libglade-devel >= 0.14
-BuildRequires:	bzip2-devel >= 1.0.1
+BuildRequires:	libxml-devel
 BuildRequires:	scrollkeeper
+BuildRequires:	zlib-devel
 Prereq:		/sbin/ldconfig
 Prereq:		scrollkeeper
 Requires:	applnk
