@@ -15,7 +15,7 @@ diff -urN gnome-core-1.3.1.org/gmenu/Makefile.am gnome-core-1.3.1/gmenu/Makefile
  EXTRA_DIST = gmenu.desktop top.xpm unknown.xpm
  
 -sysdir = $(datadir)/gnome/apps/Settings
-+sysdir = $(datadir)/applnk/Settings
++sysdir = $(datadir)/applnk/Settings/GNOME
  sys_DATA = gmenu.desktop
 diff -urN gnome-core-1.3.1.org/gmenu/main.c gnome-core-1.3.1/gmenu/main.c
 --- gnome-core-1.3.1.org/gmenu/main.c	Wed Feb 28 16:53:00 2001
@@ -57,7 +57,7 @@ diff -urN gnome-core-1.3.1.org/gnome-hint/Makefile.am gnome-core-1.3.1/gnome-hin
 -install-data-local:
 -	$(mkinstalldirs) $(DESTDIR)$(datadir)/gnome/apps/Settings/Session/
 -	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/gnome/apps/Settings/Session/gnome-hint-properties.desktop
-+desktopdir = $(datadir)/applnk/Settings/Session
++desktopdir = $(datadir)/applnk/Settings/GNOME/Session
 +desktop_DATA = gnome-hint-properties.desktop
  
 diff -urN gnome-core-1.3.1.org/gnome-terminal/Makefile.am gnome-core-1.3.1/gnome-terminal/Makefile.am
@@ -80,7 +80,7 @@ diff -urN gnome-core-1.3.1.org/gsm/Makefile.am gnome-core-1.3.1/gsm/Makefile.am
  LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
  
 -sysdir = $(datadir)/apps/Settings
-+sysdir = $(datadir)/applnk/Settings
++sysdir = $(datadir)/applnk/Settings/GNOME
  
  if SESSION
  noinst_DATA = session.desktop
@@ -89,7 +89,7 @@ diff -urN gnome-core-1.3.1.org/gsm/Makefile.am gnome-core-1.3.1/gsm/Makefile.am
  endif
  
 -settingsdir = $(datadir)/gnome/apps/Settings/Session
-+settingsdir = $(datadir)/applnk/Settings/Session
++settingsdir = $(datadir)/applnk/Settings/GNOME/Session
  
  if SESSION
  settings_DATA = session-properties.desktop
@@ -128,7 +128,7 @@ diff -urN gnome-core-1.3.1.org/panel/Makefile.am gnome-core-1.3.1/panel/Makefile
  sys_DATA = gnome-panel-properties.desktop
  
 -deskdir = $(datadir)/gnome/apps/Settings/Desktop/
-+deskdir = $(datadir)/applnk/Settings/Desktop/
++deskdir = $(datadir)/applnk/Settings/GNOME/Desktop/
  desk_DATA = gnome-panel-properties.desktop
  
  $(srcdir)/panel-util.c: $(CORBA_SRCLIST)
@@ -144,7 +144,7 @@ diff -urN gnome-core-1.3.1.org/panel/foobar-widget.c gnome-core-1.3.1/panel/foob
  	foo->settings =
  		append_folder_menu(menu_bar, _("Settings"),  NULL, TRUE,
 -			           "gnome/apps/Settings");
-+			           "applnk/Settings");
++			           "applnk/Settings/GNOME");
  	append_desktop_menu (menu_bar);
  
  	gtk_box_pack_start (GTK_BOX (foo->hbox), menu_bar, FALSE, FALSE, 0);
@@ -758,7 +758,7 @@ diff -urN gnome-core-1.3.1.org/panel/session.c gnome-core-1.3.1/panel/session.c
 -		"gnome/apps/Internet/Netscape.desktop",
 +	      { "applnk/gnome-help.desktop",
 +		"applnk/System/gnome-terminal.desktop",
-+		"applnk/Settings/gnomecc.desktop",
++		"applnk/Settings/GNOME/gnomecc.desktop",
 +		"applnk/Internet/Netscape.desktop",
  		NULL };
  	int i;
