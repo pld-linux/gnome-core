@@ -216,7 +216,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_applnkdir}/Internet
 %dir %{_applnkdir}/Multimedia
 %dir %{_applnkdir}/Settings/*desktop
-%{_applnkdir}/Settings/Session
+%{_applnkdir}/Settings/Session/*.desktop
 %{_applnkdir}/Settings/Desktop
 %dir %{_applnkdir}/System
 %{_applnkdir}/System/gnome-terminal.desktop
