@@ -420,7 +420,7 @@ diff -Nru gnome-core-1.1.6/panel/menu.c gnome-core-1.1.6.new/panel/menu.c
  		   gboolean title)
  {
 -	char *menudir = gnome_datadir_file ("gnome/apps");
-+	char *menudir = gnome_datadir_file ("appslnk");
++	char *menudir = gnome_datadir_file ("applnk");
  
  	if (menudir &&
  	    g_file_test (menudir, G_FILE_TEST_ISDIR)) {
@@ -478,7 +478,7 @@ diff -Nru gnome-core-1.1.6/panel/menu.c gnome-core-1.1.6.new/panel/menu.c
  			   GTK_SIGNAL_FUNC(add_menu_to_panel),
 -			   "gnome/apps/");
 -	setup_internal_applet_drag(submenuitem, "MENU:gnome/apps/");
-+			   "appslnk");
++			   "applnk");
 +	setup_internal_applet_drag(submenuitem, "MENU:applnk");
  
  	submenuitem = gtk_menu_item_new ();
