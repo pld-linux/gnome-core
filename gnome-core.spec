@@ -194,7 +194,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/System/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/gnome-help.desktop
-%{_applnkdir}/.*
 
 %{_pixmapsdir}/*xpm
 %{_pixmapsdir}/*png
