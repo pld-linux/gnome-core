@@ -1,0 +1,71 @@
+- added using CVS keywords in %changelog (for automating them).
+
+* Tue Jun 15 1999 Jan R瘯orajski <baggins@pld.org.pl>
+  [1.0.6-2]
+- added patches from RH
+
+* Thu Apr 22 1999 Artur Frysiak <wiget@pld.org.pl>
+  [1.0.5-2]
+- compiled on rpm 3
+- replacement in %%files
+
+* Tue Apr 13 1999 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [1.0.5-1]
+- gzipping %doc,
+- more complex %files but %files %lang description is full.
+
+* Mon Jan 04 1999 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [0.99.1-1]
+- added LDFLAGS="-s" to ./configure enviroment,
+- more locales (ca, da, es_DO, es_GT, es_HN, es_MX, es_PA, es_PE, es_SV,
+  hu, pl, ru),
+- changed Requires "gtk+ >= 1.1.11, glib = 1.1.11",
+- added --with-included-gettext to configure parameters.
+
+* Fri Sep 25 1998 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [0.30-1]
+- added /usr/X11R6/share/control-center to main,
+- added Requires "gtk+ >= 1.1.2, glib >= 1.1.3".
+
+* Fri Sep 18 1998 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [0.28-3]
+- added package Icon,
+- changed prefix to /usr/X11R6.
+
+* Mon Aug 31 1998 Wojtek 奸usarczyk <wojtek@shadow.eu.org>
+  [0.28-2]
+- added pl translation.
+
+* Sat Aug 22 1998 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [0.28-1]
+- more .mo files (sv, pt, ja, fi),
+- added package icon,
+- added %{_datadir}/default.session %config file in main package,
+- added /usr/lib/appletsConf.sh to devel,
+- added static subpackage.
+
+* Fri Jul 17 1998 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [0.20-3]
+- added -q %setup parameter,
+- added %lang macros to %{_datadir}/locale/cs/LC_MESSAGES/*/gnome-core.mo
+  files,
+- added dependences to main package "Requires: gtk+ >= 1.0.0",
+- added using %%{name} and %%{version} macros in Source,
+- added using $RPM_OPT_FLAGS in CXXFLAGS,
+- removed COPYING file from %doc (copyright statment is in Copyright field),
+- removed "Prereq: /sbin/install-info" fron main and devel subpackage
+  desription,
+- removed Packager field from spec (if you want recompile package and
+  redistribute this package later put this in your private .rpmrc). 
+- changes in registering files from %{_datadir} (not all files an directores
+  explicite are from package),
+- Buildroot changed to /tmp/%{name}-%%{version}-root,
+- added stripping binaries and shared libs,
+- removed /usr/lib/<soname> symlink from main package,
+- changed permisiion for shared libs to 755,
+- removed /usr/lib/*.la from devel,
+- added %defattr and %attr macros in %files (allows building package from
+  non-root account).
+
+* Fri Mar 13 1998 Marc Ewing <marc@redhat.com>
+- Integrate into gnome-core CVS source tree
