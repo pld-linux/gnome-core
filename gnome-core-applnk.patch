@@ -68,7 +68,7 @@ diff -urN gnome-core-1.4.0.3.org/gnome-terminal/Makefile.am gnome-core-1.4.0.3/g
  gnorba_DATA = gnome-terminal.gnorba
  
 -utildir = $(datadir)/gnome/apps/System
-+utildir = $(datadir)/applnk/System
++utildir = $(datadir)/applnk/Terminals
  util_DATA = gnome-terminal.desktop
  
  gladedir   = $(datadir)/gnome-terminal/glade
