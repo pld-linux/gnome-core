@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.0.8
-Release:	5
+Release:	6
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -25,6 +25,7 @@ Patch8:		%{name}-make2.patch
 Patch9:		%{name}-help-browser.desktop.patch
 Patch10:	%{name}-gnome-terminal.desktop.patch
 Patch11:	%{name}-am16.patch
+Patch12:	%{name}-omf.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -155,6 +156,7 @@ Statyczne biblioteki GNOME core.
 %patch9 -p1
 %patch10 -p1
 %patch11 -p1
+%patch12 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
