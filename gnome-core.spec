@@ -42,6 +42,7 @@ BuildRequires:	bison
 BuildRequires:	gtkhtml-devel >= 0.2
 BuildRequires:	libglade-devel >= 0.14
 BuildRequires:	bzip2-devel >= 1.0.1
+BuildRequires:	scrollkeeper
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
