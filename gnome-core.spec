@@ -18,11 +18,11 @@ Patch6:		gnome-core-nodisc.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
-BuildPrereq:	gnome-libs-devel
-BuildPrereq:	gtk+ >= 1.2.0
-BuildPrereq:	XFree86-devel
-BuildPrereq:	ORBit-devel
-BuildPrereq:	gettext
+BuildRequires:	gnome-libs-devel
+BuildRequires:	gtk+ >= 1.2.0
+BuildRequires:	XFree86-devel
+BuildRequires:	ORBit-devel
+BuildRequires:	gettext
 Obsoletes:	gnome
 
 %description
