@@ -28,6 +28,7 @@ Patch10:	%{name}-gnome-terminal.desktop.patch
 Patch11:	%{name}-am16.patch
 Patch12:	%{name}-omf.patch
 Patch13:	%{name}-avoid-version.patch
+Patch14:	%{name}-desktop.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -161,11 +162,13 @@ Statyczne biblioteki GNOME core.
 %patch11 -p1
 %patch12 -p1
 %patch13 -p1
+%patch14 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
 mv -f configure.in.tmp configure.in
-rm -f missing acinclude.m4
+rm -f missing
+# acinclude.m4
 %{__libtoolize}
 xml-i18n-toolize --copy --force
 %{__gettextize}
