@@ -115,13 +115,13 @@ Requires:	%{name} = %{version}
 %description devel
 Header files for gnome-libs.
 
-%description -l es devel
+%description devel -l es
 Bibliotecas y include de la base de gnome-core.
 
-%description -l fr devel
+%description devel -l fr
 Bibliothèques et fichiers d'en-tête pour la base de gnome-core.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe itp. do GNOME core.
 
 %package static
@@ -133,12 +133,12 @@ Requires:	%{name}-devel = %{version}
 %description static
 GNOME core static libraries.
 
-%description -l pl static
+%description static -l pl
 Statyczne biblioteki GNOME core.
 
 %prep
 %setup -q
-%patch0 -p1 
+%patch0 -p1
 %patch1	-p1
 %patch2	-p1
 %patch3 -p1
@@ -175,7 +175,7 @@ install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	omf_dest_dir=%{_omf_dest_dir}/omf/%{name}
-	
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
 install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
