@@ -158,8 +158,6 @@ install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 mv -f $RPM_BUILD_ROOT%{_applnkdir}/Settings/{[!G]*,GNOME}
 
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
-
 gzip -9nf AUTHORS ChangeLog NEWS README \
 	$RPM_BUILD_ROOT%{_mandir}/man?/*
 
