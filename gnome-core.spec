@@ -24,6 +24,7 @@ Patch7:		%{name}-ac25.patch
 Patch8:		%{name}-make2.patch
 Patch9:		%{name}-help-browser.desktop.patch
 Patch10:	%{name}-gnome-terminal.desktop.patch
+Patch11:	%{name}-am16.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -40,6 +41,7 @@ BuildRequires:	gdk-pixbuf-gnome-devel >= 0.7.0
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-libs-devel >= 1.2.13
 BuildRequires:	gtk+-devel >= 1.2.5
+BuildRequires:	gtk-doc
 BuildRequires:	gtkhtml-devel >= 0.2
 BuildRequires:	intltool
 BuildRequires:	libglade-gnome-devel >= 0.14
@@ -60,6 +62,7 @@ Obsoletes:	gnome
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_mandir		%{_prefix}/man
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
+%define		_gtkdocdir	%{_defaultdocdir}/gtk-doc/html
 
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
@@ -112,6 +115,7 @@ Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe itp.
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gtk-doc-common
 
 %description devel
 Header files for gnome-libs.
@@ -150,6 +154,7 @@ Statyczne biblioteki GNOME core.
 %patch8 -p1
 %patch9 -p1
 %patch10 -p1
+%patch11 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
@@ -166,7 +171,8 @@ CFLAGS="-DHAVE_CONTROL_CENTER `gnome-config --cflags capplet` %{rpmcflags}"
 CXXFLAGS="%{rpmldflags}"
 %configure \
 	--without-included-gettext \
-	--disable-gtkhtml-help
+	--disable-gtkhtml-help \
+	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
 
@@ -176,7 +182,8 @@ install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	omf_dest_dir=%{_omf_dest_dir}/%{name}
+	omf_dest_dir=%{_omf_dest_dir}/%{name} \
+	HTML_DIR=%{_gtkdocdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
@@ -241,6 +248,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/*.sh
 %{_includedir}/*
+%{_gtkdocdir}/*
 
 %files static
 %defattr(644,root,root,755)
