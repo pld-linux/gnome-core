@@ -9,7 +9,7 @@ Release:	11
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-core/1.4/%{name}-%{version}.tar.bz2
 Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
 Source3:	gnome-wm.1.da
