@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.4.0.8
-Release:	11
+Version:	1.4.2
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -26,6 +26,7 @@ Patch9:		%{name}-help-browser.desktop.patch
 Patch10:	%{name}-gnome-terminal.desktop.patch
 Patch11:	%{name}-am16.patch
 Patch12:	%{name}-omf.patch
+Patch13:	%{name}-avoid-version.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -61,6 +62,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_sysconfdir	/etc/X11/GNOME
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 %define		_gtkdocdir	%{_defaultdocdir}/gtk-doc/html
 
@@ -156,6 +159,7 @@ Statyczne biblioteki GNOME core.
 %patch10 -p1
 %patch11 -p1
 %patch12 -p1
+%patch13 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
@@ -210,10 +214,13 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_sysconfdir}/CORBA
 %dir %{_sysconfdir}/CORBA/servers
 %{_sysconfdir}/CORBA/servers/*
+%{_sysconfdir}/gnome/panel-config
 %config %{_sysconfdir}/sound/events/*
 
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libpanel_*.so.*.*
+%attr(755,root,root) %{_libdir}/libfish_applet.so
+%attr(755,root,root) %{_libdir}/libgen_util_applet.so
 
 %{_datadir}/applets
 %{_datadir}/control-center/Desktop/*.desktop
@@ -245,12 +252,12 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc ChangeLog
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libpanel_*.so
+%{_libdir}/libpanel_*.la
 %attr(755,root,root) %{_libdir}/*.sh
 %{_includedir}/*
 %{_gtkdocdir}/*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libpanel_*.a
