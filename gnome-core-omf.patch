@@ -323,7 +323,8 @@ diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/C/clock/clock_applet-C.om
 +    <type/>
      <format mime="text/sgml"/>
      <identifier url="clock_applet.sgml"/>
-     <language code="en_US"/>
+-    <language code="en_US"/>
++    <language code="C"/>
 +    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
    </resource>
@@ -593,7 +594,8 @@ diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/clock/clock_applet-eu.
 +    <type/>
      <format mime="text/sgml"/>
      <identifier url="clock_applet.sgml"/>
-     <language code="en_US"/>
+-    <language code="en_US"/>
++    <language code="eu"/>
 +    <relation seriesid="e4acca04-d79a-11d6-9b08-d7615a21f648"/>
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
    </resource>
@@ -623,7 +625,8 @@ diff -ur gnome-core-1.4.0.8.orig/applets/gen_util/help/eu/mailcheck/mailcheck_ap
 +    <type/>
      <format mime="text/sgml"/>
      <identifier url="mailcheck_applet.sgml"/>
-     <language code="C"/>
+-    <language code="C"/>
++    <language code="no"/>
 +    <relation seriesid="e4eaeaa0-d79a-11d6-83c0-d8e8f9aecc94"/>
 +    <rights type="GNU GPL" license.version="2" license="http://www.gnu.org/licenses/gpl.html"/>
    </resource>
