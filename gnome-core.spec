@@ -6,12 +6,12 @@ Release:     3
 Copyright:   LGPL
 Group:       X11/Libraries
 Source:      ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
-BuildRoot:   /tmp/%{name}-%{version}-root
-Obsoletes:   gnome
 Icon:        foot.gif
 URL:         http://www.gnome.org/
 Requires:    gtk+ >= 1.1.1
 Requires:    xscreensaver, xlockmore
+BuildRoot:   /tmp/%{name}-%{version}-root
+Obsoletes:   gnome
 
 %description
 Basic programs and libraries that are virtually required for any GNOME
@@ -105,6 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Fri Sep 18 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.28-3]
+- added package Icon,
 - changed prefix to /usr/X11R6.
 
 * Mon Aug 31 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
