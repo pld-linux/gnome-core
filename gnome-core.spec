@@ -34,6 +34,7 @@ BuildRequires:	gdk-pixbuf-devel >= 0.7.0
 BuildRequires:	control-center-devel >= 1.4.0
 BuildRequires:	ORBit-devel
 BuildRequires:	gettext-devel
+BuildRequires:	freetype-devel
 BuildRequires:	libxml-devel
 BuildRequires:	zlib-devel
 BuildRequires:	esound-devel
@@ -42,7 +43,7 @@ BuildRequires:	libpng >= 1.0.8
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	libtool
-BuildRequires:	xml-i18n-tools
+BuildRequires:	intltool
 BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	flex
 BuildRequires:	bison
