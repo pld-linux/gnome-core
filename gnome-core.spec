@@ -222,7 +222,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-terminal
 %{_omf_dest_dir}/omf/%{name}
 %{_applnkdir}/Settings/GNOME
-%{_applnkdir}/System/gnome-terminal.desktop
+%{_applnkdir}/Terminals/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/gnome-help.desktop
 
