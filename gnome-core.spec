@@ -4,14 +4,15 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.0
+Version:	1.1.1
 Release:	1
-Copyright:	LGPL
+License:	LGPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
+Patch1:		gnome-core-DESTDIR.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -104,6 +105,7 @@ GNOME core static libraries.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 
@@ -127,7 +129,8 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/.order
 
 strip --strip-unneeded $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
-gzip -9nf AUTHORS ChangeLog NEWS README
+gzip -9nf AUTHORS ChangeLog NEWS README \
+	$RPM_BUILD_ROOT%{_mandir}/man?/*
 
 %find_lang %{name}
 
@@ -144,34 +147,52 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_sysconfdir}/CORBA
 %dir %{_sysconfdir}/CORBA/servers
 %config %{_sysconfdir}/CORBA/servers/*
-%config %{_sysconfdir}/sound/events/panel.soundlist
+%config %{_sysconfdir}/sound/events/*
 
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %{_datadir}/applets
-%{_datadir}/mc
+%{_datadir}/control-center/*
 
 %dir %{_datadir}/gnome/help/gnome-terminal
 %{_datadir}/gnome/help/gnome-terminal/C
+%lang(da) %{_datadir}/gnome/help/gnome-terminal/da
+%lang(es) %{_datadir}/gnome/help/gnome-terminal/es
 %lang(no) %{_datadir}/gnome/help/gnome-terminal/no
 
 %dir %{_datadir}/gnome/help/help-browser
 %{_datadir}/gnome/help/help-browser/C
+%lang(ca) %{_datadir}/gnome/help/help-browser/ca
+%lang(da) %{_datadir}/gnome/help/help-browser/da
+%lang(el) %{_datadir}/gnome/help/help-browser/el
 %lang(es) %{_datadir}/gnome/help/help-browser/es
+%lang(et) %{_datadir}/gnome/help/help-browser/et
+%lang(eu) %{_datadir}/gnome/help/help-browser/eu
 %lang(fr) %{_datadir}/gnome/help/help-browser/fr
 %lang(hu) %{_datadir}/gnome/help/help-browser/hu
 %lang(it) %{_datadir}/gnome/help/help-browser/it
+%lang(ja) %{_datadir}/gnome/help/help-browser/ja
 %lang(ko) %{_datadir}/gnome/help/help-browser/ko
 %lang(no) %{_datadir}/gnome/help/help-browser/no
+%lang(wa) %{_datadir}/gnome/help/help-browser/wa
+
+%{_datadir}/gnome/hints
+%{_datadir}/gnome-about
 
 %dir %{_applnkdir}/Applications
 %dir %{_applnkdir}/Games
 %dir %{_applnkdir}/Internet
 %dir %{_applnkdir}/Multimedia
 %dir %{_applnkdir}/Settings
+%{_applnkdir}/Settings/gmenu.desktop
+%{_applnkdir}/Settings/gnome-hint-properties.desktop
+%{_applnkdir}/Settings/gnome-panel-properties.desktop
+%{_applnkdir}/Settings/save-session.desktop
+%{_applnkdir}/Settings/session.desktop
 %dir %{_applnkdir}/System
 %dir %{_applnkdir}/Utilities
+%{_applnkdir}/Utilities/gnome-terminal.desktop
 %{_applnkdir}/.order
 %{_applnkdir}/gnome-help.desktop
 %{_applnkdir}/*/.directory
@@ -186,6 +207,8 @@ rm -rf $RPM_BUILD_ROOT
 %config %{_datadir}/panelrc
 %config %{_datadir}/gnome/default.session
 %config %{_datadir}/gnome/default.wm
+
+%{_mandir}/man?/*
 
 %files devel
 %defattr(644,root,root,755)
