@@ -9,6 +9,8 @@ Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
+Group(de):	X11/Applikationen
+Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.bz2
 Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
@@ -23,6 +25,7 @@ Patch6:		%{name}-am15.patch
 Patch7:		%{name}-ac25.patch
 Patch8:		%{name}-make2.patch
 Patch9:		%{name}-help-browser.desktop.patch
+Patch10:	%{name}-gnome-terminal.desktop.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel >= 1.2.13
@@ -110,35 +113,39 @@ Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe itp.
 Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
 Header files for gnome-libs.
 
-%description devel -l es
+%description -l es devel
 Bibliotecas y include de la base de gnome-core.
 
-%description devel -l fr
+%description -l fr devel
 Bibliothèques et fichiers d'en-tête pour la base de gnome-core.
 
-%description devel -l pl
+%description -l pl devel
 Pliki nag³ówkowe itp. do GNOME core.
 
 %package static
 Summary:	GNOME core static libraries
 Summary(pl):	Biblioteki statyczne GNOME core
 Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
+Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
 GNOME core static libraries.
 
-%description static -l pl
+%description -l pl static
 Statyczne biblioteki GNOME core.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch0 -p1 
 %patch1	-p1
 %patch2	-p1
 %patch3 -p1
@@ -148,6 +155,7 @@ Statyczne biblioteki GNOME core.
 %patch7 -p1
 %patch8 -p1
 %patch9 -p1
+%patch10 -p1
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
@@ -175,7 +183,7 @@ install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	omf_dest_dir=%{_omf_dest_dir}/omf/%{name}
-
+	
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
 install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
