@@ -33,12 +33,11 @@ BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	automake
-BuildRoot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
-%define		_applnkdir	%{_datadir}/applnk
 %define		_mandir		%{_prefix}/man
 
 %description
