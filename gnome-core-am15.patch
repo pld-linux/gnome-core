@@ -1,0 +1,125 @@
+--- gnome-core-1.4.0.4/applets/tasklist/Makefile.am~	Fri Mar 16 17:45:19 2001
++++ gnome-core-1.4.0.4/applets/tasklist/Makefile.am	Tue Sep 18 06:15:15 2001
+@@ -7,7 +7,7 @@
+ 	-I$(top_builddir)/panel \
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+ 	-I$(includedir) $(GNOME_INCLUDEDIR)		\
+-	@PIXBUF_CFLAGS@
++	$(PIXBUF_CFLAGS)
+ 
+ bin_PROGRAMS = tasklist_applet
+ #lib_LTLIBRARIES = libtasklist_applet.la
+@@ -41,7 +41,7 @@
+ 	../../panel/libpanel_applet.la 		\
+ 	$(GNOME_LIBDIR) $(ORB_LIBS)		\
+ 	$(GNOMEUI_LIBS) $(GNORBA_LIBS)		\
+-	$(INTLLIBS) @PIXBUF_LIBS@
++	$(INTLLIBS) $(PIXBUF_LIBS)
+ 
+ EXTRA_DIST = 			\
+ 	tasklist_applet.gnorba 	\
+@@ -64,4 +64,4 @@
+ $(srcdir)/gwmh.c: $(srcdir)/../desk-guide/gwmh.c
+ 	cp -f $(srcdir)/../desk-guide/gwmh.c $(srcdir)
+ 
+-CLEANFILES += gwmh.c gstc.c
++CLEANFILES = gwmh.c gstc.c
+--- gnome-core-1.4.0.4/help-browser/Makefile.am~	Tue Sep 18 06:10:57 2001
++++ gnome-core-1.4.0.4/help-browser/Makefile.am	Tue Sep 18 06:20:50 2001
+@@ -15,7 +15,7 @@
+ 	$(htmlcflags)
+ 
+ if HELP_USE_GTKHTML
+-htmllibs = $(GNOME_XML_LIB) @PIXBUF_LIBS@ \
++htmllibs = $(GNOME_XML_LIB) $(PIXBUF_LIBS) \
+ 	$(GTK_HTML_PREFIX)/lib/libgtkhtml.a	\
+ 	$(GNOME_PRINT_PREFIX)/lib/libgnomeprint.a
+ else
+@@ -32,7 +32,7 @@
+ bin_PROGRAMS = gnome-help-browser  gnome-help-caller
+ 
+ gnome_help_caller_SOURCES = \
+-				$(ORBIT_HELP_CLIENT_SOURCES)   \
++				$(ORBIT_HELP_CLIENT_srcfiles)   \
+ 				help-caller.c
+ 
+ gnome_help_browser_SOURCES = gnome-helpwin.c gnome-helpwin.h \
+@@ -49,19 +49,19 @@
+ 			     bookmarks.c bookmarks.h \
+ 			     help-browser-impl.c \
+ 				htmlurl.c htmlurl.h \
+-			     $(ORBIT_HELP_BROWSER_SOURCES)
++			     $(ORBIT_HELP_BROWSER_srcfiles)
+ 
+ 
+-ORBIT_HELP_COMMON_SOURCES   = help-browser.h \
++ORBIT_HELP_COMMON_srcfiles   = help-browser.h \
+ 			      help-browser-common.c
+ 
+-ORBIT_HELP_BROWSER_SOURCES  = $(ORBIT_HELP_COMMON_SOURCES) \
++ORBIT_HELP_BROWSER_srcfiles  = $(ORBIT_HELP_COMMON_srcfiles) \
+ 			      help-browser-skels.c
+ 
+-ORBIT_HELP_CLIENT_SOURCES   = $(ORBIT_HELP_COMMON_SOURCES) \
++ORBIT_HELP_CLIENT_srcfiles   = $(ORBIT_HELP_COMMON_srcfiles) \
+ 			      help-browser-stubs.c
+ 
+-ORBIT_GENERATED_SOURCEFILES      = $(ORBIT_HELP_COMMON_SOURCES) \
++ORBIT_GENERATED_SOURCEFILES      = $(ORBIT_HELP_COMMON_srcfiles) \
+ 		               help-browser-skels.c help-browser-stubs.c
+ 
+ MAINTAINERCLEANFILES = $(ORBIT_GENERATED_SOURCEFILES)
+--- gnome-core-1.4.0.4/panel/Makefile.am~	Tue Sep 18 06:10:57 2001
++++ gnome-core-1.4.0.4/panel/Makefile.am	Tue Sep 18 06:21:44 2001
+@@ -15,7 +15,7 @@
+ 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
+ 	-DGNOME_DATADIR=\""$(datadir)"\" \
+ 	-I$(includedir) $(GNOME_INCLUDEDIR) $(ORB_CFLAGS) \
+-	@PIXBUF_CFLAGS@
++	$(PIXBUF_CFLAGS)
+ 
+ gwmh_dir = $(top_srcdir)/applets/desk-guide
+ 
+@@ -38,7 +38,7 @@
+ 	gnome-panel.h
+ 
+ # try to make these get cleaned properly
+-CLEANFILES += $(CORBA_SRCLIST) my_gnome_panel_idl
++CLEANFILES = $(CORBA_SRCLIST) my_gnome_panel_idl
+ 
+ $(CORBA_SRCLIST): my_gnome_panel_idl
+ 
+--- gnome-core-1.4.0.4/gnome-terminal/Makefile.am~	Tue Sep 18 06:23:36 2001
++++ gnome-core-1.4.0.4/gnome-terminal/Makefile.am	Tue Sep 18 06:26:54 2001
+@@ -23,7 +23,7 @@
+ 	Terminal-skels.c	\
+ 	Terminal-common.c
+ 
+-CLEANFILES += $(CORBA_GENERATED)
++CLEANFILES = $(CORBA_GENERATED)
+ BUILT_SOURCES = $(CORBA_GENERATED)
+ 
+ $(CORBA_GENERATED) : $(top_srcdir)/idl/Terminal.idl
+--- gnome-core-1.4.0.4/gsm/Makefile.am~	Tue Sep 18 06:23:36 2001
++++ gnome-core-1.4.0.4/gsm/Makefile.am	Tue Sep 18 06:37:02 2001
+@@ -11,8 +11,6 @@
+ 
+ LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
+ 
+-sysdir = $(datadir)/applnk/Settings/GNOME
+-
+ if SESSION
+ noinst_DATA = session.desktop
+ bin_PROGRAMS = gnome-session save-session gnome-login-check session-properties gnome-libice-check session-properties-capplet
+--- gnome-core-1.4.0.4/desktop-links/Makefile.am~	Tue Sep 18 06:41:28 2001
++++ gnome-core-1.4.0.4/desktop-links/Makefile.am	Tue Sep 18 06:41:49 2001
+@@ -91,9 +91,7 @@
+ 
+ ## We explicitly define these so that the appropriate directories will
+ ## be made at install time.
+-Multimedia_DATA =
+ Games_DATA =
+-Utilities_DATA = 
+ 
+ EXTRA_DIST = $(Applications_DATA) $(Graphics_DATA) $(Utilities_DATA) \
+ 	$(System_DATA) $(Multimedia_DATA) $(Internet_DATA) $(Games_DATA) \
