@@ -60,7 +60,7 @@ make install \
 	prefix=$RPM_BUILD_ROOT/usr/X11R6/ \
 	datadir=$RPM_BUILD_ROOT/usr/X11R6/share
 
-strip $RPM_BUILD_ROOT/usr/X11R6/{bin/*,lib/lib*.so.*.*}   
+strip $RPM_BUILD_ROOT/usr/X11R6/{bin/*,lib/lib*.so.*.*} || :
 
 %clean
 rm -rf $RPM_BUILD_ROOT
