@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.2
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -57,8 +57,7 @@ BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
-Requires(post,postun):	/sbin/ldconfig
-Requires(post,postun):	scrollkeeper
+Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
@@ -111,13 +110,25 @@ oudoben KDE, mins GNOME est tot etîr basé so des libes programes èt
 lîvreyes. Ci paketaedje chal a les maisses programes èt lîvreyes k' i
 gn a dadnjî po-z astaler GNOME.
 
+%package libs
+Summary:	GNOME core panel libraries
+Summary(pl):	Biblioteki panelu z GNOME core
+Group:		X11/Libraries
+Conflicts:	gnome-core < 1:1.4.2-3
+
+%description libs
+Panel libraries from GNOME core package.
+
+%description libs -l pl
+Biblioteki panelu z pakietu GNOME core.
+
 %package devel
-Summary:	GNOME core libraries, includes, etc
-Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
+Summary:	GNOME core includes, etc
+Summary(es):	Includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe itp
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 Requires:	gtk-doc-common
 
 %description devel
@@ -136,7 +147,7 @@ Pliki nag³ówkowe itp. do GNOME core.
 Summary:	GNOME core static libraries
 Summary(pl):	Biblioteki statyczne GNOME core
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 GNOME core static libraries.
@@ -199,18 +210,19 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
 install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
 
-%find_lang %{name} --with-gnome --all-name
+%find_lang %{name}-tmp --with-gnome --all-name
+
+grep 'gnome-core\.mo\|gnome/help/panel/' %{name}-tmp.lang > %{name}-libs.lang
+grep -v 'gnome-core\.mo\|gnome/help/panel/' %{name}-tmp.lang > %{name}.lang
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-/sbin/ldconfig
-/usr/bin/scrollkeeper-update
+%post	-p /usr/bin/scrollkeeper-update
+%postun	-p /usr/bin/scrollkeeper-update
 
-%postun
-/sbin/ldconfig
-/usr/bin/scrollkeeper-update
+%post	libs -p /sbin/ldconfig
+%postun	libs -p /sbin/ldconfig
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
@@ -223,7 +235,6 @@ rm -rf $RPM_BUILD_ROOT
 %config %{_sysconfdir}/sound/events/*
 
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/libpanel_*.so.*.*
 %attr(755,root,root) %{_libdir}/libfish_applet.so
 %attr(755,root,root) %{_libdir}/libgen_util_applet.so
 
@@ -253,6 +264,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man?/*
 %lang(da) %{_mandir}/da/man?/*
+
+%files libs -f %{name}-libs.lang
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libpanel_*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
