@@ -1,0 +1,5 @@
+- release 2,
+- new applnk patch with removing realy all RH, Debian and KDE specific
+  hacks,
+- include %%{_datadir}/pixmaps/splash (without this gnome-session crashes
+  ?!?).
