@@ -129,6 +129,7 @@ Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe itp
 Group:		X11/Development/Libraries
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
+Requires:	ORBit-devel
 Requires:	gtk-doc-common
 
 %description devel
