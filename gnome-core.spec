@@ -165,10 +165,10 @@ rm -f missing acinclude.m4
 %{__libtoolize}
 xml-i18n-toolize --copy --force
 %{__gettextize}
-aclocal -I %{_aclocaldir}/gnome
-autoheader
+%{__aclocal} -I %{_aclocaldir}/gnome
+%{__autoheader}
 %{__autoconf}
-automake -a -c --foreign
+%{__automamke}
 CFLAGS="-DHAVE_CONTROL_CENTER `gnome-config --cflags capplet` %{rpmcflags}"
 CXXFLAGS="%{rpmldflags}"
 %configure \
