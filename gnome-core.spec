@@ -140,6 +140,7 @@ Statyczne bibliteki GNOME core.
 %patch5 -p1
 
 %build
+rm missing
 libtoolize --copy --force
 xml-i18n-toolize --copy --force
 gettextize --copy --force
