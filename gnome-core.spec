@@ -143,7 +143,7 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 gzip -9nf AUTHORS ChangeLog NEWS README \
 	$RPM_BUILD_ROOT%{_mandir}/man?/*
 
-%find_lang %{name} --whit-gnome --all-name
+%find_lang %{name} --with-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
