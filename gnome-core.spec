@@ -11,7 +11,7 @@ License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	%{name}-Settings.order
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-TERM.patch
