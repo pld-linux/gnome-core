@@ -1,0 +1,46 @@
+.\" 
+.\" gnome-wm manualside.
+.\" (C) 2000 Miguel de Icaza (miguel@helixcode.com)
+.\"
+.TH GNOME 1 "GNOME 1.0"
+gnome-wm \- Starter den brugervalgte vindueshåndtering for 
+Gnome-sessionen
+.SH SYNOPSIS
+.PP
+.B gnome-wm [--default-wm vindueshaandtering] [--sm-client-id id]
+.SH BESKRIVELSE
+\fIgnome-wm\fP-skriptet starter den fra brugeren valgte vindueshåndtering.
+I så fald brugeren ikke har valgt en sådan, forsøges at starte en vindues-
+håndtering som er katagoriseret som Gnome-kompatibel.
+.PP
+Brugeren kan overskrive valget af vindueshåndteringen ved at sætte 
+.B WINDOW_MANAGER
+miljøvariablen.  Hvis et --default-wm tilvalg er givet, benytter skriptet
+denne vindueshåndtering i så fald 
+.B WINDOW_MANAGER
+ikke er sat.  Hvis gnome-wm er givet som argument til --default-wm så er 
+dét det samme som ingen vindueshåndtering er valgt på forhånd.
+.PP
+Skriptet understøtter --sm-client-id argumentet og oversætter id'et til et
+passende tilvalg til den valgte vindueshåndtering.
+.PP
+
+.SH MILJØVARIABLER
+\fIgnome-wm\fP-programmet benytter værdien udtrykt med
+.B WINDOW_MANAGER 
+miljøvariablen toæ at overskrive den forvalgte vindueshåndtering.
+.SH FILER
+Programmet gemmer det nuværende valg af vindueshåndtering i 
+~/.gnome/default.wm filen. Denne fil har følgende format:
+.PP
+.nf
+[Default]
+WM=sti-til-vindueshåndtering
+.fi
+.SH SE OGSÅ
+.BR gnome-session(1), default.session(5)
+.SH FEJL
+Hvis du finder fejl i \fIgnome-wm\fP programmet, rapportér da 
+venligst disse via \fIgnome-bug\fP-skriptet inkluderet med Gnome
+funktionsbiblioteket, gnome-libs.
+
