@@ -4,7 +4,7 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.9
+Version:	1.1.90
 Release:	1
 License:	GPL
 Group:		X11/GNOME
@@ -41,12 +41,12 @@ Obsoletes:	gnome
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
 applications and desktop tools to be used in conjunction with a window
-manager for the X Window System.  GNOME is similar in purpose and scope to
-CDE and KDE, but GNOME is based completely on Open Source software.  The
+manager for the X Window System. GNOME is similar in purpose and scope to
+CDE and KDE, but GNOME is based completely on Open Source software. The
 gnome-core package includes the basic programs and libraries that are
-needed to install GNOME.  You should install the gnome-core package if you
-would like to use the GNOME desktop environment.  You'll also need to
-install the gnome-libs package.  If you want to use linuxconf with a GNOME
+needed to install GNOME. You should install the gnome-core package if you
+would like to use the GNOME desktop environment. You'll also need to
+install the gnome-libs package. If you want to use linuxconf with a GNOME
 front end, you'll also need to install the gnome-linuxconf package.
 
 %description -l es
