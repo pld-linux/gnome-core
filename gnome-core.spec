@@ -166,7 +166,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_datadir}/applets
 %{_datadir}/control-center/Desktop
-%{_datadir}/control-center/Session
+%{_datadir}/control-center/Session/*.desktop
 
 %dir %{_datadir}/gnome/help/gnome-terminal
 %lang(en) %{_datadir}/gnome/help/gnome-terminal/C
