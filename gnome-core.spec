@@ -4,7 +4,7 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.7
+Version:	1.1.8.1
 Release:	1
 License:	GPL
 Group:		X11/GNOME
@@ -143,7 +143,7 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 gzip -9nf AUTHORS ChangeLog NEWS README \
 	$RPM_BUILD_ROOT%{_mandir}/man?/*
 
-%find_lang %{name}
+%find_lang %{name} --whit-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -166,46 +166,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applets
 %{_datadir}/control-center/Desktop
 %{_datadir}/control-center/Session/*.desktop
-
-%dir %{_datadir}/gnome/help/gen_util_applet
-%lang(en) %{_datadir}/gnome/help/gen_util_applet/C
-
-%dir %{_datadir}/gnome/help/gnome-terminal
-%lang(en) %{_datadir}/gnome/help/gnome-terminal/C
-%lang(da) %{_datadir}/gnome/help/gnome-terminal/da
-%lang(es) %{_datadir}/gnome/help/gnome-terminal/es
-%lang(it) %{_datadir}/gnome/help/gnome-terminal/it
-%lang(no) %{_datadir}/gnome/help/gnome-terminal/no
-
-%dir %{_datadir}/gnome/help/help-browser
-%lang(en) %{_datadir}/gnome/help/help-browser/C
-%lang(ca) %{_datadir}/gnome/help/help-browser/ca
-%lang(da) %{_datadir}/gnome/help/help-browser/da
-%lang(el) %{_datadir}/gnome/help/help-browser/el
-%lang(es) %{_datadir}/gnome/help/help-browser/es
-%lang(et) %{_datadir}/gnome/help/help-browser/et
-%lang(eu) %{_datadir}/gnome/help/help-browser/eu
-%lang(fr) %{_datadir}/gnome/help/help-browser/fr
-%lang(hu) %{_datadir}/gnome/help/help-browser/hu
-%lang(it) %{_datadir}/gnome/help/help-browser/it
-%lang(ja) %{_datadir}/gnome/help/help-browser/ja
-%lang(ko) %{_datadir}/gnome/help/help-browser/ko
-%lang(lt) %{_datadir}/gnome/help/help-browser/lt
-%lang(no) %{_datadir}/gnome/help/help-browser/no
-%lang(uk) %{_datadir}/gnome/help/help-browser/uk
-%lang(wa) %{_datadir}/gnome/help/help-browser/wa
-
-%dir %{_datadir}/gnome/help/desk-guide_applet
-%lang(en) %{_datadir}/gnome/help/desk-guide_applet/C
-
-%dir %{_datadir}/gnome/help/fish_applet
-%lang(en) %{_datadir}/gnome/help/fish_applet/C
-
-%dir %{_datadir}/gnome/help/panel
-%lang(en) %{_datadir}/gnome/help/panel/C
-
-%dir %{_datadir}/gnome/help/tasklist_applet
-%lang(en) %{_datadir}/gnome/help/tasklist_applet/C
 
 %{_datadir}/gnome/hints
 %{_datadir}/gnome-about
