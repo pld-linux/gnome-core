@@ -53,6 +53,7 @@ BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
+BuildRequires:	db3-devel
 Prereq:		/sbin/ldconfig
 Prereq:		scrollkeeper
 Requires:	applnk
