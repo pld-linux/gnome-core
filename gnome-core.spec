@@ -215,7 +215,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_applnkdir}/Games
 %dir %{_applnkdir}/Internet
 %dir %{_applnkdir}/Multimedia
-%dir %{_applnkdir}/Settings
+%dir %{_applnkdir}/Settings/*desktop
 %{_applnkdir}/Settings/gmenu.desktop
 %{_applnkdir}/Settings/Session
 %{_applnkdir}/Settings/Desktop
