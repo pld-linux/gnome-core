@@ -5,11 +5,12 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-core/1.4/%{name}-%{version}.tar.bz2
+# Source0-md5:	d2caf2e71afcc946d5bceaec1b7ba1d3
 Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
 Source3:	gnome-wm.1.da
