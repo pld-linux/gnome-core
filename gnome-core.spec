@@ -20,6 +20,8 @@ Patch3:		%{name}-make.patch
 Patch4:		%{name}-tasklist-ugly.patch
 Patch5:		%{name}-gettext.patch
 Patch6:		%{name}-clockicon.patch
+Patch7:		%{name}-am15.patch
+Patch8:		%{name}-ac25.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel >= 1.2.13
@@ -144,9 +146,11 @@ Statyczne bibliteki GNOME core.
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
+%patch7 -p1
+%patch8 -p1
 
 %build
-rm -f missing
+rm -f missing acinclude.m4
 libtoolize --copy --force
 xml-i18n-toolize --copy --force
 gettextize --copy --force
