@@ -1,0 +1,2 @@
+- updated to 1.1.8.1,
+- added using "--with-gnome --all-name" switches for %%find_lang macro.
