@@ -33,9 +33,9 @@ BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	automake
-BuildRequires:	gtkhtml-static >= 0.2
 BuildRequires:	bzip2-devel >= 1.0
-BuildRequires:	gnome-print-static
+# BuildRequires:	gtkhtml-static >= 0.2
+# BuildRequires:	gnome-print-static
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
@@ -139,7 +139,7 @@ LDFLAGS="-s"
 export CFLAGS CXXFLAGS LDFLAGS
 %configure \
 	--without-included-gettext \
-	--enable-gtkhtml-help
+	--disable-gtkhtml-help
 
 make
 
