@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.1.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -15,7 +15,6 @@ Patch0:		gnome-core-applnk.patch
 Patch1:		gnome-core-TERM.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
-BuildRoot:	/tmp/%{name}-%{version}-root
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	gtk+ >= 1.2.5
@@ -33,6 +32,7 @@ BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	automake
+BuildRoot:	/tmp/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
@@ -45,19 +45,17 @@ GNOME (GNU Network Object Model Environment) is a user-friendly set of
 applications and desktop tools to be used in conjunction with a window
 manager for the X Window System.  GNOME is similar in purpose and scope to
 CDE and KDE, but GNOME is based completely on Open Source software.  The
-gnome-core package includes the basic programs and libraries that are needed
-to install GNOME.
-
-You should install the gnome-core package if you would like to use the GNOME
-desktop environment.  You'll also need to install the gnome-libs package. 
-If you want to use linuxconf with a GNOME front end, you'll also need to
-install the gnome-linuxconf package.
+gnome-core package includes the basic programs and libraries that are
+needed to install GNOME.  You should install the gnome-core package if you
+would like to use the GNOME desktop environment.  You'll also need to
+install the gnome-libs package.  If you want to use linuxconf with a GNOME
+front end, you'll also need to install the gnome-linuxconf package.
 
 %description -l es
 GNOME (Entorno de Modelos Objeto por Red de GNU) es un conjunto de
-aplicaciones y herramientas amistables para el escritorio, que se usan junto
-a un getionario de ventanas para el entorno X11. GNOME es similar en su
-objetivo a otros entorno de escritorio como CDE o KDE, pero GNOME está
+aplicaciones y herramientas amistables para el escritorio, que se usan
+junto a un getionario de ventanas para el entorno X11. GNOME es similar en
+su objetivo a otros entorno de escritorio como CDE o KDE, pero GNOME está
 integralmente basado en programas y bibliotecas libres. El paquete
 gnome-core incluye los programas de base y bibliotecas necesarias para
 instalar GNOME.
@@ -68,8 +66,8 @@ d'applications et d'outils conviviaux pour le bureau graphique, à utiliser
 conjointemment avec un gestionnaire de fenêtres X11. GNOME est similaire
 dans ses buts et ses fonctionalités à d'autres environnements de bureau
 comme CDE ou KDE, mais GNOME est integralement basé sur des programmes et
-bibliothèques libres. Ce paquetage inclut les programmes et bibliothèques de
-base necessaires pour installer GNOME.
+bibliothèques libres. Ce paquetage inclut les programmes et bibliothèques
+de base necessaires pour installer GNOME.
 
 %description -l pl
 Podstawowe programy i biblioteki, które s± niezbêdne przy ka¿dej instlacji
@@ -77,11 +75,11 @@ GNOME.
 
 %description -l wa
 GNOME (Evironmint di Modeles Objet pa Rantoele di GNOME) est on insemble di
-programes èt d' usteyes grafikes pol scribanne, a-z eployi avou on manaedjeu
-di purneas do sistinme di purneas X11. Li såme di GNOME est l' minme ki d'
-ôtes evironmints di scribanne come CDE oudoben KDE, mins GNOME est tot etîr
-basé so des libes programes èt lîvreyes. Ci paketaedje chal a les maisses
-programes èt lîvreyes k' i gn a dadnjî po-z astaler GNOME.
+programes èt d' usteyes grafikes pol scribanne, a-z eployi avou on
+manaedjeu di purneas do sistinme di purneas X11. Li såme di GNOME est l'
+minme ki d' ôtes evironmints di scribanne come CDE oudoben KDE, mins GNOME
+est tot etîr basé so des libes programes èt lîvreyes. Ci paketaedje chal a
+les maisses programes èt lîvreyes k' i gn a dadnjî po-z astaler GNOME.
 
 %package devel
 Summary:	GNOME core libraries, includes, etc
@@ -139,7 +137,7 @@ make DESTDIR=$RPM_BUILD_ROOT install
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/.order
 
-strip --strip-unneeded $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf AUTHORS ChangeLog NEWS README \
 	$RPM_BUILD_ROOT%{_mandir}/man?/*
@@ -165,7 +163,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %{_datadir}/applets
-%{_datadir}/control-center/*
+%{_datadir}/control-center/*.desktop
 
 %dir %{_datadir}/gnome/help/gnome-terminal
 %lang(en) %{_datadir}/gnome/help/gnome-terminal/C
