@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.2
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -28,6 +28,8 @@ Patch10:	%{name}-gnome-terminal.desktop.patch
 Patch11:	%{name}-am16.patch
 Patch12:	%{name}-omf.patch
 Patch13:	%{name}-avoid-version.patch
+Patch14:	%{name}-applnkdir.patch
+Patch15:	%{name}-locale-sp.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
@@ -35,7 +37,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bison
 BuildRequires:	bzip2-devel >= 1.0.1
-BuildRequires:	control-center-devel >= 1.4.0
+BuildRequires:	control-center1-devel >= 1.4.0
 BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	esound-devel
 BuildRequires:	flex
@@ -62,8 +64,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
 %define		_sysconfdir	/etc/X11/GNOME
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 %define		_gtkdocdir	%{_defaultdocdir}/gtk-doc/html
 
@@ -160,6 +160,10 @@ Statyczne biblioteki GNOME core.
 %patch11 -p1
 %patch12 -p1
 %patch13 -p1
+%patch14 -p1
+%patch15 -p1
+
+mv -f po/{sp.po,sr@cyrillic.po}
 
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
@@ -188,7 +192,8 @@ install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	omf_dest_dir=%{_omf_dest_dir}/%{name} \
-	HTML_DIR=%{_gtkdocdir}
+	HTML_DIR=%{_gtkdocdir} \
+	applnkdir=%{_applnkdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
