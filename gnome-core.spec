@@ -1,12 +1,17 @@
 Summary:	GNOME core programs
 Summary(pl):	Programy podstawowe GNOME'a 
 Name:		gnome-core
-Version:	1.0.5
-Release:	2
+Version:	1.0.6
+Release:	1
 Copyright:	LGPL
 Group:		X11/GNOME
+Group(pl):	X11/GNOME
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
-Patch0:		gnome-core-DESTDIR.patch
+Patch0:		gnome-core-asclock.patch
+Patch1:		gnome-core-gdmlang.patch
+Patch2:		gnome-core-hbfixlangs.patch
+Patch3:		gnome-core-htmlicon.patch
+Patch4:		gnome-core-smallfont.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -32,7 +37,8 @@ GNOME.
 %package devel
 Summary:	GNOME core libraries, includes, etc
 Summary(pl):	GNOME core - pliki nag³ówkowe, etc
-Group:		X11/GNOME
+Group:		X11/GNOME/Development/Libraries
+Group(pl):	X11/GNOME/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
@@ -44,7 +50,8 @@ Pliki nag³ówkowe etc do GNOME core.
 %package static
 Summary:	GNOME core static libraries
 Summary(pl):	Biblioteki statyczne GNOME core
-Group:		X11/GNOME
+Group:		X11/GNOME/Development/Libraries
+Group(pl):	X11/GNOME/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
@@ -53,6 +60,10 @@ GNOME core static libraries.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
 
 %build
 CFLAGS="-DHAVE_CONTROL_CENTER $RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
@@ -72,13 +83,15 @@ strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files
+%files -f gnome-core.lang
 %defattr(644,root,root,755)
 %doc {AUTHORS,ChangeLog,NEWS,README}.gz
 
@@ -184,21 +197,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(tr) /usr/X11R6/share/pixmaps/gkb/tr.xpm
 %lang(us) /usr/X11R6/share/pixmaps/gkb/us.xpm
 %lang(yu) /usr/X11R6/share/pixmaps/gkb/yu.xpm
-
-%lang(fi)    /usr/X11R6/share/locale/fi/LC_MESSAGES/gnome-core.mo
-%lang(fr)    /usr/X11R6/share/locale/fr/LC_MESSAGES/gnome-core.mo
-%lang(ga)    /usr/X11R6/share/locale/ga/LC_MESSAGES/gnome-core.mo
-%lang(hu)    /usr/X11R6/share/locale/hu/LC_MESSAGES/gnome-core.mo
-%lang(it)    /usr/X11R6/share/locale/it/LC_MESSAGES/gnome-core.mo
-%lang(ja)    /usr/X11R6/share/locale/ja/LC_MESSAGES/gnome-core.mo
-%lang(ko)    /usr/X11R6/share/locale/ko/LC_MESSAGES/gnome-core.mo
-%lang(nl)    /usr/X11R6/share/locale/nl/LC_MESSAGES/gnome-core.mo
-%lang(no)    /usr/X11R6/share/locale/no/LC_MESSAGES/gnome-core.mo
-%lang(pl)    /usr/X11R6/share/locale/pl/LC_MESSAGES/gnome-core.mo
-%lang(pt)    /usr/X11R6/share/locale/pt/LC_MESSAGES/gnome-core.mo
-%lang(ru)    /usr/X11R6/share/locale/ru/LC_MESSAGES/gnome-core.mo
-%lang(sv)    /usr/X11R6/share/locale/sv/LC_MESSAGES/gnome-core.mo
-%lang(wa)    /usr/X11R6/share/locale/wa/LC_MESSAGES/gnome-core.mo
 
 %config /usr/X11R6/share/panelrc
 %config /usr/X11R6/share/gnome/default.session
