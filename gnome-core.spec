@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.4.0.6
-Release:	5
+Version:	1.4.0.8
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -18,7 +18,7 @@ Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
 Patch3:		%{name}-make.patch
 Patch4:		%{name}-tasklist-ugly.patch
-Patch5:		%{name}-clockicon.patch
+Patch5:		%{name}-lbracket.patch
 Patch6:		%{name}-am15.patch
 Patch7:		%{name}-ac25.patch
 Patch8:		%{name}-make2.patch
