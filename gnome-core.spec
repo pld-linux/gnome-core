@@ -1,14 +1,14 @@
 Summary:     GNOME core programs
 Summary(pl): Programy podstawowe GNOME'a 
 Name:        gnome-core
-Version:     0.28.1
-Release:     3
+Version:     0.30
+Release:     1
 Copyright:   LGPL
 Group:       X11/Libraries
 Source:      ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
 Icon:        foot.gif
 URL:         http://www.gnome.org/
-Requires:    gtk+ >= 1.1.1
+Requires:    gtk+ >= 1.1.2, glib >= 1.1.3
 Requires:    xscreensaver, xlockmore
 BuildRoot:   /tmp/%{name}-%{version}-root
 Obsoletes:   gnome
@@ -77,10 +77,10 @@ rm -rf $RPM_BUILD_ROOT
 %config /usr/X11R6/share/default.session
 /usr/X11R6/share/applets
 /usr/X11R6/share/apps
-/usr/X11R6/share/gnome
-/usr/X11R6/share/pixmaps/*.png
-/usr/X11R6/share/pixmaps/*.xpm
-/usr/X11R6/share/pixmaps/mailcheck
+/usr/X11R6/share/control-center
+/usr/X11R6/share/gnome/help/*
+/usr/X11R6/share/pixmaps/*
+%lang(cs) /usr/X11R6/share/locale/cs/LC_MESSAGES/gnome-core.mo
 %lang(de) /usr/X11R6/share/locale/de/LC_MESSAGES/gnome-core.mo
 %lang(es) /usr/X11R6/share/locale/es/LC_MESSAGES/gnome-core.mo
 %lang(fi) /usr/X11R6/share/locale/fi/LC_MESSAGES/gnome-core.mo
@@ -96,13 +96,18 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644, root, root)
 /usr/X11R6/lib/lib*.so
-/usr/X11R6/lib/appletsConf.sh
+/usr/X11R6/lib/*.sh
 /usr/X11R6/include/*
 
 %files static
 %attr(644, root, root) /usr/X11R6/lib/*.a
 
 %changelog
+* Fri Sep 25 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [0.30-1]
+- added /usr/X11R6/share/control-center to main,
+- added in Requires "gtk+ >= 1.1.2, glib >= 1.1.3".
+
 * Fri Sep 18 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.28-3]
 - added package Icon,
