@@ -9,11 +9,12 @@ Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-core/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
 Patch1:		gnome-core-TERM.patch
 Patch2:		gnome-core-help_paths.patch
+Patch3:		gnome-core-applet-docs.make.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel
@@ -31,6 +32,7 @@ BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	automake
+Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
 
@@ -118,6 +120,7 @@ GNOME core static libraries.
 %patch0 -p1 
 %patch1	-p1
 %patch2	-p1
+%patch3	-p1
 
 %build
 
@@ -171,20 +174,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome/hints
 %{_datadir}/gnome-about
 
-%dir %{_applnkdir}/Applications
-%dir %{_applnkdir}/Games
-%dir %{_applnkdir}/Internet
-%dir %{_applnkdir}/Multimedia
-%dir %{_applnkdir}/Settings/*desktop
-%{_applnkdir}/Settings/Session/*.desktop
+%{_applnkdir}/Settings/gmenu.desktop
+%{_applnkdir}/Settings/.order
+%{_applnkdir}/Settings/Session
 %{_applnkdir}/Settings/Desktop
-%dir %{_applnkdir}/System
 %{_applnkdir}/System/gnome-terminal.desktop
-%dir %{_applnkdir}/Utilities
-%{_applnkdir}/.order
+%{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/gnome-help.desktop
-%{_applnkdir}/*/.directory
-%{_applnkdir}/*/.order
 
 %{_datadir}/pixmaps/*xpm
 %{_datadir}/pixmaps/*png
