@@ -146,9 +146,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/Gnome
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/Gnome/.order
-mv -f $RPM_BUILD_ROOT%{_applnkdir}/Settings/{[!G]*,Gnome}
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
+mv -f $RPM_BUILD_ROOT%{_applnkdir}/Settings/{[!G]*,GNOME}
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
@@ -182,7 +182,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome/hints
 %{_datadir}/gnome-about
 
-%{_applnkdir}/Settings/Gnome
+%{_applnkdir}/Settings/GNOME
 %{_applnkdir}/System/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/gnome-help.desktop
