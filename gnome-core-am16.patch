@@ -1,0 +1,38 @@
+--- gnome-core-1.4.0.8/panel/Makefile.am.orig	Wed Oct  2 09:31:11 2002
++++ gnome-core-1.4.0.8/panel/Makefile.am	Wed Oct  2 10:01:43 2002
+@@ -206,17 +206,20 @@
+ 	panel-util.c			\
+ 	icon-entry-hack.c		\
+ 	conditional.c			\
+-	$(CORBA_SRCLIST)
++	gnome-panel.h
+ 
+ gnome_panel_properties_capplet_LDADD = \
+ 	$(GNOME_LIBDIR)		\
+ 	$(GNOME_CAPPLET_LIBS)	\
+ 	$(INTLLIBS)		\
+-	$(PIXBUF_LIBS)
++	$(PIXBUF_LIBS)		\
++	gnome-panel-stubs.lo	\
++	gnome-panel-skels.lo	\
++	gnome-panel-common.lo
+ 
+ gnome_panel_add_launcher_SOURCES = \
+ 	gnome-panel-add-launcher.c	\
+-	$(CORBA_SRCLIST)
++	gnome-panel.h
+ 
+ gnome_panel_screenshot_SOURCES = \
+ 	gnome-panel-screenshot.c
+@@ -227,7 +230,10 @@
+ 	$(GNORBA_LIBS)		\
+ 	$(ORB_LIBS)		\
+ 	$(INTLLIBS)		\
+-	$(PIXBUF_LIBS)
++	$(PIXBUF_LIBS)		\
++	gnome-panel-stubs.lo	\
++	gnome-panel-skels.lo	\
++	gnome-panel-common.lo
+ 
+ gnome_panel_screenshot_LDADD = \
+ 	$(GNOME_LIBDIR)		\
