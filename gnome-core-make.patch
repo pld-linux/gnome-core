@@ -1,45 +1,28 @@
-diff -urN gnome-core-1.3.1.org/core-docs/fdl/C/Makefile.am gnome-core-1.3.1/core-docs/fdl/C/Makefile.am
---- gnome-core-1.3.1.org/core-docs/fdl/C/Makefile.am	Wed Feb 28 15:03:07 2001
-+++ gnome-core-1.3.1/core-docs/fdl/C/Makefile.am	Wed Feb 28 16:30:14 2001
-@@ -1,6 +1,9 @@
-+figs = 
- app = fdl
- lang = C
- omffiles=fdl-C.omf
- include $(top_srcdir)/app-docs.make
- dist-hook: app-dist-hook
- 
-+topic.dat:
-+	echo "index.html	Free Documentation License" > topic.dat
-diff -urN gnome-core-1.3.1.org/core-docs/gpl/C/Makefile.am gnome-core-1.3.1/core-docs/gpl/C/Makefile.am
---- gnome-core-1.3.1.org/core-docs/gpl/C/Makefile.am	Wed Feb 28 15:03:07 2001
-+++ gnome-core-1.3.1/core-docs/gpl/C/Makefile.am	Wed Feb 28 16:30:47 2001
-@@ -1,6 +1,9 @@
-+figs =
- app = gpl
- lang = C
- omffiles=gpl-C.omf
- include $(top_srcdir)/app-docs.make
- dist-hook: app-dist-hook
- 
-+topic.dat:
-+	echo "index.html GPL License" > topic.dat       
-diff -urN gnome-core-1.3.1.org/core-docs/lgpl/C/Makefile.am gnome-core-1.3.1/core-docs/lgpl/C/Makefile.am
---- gnome-core-1.3.1.org/core-docs/lgpl/C/Makefile.am	Wed Feb 28 15:03:08 2001
-+++ gnome-core-1.3.1/core-docs/lgpl/C/Makefile.am	Wed Feb 28 16:31:05 2001
-@@ -1,6 +1,9 @@
-+figs =
- app = lgpl
- lang = C
- omffiles=lgpl-C.omf
- include $(top_srcdir)/app-docs.make
- dist-hook: app-dist-hook
- 
-+topic.dat:
-+	echo "index.html LGPL License" > topic.dat       
-diff -urN gnome-core-1.3.1.org/gnome-terminal/da/Makefile.am gnome-core-1.3.1/gnome-terminal/da/Makefile.am
---- gnome-core-1.3.1.org/gnome-terminal/da/Makefile.am	Wed Feb 28 15:03:06 2001
-+++ gnome-core-1.3.1/gnome-terminal/da/Makefile.am	Wed Feb 28 15:41:30 2001
+diff -urN gnome-core-1.4.0.1.org/Makefile.am gnome-core-1.4.0.1/Makefile.am
+--- gnome-core-1.4.0.1.org/Makefile.am	Sat Apr  7 14:24:32 2001
++++ gnome-core-1.4.0.1/Makefile.am	Sat Apr  7 15:17:11 2001
+@@ -12,7 +12,6 @@
+ 	 gnome-edit \
+ 	 gnome-hint \
+ 	 gnome-about \
+-	 core-docs \
+ 	 panel \
+ 	 applets \
+ 	 omf-install \
+diff -urN gnome-core-1.4.0.1.org/applets/gen_util/help/es/printer/Makefile.am gnome-core-1.4.0.1/applets/gen_util/help/es/printer/Makefile.am
+--- gnome-core-1.4.0.1.org/applets/gen_util/help/es/printer/Makefile.am	Sat Apr  7 14:24:34 2001
++++ gnome-core-1.4.0.1/applets/gen_util/help/es/printer/Makefile.am	Sat Apr  7 14:59:00 2001
+@@ -3,6 +3,7 @@
+         printer-fig.png\
+         printer-properties.png
+ lang = es
++omffiles =
+ sgml_ents = $(applet).sgml
+ include $(top_srcdir)/applet-docs.make
+ dist-hook: applet-dist-hook
+diff -urN gnome-core-1.4.0.1.org/gnome-terminal/da/Makefile.am gnome-core-1.4.0.1/gnome-terminal/da/Makefile.am
+--- gnome-core-1.4.0.1.org/gnome-terminal/da/Makefile.am	Sat Apr  7 14:24:31 2001
++++ gnome-core-1.4.0.1/gnome-terminal/da/Makefile.am	Sat Apr  7 14:59:00 2001
 @@ -1,6 +1,7 @@
  figs =
  app = gnome-terminal
@@ -48,9 +31,9 @@ diff -urN gnome-core-1.3.1.org/gnome-terminal/da/Makefile.am gnome-core-1.3.1/gn
  # Commenting out for now b/c TOC extraction is broken for this SGML file
  # omffiles = gnome-terminal-da.omf
  include $(top_srcdir)/app-docs.make
-diff -urN gnome-core-1.3.1.org/gnome-terminal/it/Makefile.am gnome-core-1.3.1/gnome-terminal/it/Makefile.am
---- gnome-core-1.3.1.org/gnome-terminal/it/Makefile.am	Wed Feb 28 15:03:06 2001
-+++ gnome-core-1.3.1/gnome-terminal/it/Makefile.am	Wed Feb 28 15:41:59 2001
+diff -urN gnome-core-1.4.0.1.org/gnome-terminal/it/Makefile.am gnome-core-1.4.0.1/gnome-terminal/it/Makefile.am
+--- gnome-core-1.4.0.1.org/gnome-terminal/it/Makefile.am	Sat Apr  7 14:24:31 2001
++++ gnome-core-1.4.0.1/gnome-terminal/it/Makefile.am	Sat Apr  7 14:59:00 2001
 @@ -1,6 +1,7 @@
  figs =
  app = gnome-terminal
@@ -59,9 +42,9 @@ diff -urN gnome-core-1.3.1.org/gnome-terminal/it/Makefile.am gnome-core-1.3.1/gn
  # Commenting out for now b/c TOC extraction is broken for this SGML file
  #omffiles = gnome-terminal-it.omf
  include $(top_srcdir)/app-docs.make
-diff -urN gnome-core-1.3.1.org/gnome-terminal/no/Makefile.am gnome-core-1.3.1/gnome-terminal/no/Makefile.am
---- gnome-core-1.3.1.org/gnome-terminal/no/Makefile.am	Wed Feb 28 15:03:07 2001
-+++ gnome-core-1.3.1/gnome-terminal/no/Makefile.am	Wed Feb 28 15:42:09 2001
+diff -urN gnome-core-1.4.0.1.org/gnome-terminal/no/Makefile.am gnome-core-1.4.0.1/gnome-terminal/no/Makefile.am
+--- gnome-core-1.4.0.1.org/gnome-terminal/no/Makefile.am	Sat Apr  7 14:24:31 2001
++++ gnome-core-1.4.0.1/gnome-terminal/no/Makefile.am	Sat Apr  7 14:59:00 2001
 @@ -1,6 +1,7 @@
  figs =
  app = gnome-terminal
@@ -70,23 +53,21 @@ diff -urN gnome-core-1.3.1.org/gnome-terminal/no/Makefile.am gnome-core-1.3.1/gn
  # Commenting out for now b/c TOC extraction is broken for this SGML file
  # omffiles = gnome-terminal-no.omf
  include $(top_srcdir)/app-docs.make
-diff -urN gnome-core-1.3.1.org/gsm/help/C/Makefile.am gnome-core-1.3.1/gsm/help/C/Makefile.am
---- gnome-core-1.3.1.org/gsm/help/C/Makefile.am	Wed Feb 28 15:03:00 2001
-+++ gnome-core-1.3.1/gsm/help/C/Makefile.am	Wed Feb 28 16:07:32 2001
-@@ -14,3 +14,5 @@
- include $(top_srcdir)/app-docs.make
- dist-hook: app-dist-hook
+diff -urN gnome-core-1.4.0.1.org/sgmldocs.make gnome-core-1.4.0.1/sgmldocs.make
+--- gnome-core-1.4.0.1.org/sgmldocs.make	Sat Apr  7 14:24:30 2001
++++ gnome-core-1.4.0.1/sgmldocs.make	Sat Apr  7 14:59:00 2001
+@@ -58,7 +58,7 @@
+ 	-cp $(docname)/index.html .
  
-+topic.dat:
-+	touch topic.dat
-diff -urN gnome-core-1.3.1.org/gsm/help/C/topic.dat gnome-core-1.3.1/gsm/help/C/topic.dat
---- gnome-core-1.3.1.org/gsm/help/C/topic.dat	Thu Jan  1 01:00:00 1970
-+++ gnome-core-1.3.1/gsm/help/C/topic.dat	Wed Feb 28 16:00:58 2001
-@@ -0,0 +1 @@
-+index.html GNOME session manager guide. 
-diff -urN gnome-core-1.3.1.org/smproxy/Makefile.am gnome-core-1.3.1/smproxy/Makefile.am
---- gnome-core-1.3.1.org/smproxy/Makefile.am	Wed Feb 28 15:03:05 2001
-+++ gnome-core-1.3.1/smproxy/Makefile.am	Wed Feb 28 16:15:03 2001
+ $(docname).sgml: $(sgml_ents)
+-        -ourdir=`pwd`;  \
++        ourdir=`pwd`;  \
+         cd $(srcdir);   \
+         cp $(sgml_ents) $$ourdir
+ 
+diff -urN gnome-core-1.4.0.1.org/smproxy/Makefile.am gnome-core-1.4.0.1/smproxy/Makefile.am
+--- gnome-core-1.4.0.1.org/smproxy/Makefile.am	Sat Apr  7 14:24:30 2001
++++ gnome-core-1.4.0.1/smproxy/Makefile.am	Sat Apr  7 14:59:14 2001
 @@ -13,6 +13,4 @@
  
  gnome_smproxy_SOURCES = save.c smproxy.h smproxy.c
