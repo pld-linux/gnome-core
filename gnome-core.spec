@@ -160,7 +160,7 @@ xml-i18n-toolize --copy --force
 gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome
 autoheader
-autoconf
+%{__autoconf}
 automake -a -c --foreign
 CFLAGS="-DHAVE_CONTROL_CENTER `gnome-config --cflags capplet` %{rpmcflags}"
 CXXFLAGS="%{rpmldflags}"
