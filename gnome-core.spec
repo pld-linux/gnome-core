@@ -141,7 +141,7 @@ rm -rf $RPM_BUILD_ROOT
 - changes in registering files from /usr/share (not all files an directores
   explicite are from package),
 - Buildroot changed to /tmp/%{name}-%%{version}-root,
-- added striping binaries and shared libs,
+- added stripping binaries and shared libs,
 - removed /usr/lib/<soname> symlink from main package,
 - changed permisiion for shared libs to 755,
 - removed /usr/lib/*.la from devel,
