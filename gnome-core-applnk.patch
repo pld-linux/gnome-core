@@ -931,3 +931,14 @@ diff -urN gnome-core-1.4.0.3.org/panel/panel.c gnome-core-1.4.0.3/panel/panel.c
  				flags |= MAIN_MENU_APPLETS_SUB |
  					MAIN_MENU_PANEL_SUB |
  					MAIN_MENU_DESKTOP;
+--- gnome-core-1.4.0.5/panel/gnome-panel-properties.c~	Fri Oct 26 11:13:45 2001
++++ gnome-core-1.4.0.5/panel/gnome-panel-properties.c	Sat Jan 26 23:36:24 2002
+@@ -122,8 +122,6 @@
+ 	{ MAIN_MENU_SYSTEM,       MAIN_MENU_SYSTEM_SUB,        N_("Programs: ") },
+ 	{ MAIN_MENU_USER,         MAIN_MENU_USER_SUB,          N_("Favorites: ") },
+ 	{ MAIN_MENU_APPLETS,      MAIN_MENU_APPLETS_SUB,       N_("Applets: ") },
+-	{ MAIN_MENU_DISTRIBUTION, MAIN_MENU_DISTRIBUTION_SUB,  N_("Distribution: ") },
+-	{ MAIN_MENU_KDE,          MAIN_MENU_KDE_SUB,           N_("KDE: ") },
+ 	{ MAIN_MENU_PANEL,        MAIN_MENU_PANEL_SUB,         N_("Panel: ") },
+ 	{ MAIN_MENU_DESKTOP,      MAIN_MENU_DESKTOP_SUB,       N_("Desktop: ") },
+ 	{ 0 }
