@@ -4,12 +4,12 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.2
-Release:	2
+Version:	1.1.3
+Release:	1
 License:	LGPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/unsources/gnome-core/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
 Icon:		gnome-core.gif
