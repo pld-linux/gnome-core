@@ -1,18 +1,18 @@
 Summary:	GNOME core programs
 Summary(pl):	Programy podstawowe GNOME'a 
 Name:		gnome-core
-Version:	0.99.5.1
-Release:	1d
+Version:	1.0.3
+Release:	1
 Copyright:	LGPL
 Group:		X11/Libraries
 Group(pl):	X11/Biblioteki
 Source:		ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
 Icon:		gnome-core.gif
-Requires:	gnome-libs >= 0.99.2
-Requires:	esound = 0.2.7
-Requires:	libgtop = 0.99.1
-Requires:	gtk+ = 1.1.15
-Requires:	glib = 1.1.15
+Requires:	gnome-libs >= 1.0.4 
+Requires:	esound = 0.2.8
+Requires:	libgtop = 1.0.1
+Requires:	gtk+ = 1.2.0
+Requires:	glib = 1.2.0
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	gnome
@@ -75,7 +75,7 @@ make \
 
 strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
-bzip2 -9 AUTHORS ChangeLog NEWS README
+gzip -9nf AUTHORS ChangeLog NEWS README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -85,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,NEWS,README}.bz2
+%doc {AUTHORS,ChangeLog,NEWS,README}.gz
 
 %dir /etc/X11/GNOME/CORBA
 %dir /etc/X11/GNOME/CORBA/servers
@@ -96,27 +96,28 @@ rm -rf $RPM_BUILD_ROOT
 %config /usr/X11R6/share/default.session
 
 %attr(755,root,root) /usr/X11R6/bin/*
-%attr(755,root,root) /usr/X11R6/lib/lib*.so.*
+%attr(755,root,root) /usr/X11R6/lib/lib*.so.*.*
 
 /usr/X11R6/share/applets
-/usr/X11R6/share/apps
+/usr/X11R6/share/gnome/apps/*
 /usr/X11R6/share/gnome/help/*
 /usr/X11R6/share/mc
 
 /usr/X11R6/share/pixmaps/*
+/usr/X11R6/share/xmodmap
 
 %lang(ca)    /usr/X11R6/share/locale/ca/LC_MESSAGES/gnome-core.mo
 %lang(cs)    /usr/X11R6/share/locale/cs/LC_MESSAGES/gnome-core.mo
 %lang(da)    /usr/X11R6/share/locale/da/LC_MESSAGES/gnome-core.mo
 %lang(de)    /usr/X11R6/share/locale/de/LC_MESSAGES/gnome-core.mo
 %lang(es)    /usr/X11R6/share/locale/es/LC_MESSAGES/gnome-core.mo
-%lang(es_DO) /usr/X11R6/share/locale/es_DO/LC_MESSAGES/gnome-core.mo
-%lang(es_GT) /usr/X11R6/share/locale/es_GT/LC_MESSAGES/gnome-core.mo
-%lang(es_HN) /usr/X11R6/share/locale/es_HN/LC_MESSAGES/gnome-core.mo
+#%lang(es_DO) /usr/X11R6/share/locale/es_DO/LC_MESSAGES/gnome-core.mo
+#%lang(es_GT) /usr/X11R6/share/locale/es_GT/LC_MESSAGES/gnome-core.mo
+#%lang(es_HN) /usr/X11R6/share/locale/es_HN/LC_MESSAGES/gnome-core.mo
 %lang(es_MX) /usr/X11R6/share/locale/es_MX/LC_MESSAGES/gnome-core.mo
-%lang(es_PA) /usr/X11R6/share/locale/es_PA/LC_MESSAGES/gnome-core.mo
-%lang(es_PE) /usr/X11R6/share/locale/es_PE/LC_MESSAGES/gnome-core.mo
-%lang(es_SV) /usr/X11R6/share/locale/es_SV/LC_MESSAGES/gnome-core.mo
+#%lang(es_PA) /usr/X11R6/share/locale/es_PA/LC_MESSAGES/gnome-core.mo
+#%lang(es_PE) /usr/X11R6/share/locale/es_PE/LC_MESSAGES/gnome-core.mo
+#%lang(es_SV) /usr/X11R6/share/locale/es_SV/LC_MESSAGES/gnome-core.mo
 %lang(fi)    /usr/X11R6/share/locale/fi/LC_MESSAGES/gnome-core.mo
 %lang(fr)    /usr/X11R6/share/locale/fr/LC_MESSAGES/gnome-core.mo
 %lang(ga)    /usr/X11R6/share/locale/ga/LC_MESSAGES/gnome-core.mo
