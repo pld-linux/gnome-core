@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.1.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
