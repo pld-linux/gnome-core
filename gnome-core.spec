@@ -2,7 +2,7 @@ Summary:	GNOME core programs
 Summary(pl):	Programy podstawowe GNOME'a 
 Name:		gnome-core
 Version:	1.0.5
-Release:	1
+Release:	2
 Copyright:	LGPL
 Group:		X11/GNOME
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
@@ -10,6 +10,11 @@ Patch0:		gnome-core-DESTDIR.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
+BuildPrereq:	gnome-libs-devel
+BuildPrereq:	gtk+ >= 1.2.0
+BuildPrereq:	XFree86-devel
+BuildPrereq:	ORBit-devel
+BuildPrereq:	gettext
 Obsoletes:	gnome
 
 %description
@@ -81,10 +86,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir /etc/X11/GNOME/CORBA/servers
 %config /etc/X11/GNOME/CORBA/servers/*
 %config /etc/X11/GNOME/sound/events/panel.soundlist
-
-%config /usr/X11R6/share/panelrc
-%config /usr/X11R6/share/gnome/default.session
-%config /usr/X11R6/share/gnome/default.wm
 
 %attr(755,root,root) /usr/X11R6/bin/*
 %attr(755,root,root) /usr/X11R6/lib/lib*.so.*.*
@@ -199,6 +200,10 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv)    /usr/X11R6/share/locale/sv/LC_MESSAGES/gnome-core.mo
 %lang(wa)    /usr/X11R6/share/locale/wa/LC_MESSAGES/gnome-core.mo
 
+%config /usr/X11R6/share/panelrc
+%config /usr/X11R6/share/gnome/default.session
+%config /usr/X11R6/share/gnome/default.wm
+
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) /usr/X11R6/lib/lib*.so
@@ -207,9 +212,15 @@ rm -rf $RPM_BUILD_ROOT
 /usr/X11R6/include/*
 
 %files static
-%attr(644,root,root) /usr/X11R6/lib/lib*.a
+%defattr(644,root,root,755)
+/usr/X11R6/lib/lib*.a
 
 %changelog
+* Thu Apr 22 1999 Artur Frysiak <wiget@pld.org.pl>
+  [1.0.5-2]
+- compiled on rpm 3
+- replacement in %%files
+
 * Tue Apr 13 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.0.5-1]
 - gzipping %doc,
