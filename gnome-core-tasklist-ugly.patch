@@ -1,0 +1,12 @@
+diff -urN gnome-core-1.3.1.org/applets/tasklist/tasklist_applet.c gnome-core-1.3.1/applets/tasklist/tasklist_applet.c
+--- gnome-core-1.3.1.org/applets/tasklist/tasklist_applet.c	Wed Mar  7 12:52:17 2001
++++ gnome-core-1.3.1/applets/tasklist/tasklist_applet.c	Wed Mar  7 12:53:08 2001
+@@ -112,7 +112,7 @@
+ 
+ 	das_string = task->gwmh_task->name;
+ 
+-	label_len = gdk_string_width (tasklist->area->style->font, das_string);
++	label_len = task->gwmh_task->name ? gdk_string_width (tasklist->area->style->font, das_string) : 0;
+ 
+ 	overhead = tasklist->config.show_mini_icons ? 30 : 6;
+ 

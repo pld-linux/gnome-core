@@ -17,6 +17,7 @@ Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
 Patch3:		%{name}-make.patch
+Patch4:		%{name}-tasklist-ugly.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel
@@ -132,6 +133,7 @@ GNOME core static libraries.
 %patch1	-p1
 %patch2	-p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 libtoolize --copy --force
