@@ -84,6 +84,15 @@ diff -urN gnome-core-1.3.1.org/gsm/Makefile.am gnome-core-1.3.1/gsm/Makefile.am
  
  if SESSION
  noinst_DATA = session.desktop
+@@ -48,7 +48,7 @@
+ 
+ default_DATA = default.session default.wm
+ 
+-desktopdir = $(datadir)/gnome/apps/Settings/Session/
++desktopdir = $(datadir)/applnk/GNOME/Settings/Session/
+ desktop_DATA = save-session.desktop session.desktop
+ 
+ sysdir = $(datadir)/control-center/Session
 @@ -57,7 +57,7 @@
  sys_DATA = session-properties.desktop
  endif
