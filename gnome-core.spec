@@ -157,7 +157,7 @@ mv -f configure.in.tmp configure.in
 rm -f missing acinclude.m4
 %{__libtoolize}
 xml-i18n-toolize --copy --force
-gettextize --copy --force
+%{__gettextize}
 aclocal -I %{_aclocaldir}/gnome
 autoheader
 %{__autoconf}
