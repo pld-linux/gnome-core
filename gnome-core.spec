@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -33,7 +33,7 @@ BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	automake
-BuildRequires:	bzip2-devel >= 1.0
+BuildRequires:	bzip2-devel >= 1.0.1
 # BuildRequires:	gtkhtml-static >= 0.2
 # BuildRequires:	gnome-print-static
 Requires:	applnk
