@@ -113,7 +113,7 @@ gn a dadnjî po-z astaler GNOME.
 Summary:	GNOME core libraries, includes, etc
 Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
-Summary(pl):	GNOME core - pliki nag³ówkowe itp.
+Summary(pl):	GNOME core - pliki nag³ówkowe itp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 Requires:	gtk-doc-common
