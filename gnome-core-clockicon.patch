@@ -1,8 +1,8 @@
---- gnome-core-1.4.0.4/applets/gen_util/clock_applet.desktop.icon	Thu Jul 19 11:49:55 2001
-+++ gnome-core-1.4.0.4/applets/gen_util/clock_applet.desktop	Thu Jul 19 11:50:00 2001
-@@ -62,6 +62,6 @@
- Comment[zh_TW.Big5]=Æ…ƒ¡
- Comment[zh_CN.GB2312]= ±÷”
+--- gnome-core-1.4.0.5/applets/gen_util/clock_applet.desktop.in~	Sat Jan 26 16:24:26 2002
++++ gnome-core-1.4.0.5/applets/gen_util/clock_applet.desktop.in	Sat Jan 26 16:24:26 2002
+@@ -2,6 +2,6 @@
+ _Name=Clock
+ _Comment=Clock
  Exec=gen_util_clock
 -Icon=
 +Icon=gnome-clock.png

@@ -9,17 +9,6 @@ diff -urN gnome-core-1.4.0.1.org/Makefile.am gnome-core-1.4.0.1/Makefile.am
  	 panel \
  	 applets \
  	 omf-install \
-diff -urN gnome-core-1.4.0.1.org/applets/gen_util/help/es/printer/Makefile.am gnome-core-1.4.0.1/applets/gen_util/help/es/printer/Makefile.am
---- gnome-core-1.4.0.1.org/applets/gen_util/help/es/printer/Makefile.am	Sat Apr  7 14:24:34 2001
-+++ gnome-core-1.4.0.1/applets/gen_util/help/es/printer/Makefile.am	Sat Apr  7 14:59:00 2001
-@@ -3,6 +3,7 @@
-         printer-fig.png\
-         printer-properties.png
- lang = es
-+omffiles =
- sgml_ents = $(applet).sgml
- include $(top_srcdir)/applet-docs.make
- dist-hook: applet-dist-hook
 diff -urN gnome-core-1.4.0.1.org/gnome-terminal/da/Makefile.am gnome-core-1.4.0.1/gnome-terminal/da/Makefile.am
 --- gnome-core-1.4.0.1.org/gnome-terminal/da/Makefile.am	Sat Apr  7 14:24:31 2001
 +++ gnome-core-1.4.0.1/gnome-terminal/da/Makefile.am	Sat Apr  7 14:59:00 2001
@@ -41,17 +30,6 @@ diff -urN gnome-core-1.4.0.1.org/gnome-terminal/it/Makefile.am gnome-core-1.4.0.
 +omffiles =
  # Commenting out for now b/c TOC extraction is broken for this SGML file
  #omffiles = gnome-terminal-it.omf
- include $(top_srcdir)/app-docs.make
-diff -urN gnome-core-1.4.0.1.org/gnome-terminal/no/Makefile.am gnome-core-1.4.0.1/gnome-terminal/no/Makefile.am
---- gnome-core-1.4.0.1.org/gnome-terminal/no/Makefile.am	Sat Apr  7 14:24:31 2001
-+++ gnome-core-1.4.0.1/gnome-terminal/no/Makefile.am	Sat Apr  7 14:59:00 2001
-@@ -1,6 +1,7 @@
- figs =
- app = gnome-terminal
- lang = no
-+omffiles =
- # Commenting out for now b/c TOC extraction is broken for this SGML file
- # omffiles = gnome-terminal-no.omf
  include $(top_srcdir)/app-docs.make
 diff -urN gnome-core-1.4.0.1.org/sgmldocs.make gnome-core-1.4.0.1/sgmldocs.make
 --- gnome-core-1.4.0.1.org/sgmldocs.make	Sat Apr  7 14:24:30 2001
