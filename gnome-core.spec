@@ -38,6 +38,7 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	libtool
 BuildRequires:	xml-i18n-tools
 BuildRequires:	docbook-dtd31-sgml
 BuildRequires:	flex
@@ -90,7 +91,7 @@ pour installer GNOME.
 
 %description -l pl
 Podstawowe programy i biblioteki, które s± niezbêdne przy ka¿dej
-instlacji GNOME.
+instalacji GNOME.
 
 %description -l wa
 GNOME (Evironmint di Modeles Objet pa Rantoele di GNOME) est on
@@ -105,7 +106,7 @@ gn a dadnjî po-z astaler GNOME.
 Summary:	GNOME core libraries, includes, etc
 Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
-Summary(pl):	GNOME core - pliki nag³ówkowe, etc
+Summary(pl):	GNOME core - pliki nag³ówkowe itp.
 Group:		X11/Development/Libraries
 Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
@@ -121,7 +122,7 @@ Bibliotecas y include de la base de gnome-core.
 Bibliothèques et fichiers d'en-tête pour la base de gnome-core.
 
 %description -l pl devel
-Pliki nag³ówkowe etc do GNOME core.
+Pliki nag³ówkowe itp. do GNOME core.
 
 %package static
 Summary:	GNOME core static libraries
@@ -135,7 +136,7 @@ Requires:	%{name}-devel = %{version}
 GNOME core static libraries.
 
 %description -l pl static
-Statyczne bibliteki GNOME core.
+Statyczne biblioteki GNOME core.
 
 %prep
 %setup -q
