@@ -6,10 +6,11 @@ Release:     1
 Copyright:   LGPL
 Group:       X11/Libraries
 Source:      ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
+Patch0:      gnome-core.patch
 Icon:        gnome-core.gif
-URL:         http://www.gnome.org/
 Requires:    gnome-libs = 0.99.1, esound = 0.2.7, libgtop = 0.99.1,
 Requires:    gtk = 1.1.12, glib = 1.1.12
+URL:         http://www.gnome.org/
 BuildRoot:   /tmp/%{name}-%{version}-root
 Obsoletes:   gnome
 
@@ -48,6 +49,7 @@ GNOME core static libraries.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
@@ -73,7 +75,8 @@ strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 %defattr(644, root, root, 755)
 %doc AUTHORS ChangeLog NEWS README
 
-%dir /etc/X11/GNOME/CORBA/servers/
+%dir /etc/X11/GNOME/CORBA
+%dir /etc/X11/GNOME/CORBA/servers
 %config /etc/X11/GNOME/CORBA/servers/*
 %config /etc/X11/GNOME/sound/events/panel.soundlist
 
@@ -85,7 +88,6 @@ strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
 /usr/X11R6/share/applets
 /usr/X11R6/share/apps
-/usr/X11R6/share/control-center
 /usr/X11R6/share/gnome/help/*
 
 /usr/X11R6/share/pixmaps/*
@@ -105,7 +107,7 @@ strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 %lang(fi)    /usr/X11R6/share/locale/fi/LC_MESSAGES/gnome-core.mo
 %lang(fr)    /usr/X11R6/share/locale/fr/LC_MESSAGES/gnome-core.mo
 %lang(ga)    /usr/X11R6/share/locale/ga/LC_MESSAGES/gnome-core.mo
-%lang(hu)    /usr/X11R6/share/locale/ht/LC_MESSAGES/gnome-core.mo
+%lang(hu)    /usr/X11R6/share/locale/hu/LC_MESSAGES/gnome-core.mo
 %lang(it)    /usr/X11R6/share/locale/it/LC_MESSAGES/gnome-core.mo
 %lang(ja)    /usr/X11R6/share/locale/ja/LC_MESSAGES/gnome-core.mo
 %lang(ko)    /usr/X11R6/share/locale/ko/LC_MESSAGES/gnome-core.mo
