@@ -22,7 +22,7 @@ BuildRequires:	gnome-libs-devel
 BuildRequires:	gtk+ >= 1.2.0
 BuildRequires:	XFree86-devel
 BuildRequires:	ORBit-devel
-BuildRequires:	gettext
+BuildRequires:	gettext-devel
 Obsoletes:	gnome
 
 %description
