@@ -13,10 +13,8 @@ Patch1:		gnome-core-gdmlang.patch
 Patch2:		gnome-core-hbfixlangs.patch
 Patch3:		gnome-core-htmlicon.patch
 Patch4:		gnome-core-smallfont.patch
-Patch5:		gnome-core-mergerhmenus.patch
-Patch6:		gnome-core-mergerhmenus2.patch
-Patch7:		gnome-core-newsession-1.patch
-Patch8:		gnome-core-nodisc.patch
+Patch5:		gnome-core-newsession-1.patch
+Patch6:		gnome-core-nodisc.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -71,8 +69,6 @@ GNOME core static libraries.
 %patch4 -p1
 %patch5 -p1
 %patch6 -p1
-%patch7 -p1
-%patch8 -p1
 
 %build
 CFLAGS="-DHAVE_CONTROL_CENTER $RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
