@@ -113,7 +113,79 @@
  bin_PROGRAMS = gnome-session save-session gnome-login-check session-properties gnome-libice-check session-properties-capplet
 --- gnome-core-1.4.0.4/desktop-links/Makefile.am~	Tue Sep 18 06:41:28 2001
 +++ gnome-core-1.4.0.4/desktop-links/Makefile.am	Tue Sep 18 06:41:49 2001
-@@ -91,9 +91,7 @@
+@@ -33,67 +33,25 @@
+ 	Development.directory   \
+ 	Settings.directory
+ 
+-Multimedia_DATA = \
+-	XEphem.desktop		\
+-	XMcd.desktop		\
+-	xmix.desktop      	\
+-	realplayer.desktop	\
+-	GXanim.desktop		\
+-	XMcd.desktop		\
+-	realplayer.desktop	\
+-	xmix.desktop
+-
+-
+-Utilities_DATA = \
+-	Xemacs.desktop		\
+-	gaspell.desktop   	\
+-	FileRunner.desktop	\
+-	TkSETI.desktop		\
+-	rxvt.desktop		\
+-	lynx.desktop		\
+-	xbmbrowser.desktop	\
+-	Vim.desktop		\
+-	xcolsel.desktop		\
+-	FileRunner.desktop
+-
+-Applications_DATA = \
+-	Emacs.desktop		\
+-	Vim.desktop		\
+-	WordPerfect.desktop	\
+-	Xemacs.desktop		\
+-	XEphem.desktop		\
+-	gaspell.desktop
+-
+-Graphics_DATA = \
+-	GIMP.desktop		\
+-	xv.desktop		\
+-	xbmbrowser.desktop
+-
+-System_DATA = \
+-	UNIX.desktop		\
+-	UNIX-regular.desktop	\
+-	Eterm.desktop		\
+-	Kterm.desktop		\
+-	Vnterm.desktop
+-
+-Settings_DATA =	\
+-	Imlib_config.desktop
+-
+-Internet_DATA = \
+-	Netscape.desktop	\
+-	Tkrat.desktop	        \
+-	TkSETI.desktop		\
+-	Tkrat.desktop		\
+-	lynx.desktop
++Multimedia_DATA =
++
++Utilities_DATA =
++
++Applications_DATA =
++
++Graphics_DATA =
+ 
+-Root_DATA = \
+-	Gmc.desktop
++System_DATA =
++
++Settings_DATA =
++
++Internet_DATA =
++
++Root_DATA =
  
  ## We explicitly define these so that the appropriate directories will
  ## be made at install time.
