@@ -5,12 +5,10 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.0.6
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.bz2
 Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
@@ -113,41 +111,37 @@ Summary(es):	Bibliotecas, includes, etc de la base de gnome-core
 Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
 Summary(pl):	GNOME core - pliki nag³ówkowe itp.
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
 %description devel
 Header files for gnome-libs.
 
-%description -l es devel
+%description devel -l es
 Bibliotecas y include de la base de gnome-core.
 
-%description -l fr devel
+%description devel -l fr
 Bibliothèques et fichiers d'en-tête pour la base de gnome-core.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe itp. do GNOME core.
 
 %package static
 Summary:	GNOME core static libraries
 Summary(pl):	Biblioteki statyczne GNOME core
 Group:		X11/Development/Libraries
-Group(de):	X11/Entwicklung/Libraries
-Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
 %description static
 GNOME core static libraries.
 
-%description -l pl static
+%description static -l pl
 Statyczne biblioteki GNOME core.
 
 %prep
 %setup -q
-%patch0 -p1 
-%patch1	-p1
-%patch2	-p1
+%patch0 -p1
+%patch1 -p1
+%patch2 -p1
 %patch3 -p1
 %patch4 -p1
 %patch5 -p1
@@ -183,7 +177,7 @@ install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	omf_dest_dir=%{_omf_dest_dir}/omf/%{name}
-	
+
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
 install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
