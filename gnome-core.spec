@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.2.4
-Release:	3
+Version:	1.3.1
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -16,7 +16,7 @@ Source1:	%{name}-Settings.order
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
-Patch3:		%{name}-applet-docs.make.patch
+Patch3:		%{name}-make.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel
@@ -33,9 +33,14 @@ BuildRequires:	esound-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	automake
+BuildRequires:	autoconf
+BuildRequires:	xml-i18n-tools
+BuildRequires:	docbook-dtd31-sgml
+BuildRequires:	flex
+BuildRequires:	bison
+BuildRequires:	gtkhtml-devel >= 0.2
+BuildRequires:	libglade-devel >= 0.14
 BuildRequires:	bzip2-devel >= 1.0.1
-# BuildRequires:	gtkhtml-static >= 0.2
-# BuildRequires:	gnome-print-static
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
@@ -126,12 +131,15 @@ GNOME core static libraries.
 %patch0 -p1 
 %patch1	-p1
 %patch2	-p1
-%patch3	-p1
+%patch3 -p1
 
 %build
+libtoolize --copy --force
 gettextize --copy --force
+xml-i18n-toolize --copy --force
+aclocal -I macros
 autoheader
-automake
+automake -a -c --force-missing
 autoconf
 CFLAGS="-DHAVE_CONTROL_CENTER %{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 CXXFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
@@ -186,6 +194,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/System/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/gnome-help.desktop
+%{_applnkdir}/.*
 
 %{_pixmapsdir}/*xpm
 %{_pixmapsdir}/*png
