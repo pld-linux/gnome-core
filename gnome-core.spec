@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.1.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -203,6 +203,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/fish
 %{_datadir}/pixmaps/mailcheck
 %{_datadir}/pixmaps/tiles
+%{_datadir}/pixmaps/splash
 
 %config %{_datadir}/panelrc
 %config %{_datadir}/gnome/default.session
