@@ -2,16 +2,21 @@ Summary:	GNOME core programs
 Summary(pl):	Programy podstawowe GNOME'a 
 Name:		gnome-core
 Version:	1.0.6
-Release:	1
+Release:	2
 Copyright:	LGPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
+Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-asclock.patch
 Patch1:		gnome-core-gdmlang.patch
 Patch2:		gnome-core-hbfixlangs.patch
 Patch3:		gnome-core-htmlicon.patch
 Patch4:		gnome-core-smallfont.patch
+Patch5:		gnome-core-mergerhmenus.patch
+Patch6:		gnome-core-mergerhmenus2.patch
+Patch7:		gnome-core-newsession-1.patch
+Patch8:		gnome-core-nodisc.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -64,6 +69,10 @@ GNOME core static libraries.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
+%patch8 -p1
 
 %build
 CFLAGS="-DHAVE_CONTROL_CENTER $RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
@@ -78,6 +87,8 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 make DESTDIR=$RPM_BUILD_ROOT install
+
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/gnome/apps/Settings/.order
 
 strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
@@ -158,6 +169,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir /usr/X11R6/share/gnome/help/mini-commander_applet
 /usr/X11R6/share/gnome/help/mini-commander_applet/C
 
+/usr/X11R6/share/gnome/apps/Settings/.order
+
 /usr/X11R6/share/pixmaps/*xpm
 /usr/X11R6/share/pixmaps/*png
 /usr/X11R6/share/pixmaps/fish
@@ -214,6 +227,10 @@ rm -rf $RPM_BUILD_ROOT
 /usr/X11R6/lib/lib*.a
 
 %changelog
+* Tue Jun 15 1999 Jan Rêkorajski <baggins@pld.org.pl>
+  [1.0.6-2]
+- added patches from RH
+
 * Thu Apr 22 1999 Artur Frysiak <wiget@pld.org.pl>
   [1.0.5-2]
 - compiled on rpm 3
