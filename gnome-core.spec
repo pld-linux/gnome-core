@@ -212,8 +212,8 @@ install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
 
 %find_lang %{name}-tmp --with-gnome --all-name
 
-grep 'gnome-core\.mo\|gnome/help/panel/' %{name}-tmp.lang > %{name}-libs.lang
-grep -v 'gnome-core\.mo\|gnome/help/panel/' %{name}-tmp.lang > %{name}.lang
+grep 'gnome-core\.mo\|gnome/help/panel' %{name}-tmp.lang > %{name}-libs.lang
+grep -v 'gnome-core\.mo\|gnome/help/panel' %{name}-tmp.lang > %{name}.lang
 
 %clean
 rm -rf $RPM_BUILD_ROOT
