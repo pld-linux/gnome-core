@@ -12,6 +12,7 @@ Group(pl):	X11/GNOME
 Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
+Patch1:		gnome-core-TERM.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -114,6 +115,7 @@ GNOME core static libraries.
 %prep
 %setup -q
 %patch0 -p1 
+%patch1	-p1
 
 %build
 

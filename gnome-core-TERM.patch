@@ -1,0 +1,26 @@
+diff -urN gnome-core-1.1.3.orig/gnome-terminal/gnome-terminal.c gnome-core-1.1.3/gnome-terminal/gnome-terminal.c
+--- gnome-core-1.1.3.orig/gnome-terminal/gnome-terminal.c	Tue Feb  1 22:01:28 2000
++++ gnome-core-1.1.3/gnome-terminal/gnome-terminal.c	Tue Feb 15 14:25:03 2000
+@@ -2196,7 +2196,7 @@
+ 		if (cfg->termname && cfg->termname [0])
+ 			env_copy [term_pos] = cfg->termname;
+ 		else
+-			env_copy [term_pos] = "TERM=xterm";
++			env_copy [term_pos] = "TERM=xterm-color";
+ 
+ 		if (cmd){
+ 			environ = env_copy;
+@@ -2304,11 +2304,11 @@
+ 		cfg->invoke_as_login_shell = gnome_config_get_bool("invoke_as_login_shell");
+ 		{
+ 			char *ctmp;
+-			ctmp = gnome_config_get_string("termname=xterm");
++			ctmp = gnome_config_get_string("termname=xterm-color");
+ 			if(ctmp && *ctmp)
+ 				cfg->termname = g_strconcat("TERM=", ctmp, NULL);
+ 			else
+-				cfg->termname = g_strdup("TERM=xterm");
++				cfg->termname = g_strdup("TERM=xterm-color");
+ 			g_free(ctmp);
+ 		}
+ 		cfg->window_title = gnome_config_get_string("window_title");
