@@ -4,14 +4,14 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.4.0.1
-Release:	1
+Version:	1.4.0.2
+Release:	2
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
-Source0:	ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gnome-core/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.bz2
 Source1:	%{name}-Settings.order
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-TERM.patch
@@ -43,6 +43,8 @@ BuildRequires:	gtkhtml-devel >= 0.2
 BuildRequires:	libglade-devel >= 0.14
 BuildRequires:	bzip2-devel >= 1.0.1
 BuildRequires:	scrollkeeper
+Prereq:		/sbin/ldconfig
+Prereq:		scrollkeeper
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
@@ -50,6 +52,7 @@ Obsoletes:	gnome
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_mandir		%{_prefix}/man
+%define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
 
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
@@ -160,26 +163,31 @@ CXXFLAGS="%{rpmldflags}"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
-
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	omf_dest_dir=%{_omf_dest_dir}
+	
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
-mv -f $RPM_BUILD_ROOT%{_applnkdir}/Settings/{[!G]*,GNOME}
 
-gzip -9nf AUTHORS ChangeLog NEWS README \
-	$RPM_BUILD_ROOT%{_mandir}/man?/*
+gzip -9nf AUTHORS ChangeLog NEWS README
 
 %find_lang %{name} --with-gnome --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post
+/sbin/ldconfig
+/usr/bin/scrollkeeper-update
+
+%postun
+/sbin/ldconfig
+/usr/bin/scrollkeeper-update
+
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc {AUTHORS,ChangeLog,NEWS,README}.gz
+%doc {AUTHORS,NEWS,README}.gz
 
 %dir %{_sysconfdir}/CORBA
 %dir %{_sysconfdir}/CORBA/servers
@@ -195,7 +203,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_datadir}/gnome/hints
 %{_datadir}/gnome-about
-
+%{_omf_dest_dir}/omf/%{name}
 %{_applnkdir}/Settings/GNOME
 %{_applnkdir}/System/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
@@ -215,6 +223,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
+%doc ChangeLog.gz
 %attr(755,root,root) %{_libdir}/lib*.so
 %attr(755,root,root) %{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/*.sh
