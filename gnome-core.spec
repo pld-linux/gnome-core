@@ -4,7 +4,7 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.1
+Version:	1.1.2
 Release:	1
 License:	LGPL
 Group:		X11/GNOME
@@ -12,13 +12,14 @@ Group(pl):	X11/GNOME
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/unsources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
-Patch1:		gnome-core-DESTDIR.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	gtk+ >= 1.2.0
+BuildRequires:	gdk-pixbuf-devel >= 0.5.0
+BuildRequires:	control-center-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	ORBit-devel
 BuildRequires:	gettext-devel
@@ -104,8 +105,7 @@ GNOME core static libraries.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
+%patch0 -p1 
 
 %build
 
@@ -188,8 +188,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Settings/gmenu.desktop
 %{_applnkdir}/Settings/gnome-hint-properties.desktop
 %{_applnkdir}/Settings/gnome-panel-properties.desktop
-%{_applnkdir}/Settings/save-session.desktop
-%{_applnkdir}/Settings/session.desktop
+%{_applnkdir}/Settings/Session/save-session.desktop
+%{_applnkdir}/Settings/Session/session.desktop
 %dir %{_applnkdir}/System
 %dir %{_applnkdir}/Utilities
 %{_applnkdir}/Utilities/gnome-terminal.desktop
