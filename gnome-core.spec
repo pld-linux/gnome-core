@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.3
-Release:	2
+Version:	1.1.4
+Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -198,8 +198,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_applnkdir}/Settings/gmenu.desktop
 %{_applnkdir}/Settings/gnome-hint-properties.desktop
 %{_applnkdir}/Settings/gnome-panel-properties.desktop
-%{_applnkdir}/Settings/Session/save-session.desktop
-%{_applnkdir}/Settings/Session/session.desktop
+%{_applnkdir}/Settings/Session
+%{_applnkdir}/Settings/Desktop
 %dir %{_applnkdir}/System
 %dir %{_applnkdir}/Utilities
 %{_applnkdir}/Utilities/gnome-terminal.desktop
