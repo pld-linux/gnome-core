@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.2.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -15,6 +15,7 @@ Patch0:		gnome-core-applnk.patch
 Patch1:		gnome-core-TERM.patch
 Patch2:		gnome-core-help_paths.patch
 Patch3:		gnome-core-applet-docs.make.patch
+Patch4:		gnome-core-bzip2.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	gnome-libs-devel
@@ -32,6 +33,9 @@ BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	automake
+BuildRequires:	gtkhtml-static >= 0.2
+BuildRequires:	bzip2-devel >= 1.0
+BuildRequires:	gnome-print-static
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
@@ -121,18 +125,21 @@ GNOME core static libraries.
 %patch1	-p1
 %patch2	-p1
 %patch3	-p1
+%patch4	-p1
 
 %build
 
 gettextize --copy --force
+autoheader
+automake
+autoconf
 CFLAGS="-DHAVE_CONTROL_CENTER $RPM_OPT_FLAGS"
 CXXFLAGS="$RPM_OPT_FLAGS"
 LDFLAGS="-s"
 export CFLAGS CXXFLAGS LDFLAGS
-automake
 %configure \
 	--without-included-gettext \
-	--with-window-manager=enlightenment
+	--enable-gtkhtml-help
 
 make
 
