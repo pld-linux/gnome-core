@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.6
-Release:	3
+Version:	1.1.7
+Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -167,6 +167,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/control-center/Desktop
 %{_datadir}/control-center/Session/*.desktop
 
+%dir %{_datadir}/gnome/help/gen_util_applet
+%lang(en) %{_datadir}/gnome/help/gen_util_applet/C
+
 %dir %{_datadir}/gnome/help/gnome-terminal
 %lang(en) %{_datadir}/gnome/help/gnome-terminal/C
 %lang(da) %{_datadir}/gnome/help/gnome-terminal/da
@@ -197,9 +200,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %dir %{_datadir}/gnome/help/fish_applet
 %lang(en) %{_datadir}/gnome/help/fish_applet/C
-
-%dir %{_datadir}/gnome/help/mailcheck_applet
-%lang(en) %{_datadir}/gnome/help/mailcheck_applet/C
 
 %dir %{_datadir}/gnome/help/panel
 %lang(en) %{_datadir}/gnome/help/panel/C
