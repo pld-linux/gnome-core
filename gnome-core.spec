@@ -8,8 +8,8 @@ Group:       X11/Libraries
 Source:      ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
 Patch0:      gnome-core.patch
 Icon:        gnome-core.gif
-Requires:    gnome-libs = 0.99.1, esound = 0.2.7, libgtop = 0.99.1,
-Requires:    gtk = 1.1.12, glib = 1.1.12
+Requires:    gnome-libs = 0.99.2, esound = 0.2.7, libgtop = 0.99.1,
+Requires:    gtk+ = 1.1.12, glib = 1.1.12
 URL:         http://www.gnome.org/
 BuildRoot:   /tmp/%{name}-%{version}-root
 Obsoletes:   gnome
