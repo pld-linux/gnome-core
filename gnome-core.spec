@@ -22,10 +22,8 @@ BuildRequires:	gtk+ >= 1.2.5
 BuildRequires:	gtk+-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.7.0
 BuildRequires:	control-center-devel
-BuildRequires:	XFree86-devel
 BuildRequires:	ORBit-devel
 BuildRequires:	gettext-devel
-BuildRequires:	glib-devel
 BuildRequires:	libxml-devel
 BuildRequires:	zlib-devel
 BuildRequires:	esound-devel
