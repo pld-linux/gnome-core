@@ -4,7 +4,7 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.4.0
+Version:	1.4.0.1
 Release:	1
 Epoch:		1
 License:	GPL
@@ -18,14 +18,14 @@ Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
 Patch3:		%{name}-make.patch
 Patch4:		%{name}-tasklist-ugly.patch
+Patch5:		%{name}-gettext.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
-BuildRequires:	gnome-libs-devel
+BuildRequires:	gnome-libs-devel >= 1.2.13
 BuildRequires:	libgtop-devel >= 1.0.0
-BuildRequires:	gtk+ >= 1.2.5
-BuildRequires:	gtk+-devel
+BuildRequires:	gtk+-devel >= 1.2.5
 BuildRequires:	gdk-pixbuf-devel >= 0.7.0
-BuildRequires:	control-center-devel
+BuildRequires:	control-center-devel >= 1.4.0
 BuildRequires:	ORBit-devel
 BuildRequires:	gettext-devel
 BuildRequires:	libxml-devel
@@ -127,6 +127,9 @@ Requires:	%{name}-devel = %{version}
 %description static
 GNOME core static libraries.
 
+%description -l pl static
+Statyczne bibliteki GNOME core.
+
 %prep
 %setup -q
 %patch0 -p1 
@@ -134,17 +137,18 @@ GNOME core static libraries.
 %patch2	-p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 %build
 libtoolize --copy --force
-gettextize --copy --force
 xml-i18n-toolize --copy --force
+gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome
 autoheader
-automake -a -c --foreign
 autoconf
-CFLAGS="-DHAVE_CONTROL_CENTER %{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
-CXXFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
+automake -a -c --foreign
+CFLAGS="-DHAVE_CONTROL_CENTER %{rpmcflags}"
+CXXFLAGS="%{rpmldflags}"
 %configure \
 	--without-included-gettext \
 	--disable-gtkhtml-help
