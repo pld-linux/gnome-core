@@ -155,7 +155,7 @@ Statyczne biblioteki GNOME core.
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
 mv -f configure.in.tmp configure.in
 rm -f missing acinclude.m4
-libtoolize --copy --force
+%{__libtoolize}
 xml-i18n-toolize --copy --force
 gettextize --copy --force
 aclocal -I %{_aclocaldir}/gnome
