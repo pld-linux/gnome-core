@@ -4,8 +4,8 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.1.5
-Release:	2
+Version:	1.1.6
+Release:	1
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -18,7 +18,7 @@ URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libgtop-devel >= 1.0.0
-BuildRequires:	gtk+ >= 1.2.0
+BuildRequires:	gtk+ >= 1.2.5
 BuildRequires:	gtk+-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.5.0
 BuildRequires:	control-center-devel
@@ -32,6 +32,7 @@ BuildRequires:	esound-devel
 BuildRequires:	xpm-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
+BuildRequires:	automake
 Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
@@ -157,7 +158,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %dir %{_sysconfdir}/CORBA
 %dir %{_sysconfdir}/CORBA/servers
-%config %{_sysconfdir}/CORBA/servers/*
+%{_sysconfdir}/CORBA/servers/*
 %config %{_sysconfdir}/sound/events/*
 
 %attr(755,root,root) %{_bindir}/*
@@ -167,13 +168,14 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/control-center/*
 
 %dir %{_datadir}/gnome/help/gnome-terminal
-%{_datadir}/gnome/help/gnome-terminal/C
+%lang(en) %{_datadir}/gnome/help/gnome-terminal/C
 %lang(da) %{_datadir}/gnome/help/gnome-terminal/da
 %lang(es) %{_datadir}/gnome/help/gnome-terminal/es
+%lang(it) %{_datadir}/gnome/help/gnome-terminal/it
 %lang(no) %{_datadir}/gnome/help/gnome-terminal/no
 
 %dir %{_datadir}/gnome/help/help-browser
-%{_datadir}/gnome/help/help-browser/C
+%lang(en) %{_datadir}/gnome/help/help-browser/C
 %lang(ca) %{_datadir}/gnome/help/help-browser/ca
 %lang(da) %{_datadir}/gnome/help/help-browser/da
 %lang(el) %{_datadir}/gnome/help/help-browser/el
@@ -185,8 +187,25 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %{_datadir}/gnome/help/help-browser/it
 %lang(ja) %{_datadir}/gnome/help/help-browser/ja
 %lang(ko) %{_datadir}/gnome/help/help-browser/ko
+%lang(lt) %{_datadir}/gnome/help/help-browser/lt
 %lang(no) %{_datadir}/gnome/help/help-browser/no
+%lang(uk) %{_datadir}/gnome/help/help-browser/uk
 %lang(wa) %{_datadir}/gnome/help/help-browser/wa
+
+%dir %{_datadir}/gnome/help/desk-guide_applet
+%lang(en) %{_datadir}/gnome/help/desk-guide_applet/C
+
+%dir %{_datadir}/gnome/help/fish_applet
+%lang(en) %{_datadir}/gnome/help/fish_applet/C
+
+%dir %{_datadir}/gnome/help/mailcheck_applet
+%lang(en) %{_datadir}/gnome/help/mailcheck_applet/C
+
+%dir %{_datadir}/gnome/help/panel
+%lang(en) %{_datadir}/gnome/help/panel/C
+
+%dir %{_datadir}/gnome/help/tasklist_applet
+%lang(en) %{_datadir}/gnome/help/tasklist_applet/C
 
 %{_datadir}/gnome/hints
 %{_datadir}/gnome-about
