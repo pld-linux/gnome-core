@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.0.4
-Release:	40
+Release:	41
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -14,6 +14,7 @@ Group(pl):	X11/Aplikacje
 Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.bz2
 Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
+Source3:	gnome-wm.1.da
 Patch0:		%{name}-applnk.patch
 Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
@@ -174,6 +175,7 @@ CXXFLAGS="%{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/da/man1
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -181,6 +183,7 @@ rm -rf $RPM_BUILD_ROOT
 	
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.order
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Settings/GNOME/.directory
+install %{SOURCE3} $RPM_BUILD_ROOT%{_mandir}/da/man1/gnome-wm.1
 
 gzip -9nf AUTHORS ChangeLog NEWS README
 
@@ -234,6 +237,7 @@ rm -rf $RPM_BUILD_ROOT
 %config %{_datadir}/gnome/default.wm
 
 %{_mandir}/man?/*
+%lang(da) %{_mandir}/da/man?/*
 
 %files devel
 %defattr(644,root,root,755)
