@@ -194,7 +194,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/pixmaps/tiles
 %{_datadir}/pixmaps/splash
 
-%config %{_datadir}/panelrc
 %config %{_datadir}/gnome/default.session
 %config %{_datadir}/gnome/default.wm
 
