@@ -1,15 +1,15 @@
-diff -ruN gnome-core-1.1.0.orig/desktop-links/Makefile.am gnome-core-1.1.0/desktop-links/Makefile.am
---- gnome-core-1.1.0.orig/desktop-links/Makefile.am	Tue Sep 21 20:01:33 1999
-+++ gnome-core-1.1.0/desktop-links/Makefile.am	Tue Jan 25 13:28:52 2000
+diff -Nru gnome-core-1.1.1/desktop-links/Makefile.am gnome-core-1.1.1.new/desktop-links/Makefile.am
+--- gnome-core-1.1.1/desktop-links/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/desktop-links/Makefile.am	Thu Jan 27 20:27:54 2000
 @@ -1,4 +1,4 @@
 -appsdir = $(datadir)/gnome/apps
 +appsdir = $(datadir)/applnk
  
  Rootdir           = $(appsdir)
  Applicationsdir   = $(appsdir)/Applications
-diff -ruN gnome-core-1.1.0.orig/gmenu/Makefile.am gnome-core-1.1.0/gmenu/Makefile.am
---- gnome-core-1.1.0.orig/gmenu/Makefile.am	Fri Mar 26 23:31:56 1999
-+++ gnome-core-1.1.0/gmenu/Makefile.am	Tue Jan 25 13:28:52 2000
+diff -Nru gnome-core-1.1.1/gmenu/Makefile.am gnome-core-1.1.1.new/gmenu/Makefile.am
+--- gnome-core-1.1.1/gmenu/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/gmenu/Makefile.am	Thu Jan 27 20:27:54 2000
 @@ -26,5 +26,5 @@
  
  EXTRA_DIST = gmenu.desktop top.xpm unknown.xpm
@@ -17,29 +17,29 @@ diff -ruN gnome-core-1.1.0.orig/gmenu/Makefile.am gnome-core-1.1.0/gmenu/Makefil
 -sysdir = $(datadir)/gnome/apps/Settings
 +sysdir = $(datadir)/applnk/Settings
  sys_DATA = gmenu.desktop
-diff -ruN gnome-core-1.1.0.orig/gnome-hint/Makefile.am gnome-core-1.1.0/gnome-hint/Makefile.am
---- gnome-core-1.1.0.orig/gnome-hint/Makefile.am	Mon Oct  4 06:44:23 1999
-+++ gnome-core-1.1.0/gnome-hint/Makefile.am	Tue Jan 25 13:29:43 2000
-@@ -33,5 +33,5 @@
- sys_DATA = gnome-hint-properties.desktop
+diff -Nru gnome-core-1.1.1/gnome-hint/Makefile.am gnome-core-1.1.1.new/gnome-hint/Makefile.am
+--- gnome-core-1.1.1/gnome-hint/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/gnome-hint/Makefile.am	Thu Jan 27 20:27:54 2000
+@@ -37,5 +37,5 @@
+ pixmaps_DATA = gnome-hint.png
  
  install-data-local:
 -	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/gnome/apps/Settings/gnome-hint-properties.desktop
 +	$(INSTALL_DATA) $(srcdir)/gnome-hint-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-hint-properties.desktop
  
-diff -ruN gnome-core-1.1.0.orig/gnome-terminal/Makefile.am gnome-core-1.1.0/gnome-terminal/Makefile.am
---- gnome-core-1.1.0.orig/gnome-terminal/Makefile.am	Thu Oct 21 07:59:40 1999
-+++ gnome-core-1.1.0/gnome-terminal/Makefile.am	Tue Jan 25 13:28:52 2000
-@@ -28,5 +28,5 @@
- 
- gnome_terminal_LDADD = $(LDADD)
+diff -Nru gnome-core-1.1.1/gnome-terminal/Makefile.am gnome-core-1.1.1.new/gnome-terminal/Makefile.am
+--- gnome-core-1.1.1/gnome-terminal/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/gnome-terminal/Makefile.am	Thu Jan 27 20:27:54 2000
+@@ -46,5 +46,5 @@
+ gnorbadir = $(sysconfdir)/CORBA/servers
+ gnorba_DATA = gnome-terminal.gnorba
  
 -utildir = $(datadir)/gnome/apps/Utilities
 +utildir = $(datadir)/applnk/Utilities
  util_DATA = gnome-terminal.desktop
-diff -ruN gnome-core-1.1.0.orig/gsm/Makefile.am gnome-core-1.1.0/gsm/Makefile.am
---- gnome-core-1.1.0.orig/gsm/Makefile.am	Thu Oct 21 02:29:07 1999
-+++ gnome-core-1.1.0/gsm/Makefile.am	Tue Jan 25 13:29:17 2000
+diff -Nru gnome-core-1.1.1/gsm/Makefile.am gnome-core-1.1.1.new/gsm/Makefile.am
+--- gnome-core-1.1.1/gsm/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/gsm/Makefile.am	Thu Jan 27 20:27:54 2000
 @@ -9,7 +9,7 @@
  
  LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
@@ -58,20 +58,31 @@ diff -ruN gnome-core-1.1.0.orig/gsm/Makefile.am gnome-core-1.1.0/gsm/Makefile.am
  desktop_DATA = save-session.desktop session.desktop
  
  default.session: default.in ../config.status
-diff -ruN gnome-core-1.1.0.orig/help-browser/Makefile.am gnome-core-1.1.0/help-browser/Makefile.am
---- gnome-core-1.1.0.orig/help-browser/Makefile.am	Thu Oct 21 07:43:04 1999
-+++ gnome-core-1.1.0/help-browser/Makefile.am	Tue Jan 25 13:28:52 2000
-@@ -76,5 +76,5 @@
+diff -Nru gnome-core-1.1.1/help-browser/Makefile.am gnome-core-1.1.1.new/help-browser/Makefile.am
+--- gnome-core-1.1.1/help-browser/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/help-browser/Makefile.am	Thu Jan 27 20:27:54 2000
+@@ -77,7 +77,7 @@
  gnorbadir = $(sysconfdir)/CORBA/servers
  gnorba_DATA = help-browser.gnorba
  
 -sysdir = $(datadir)/gnome/apps
 +sysdir = $(datadir)/applnk
  sys_DATA = gnome-help.desktop
-diff -ruN gnome-core-1.1.0.orig/panel/Makefile.am gnome-core-1.1.0/panel/Makefile.am
---- gnome-core-1.1.0.orig/panel/Makefile.am	Fri Oct 22 21:33:45 1999
-+++ gnome-core-1.1.0/panel/Makefile.am	Tue Jan 25 13:31:27 2000
-@@ -215,6 +215,6 @@
+ 
+ gnome_downloaddir = $(bindir)
+diff -Nru gnome-core-1.1.1/panel/Makefile.am gnome-core-1.1.1.new/panel/Makefile.am
+--- gnome-core-1.1.1/panel/Makefile.am	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/panel/Makefile.am	Thu Jan 27 20:27:54 2000
+@@ -85,8 +85,6 @@
+ 	menu.h  		\
+ 	menu-fentry.c  		\
+ 	menu-fentry.h  		\
+-	menu-rh.c  		\
+-	menu-rh.h  		\
+ 	menu-properties.c	\
+ 	menu-properties.h	\
+ 	menu-util.c		\
+@@ -221,6 +219,6 @@
  sys_DATA = gnome-panel-properties.desktop
  
  install-data-local:
@@ -79,10 +90,76 @@ diff -ruN gnome-core-1.1.0.orig/panel/Makefile.am gnome-core-1.1.0/panel/Makefil
 +	$(INSTALL_DATA) $(srcdir)/gnome-panel-properties.desktop $(DESTDIR)$(datadir)/applnk/Settings/gnome-panel-properties.desktop
  
  $(srcdir)/panel-util.c: $(CORBA_SRCLIST)
-diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
---- gnome-core-1.1.0.orig/panel/menu.c	Fri Oct 22 18:39:53 1999
-+++ gnome-core-1.1.0/panel/menu.c	Tue Jan 25 13:28:52 2000
-@@ -59,7 +59,7 @@
+diff -Nru gnome-core-1.1.1/panel/menu-properties.c gnome-core-1.1.1.new/panel/menu-properties.c
+--- gnome-core-1.1.1/panel/menu-properties.c	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/panel/menu-properties.c	Thu Jan 27 20:33:41 2000
+@@ -94,12 +94,6 @@
+ 	GtkWidget *user_sub = gtk_object_get_data(GTK_OBJECT(widget), "user_sub");
+ 	GtkWidget *applets = gtk_object_get_data(GTK_OBJECT(widget), "applets");
+ 	GtkWidget *applets_sub = gtk_object_get_data(GTK_OBJECT(widget), "applets_sub");
+-	GtkWidget *redhat = gtk_object_get_data(GTK_OBJECT(widget), "redhat");
+-	GtkWidget *redhat_sub = gtk_object_get_data(GTK_OBJECT(widget), "redhat_sub");
+- 	GtkWidget *kde = gtk_object_get_data(GTK_OBJECT(widget), "kde");
+- 	GtkWidget *kde_sub = gtk_object_get_data(GTK_OBJECT(widget), "kde_sub");
+-	GtkWidget *debian = gtk_object_get_data(GTK_OBJECT(widget), "debian");
+-	GtkWidget *debian_sub = gtk_object_get_data(GTK_OBJECT(widget), "debian_sub");
+ 
+ 	GtkWidget *panel = gtk_object_get_data(GTK_OBJECT(widget), "panel");
+ 	GtkWidget *panel_sub = gtk_object_get_data(GTK_OBJECT(widget), "panel_sub");
+@@ -152,21 +146,6 @@
+ 	else if (GTK_TOGGLE_BUTTON (applets)->active)
+ 		menu->main_menu_flags |= MAIN_MENU_APPLETS;
+ 
+-	if(GTK_TOGGLE_BUTTON(redhat_sub)->active)
+-		menu->main_menu_flags |= MAIN_MENU_REDHAT_SUB;
+-	else if (GTK_TOGGLE_BUTTON (redhat)->active)
+-		menu->main_menu_flags |= MAIN_MENU_REDHAT;
+-
+-	if(GTK_TOGGLE_BUTTON(debian_sub)->active)
+-		menu->main_menu_flags |= MAIN_MENU_DEBIAN_SUB;
+-	else if (GTK_TOGGLE_BUTTON (debian)->active)
+-		menu->main_menu_flags |= MAIN_MENU_DEBIAN;
+-
+-	if(GTK_TOGGLE_BUTTON(kde_sub)->active)
+-		menu->main_menu_flags |= MAIN_MENU_KDE_SUB;
+-	else if (GTK_TOGGLE_BUTTON (kde)->active)
+-		menu->main_menu_flags |= MAIN_MENU_KDE;
+-
+ 	if(GTK_TOGGLE_BUTTON(panel_sub)->active)
+ 		menu->main_menu_flags |= MAIN_MENU_PANEL_SUB;
+ 	else if (GTK_TOGGLE_BUTTON(panel)->active)
+@@ -182,7 +161,7 @@
+ 	menu->menu = NULL;
+ 
+ 	{
+-		char *menu_base = gnome_unconditional_datadir_file ("gnome/apps");
++		char *menu_base = gnome_unconditional_datadir_file ("applnk");
+ 		char *this_menu = get_real_menu_path(menu->path,menu_base);
+ 		GSList *list = g_slist_append(NULL,this_menu);
+ 		char *pixmap_name = get_pixmap(this_menu,
+@@ -363,18 +342,6 @@
+ 			      _("Applets: "),"applets",
+ 			      menu->main_menu_flags&MAIN_MENU_APPLETS,
+ 			      menu->main_menu_flags&MAIN_MENU_APPLETS_SUB);
+-	add_menu_type_options(GTK_OBJECT(dialog),GTK_TABLE(table),3,
+-			      _("AnotherLevel menu (if found): "),"redhat",
+-			      menu->main_menu_flags&MAIN_MENU_REDHAT,
+-			      menu->main_menu_flags&MAIN_MENU_REDHAT_SUB);
+- 	add_menu_type_options(GTK_OBJECT(dialog),GTK_TABLE(table),4,
+- 			      _("KDE menu (if found): "),"kde",
+- 			      menu->main_menu_flags&MAIN_MENU_KDE,
+- 			      menu->main_menu_flags&MAIN_MENU_KDE_SUB);
+-	add_menu_type_options(GTK_OBJECT(dialog),GTK_TABLE(table),5,
+-			      _("Debian menu (if found): "),"debian",
+-			      menu->main_menu_flags&MAIN_MENU_DEBIAN,
+-			      menu->main_menu_flags&MAIN_MENU_DEBIAN_SUB);
+ 	add_menu_type_options(GTK_OBJECT(dialog),GTK_TABLE(table),6,
+ 			      _("Panel menu: "),"panel",
+ 			      menu->main_menu_flags&MAIN_MENU_PANEL,
+diff -Nru gnome-core-1.1.1/panel/menu.c gnome-core-1.1.1.new/panel/menu.c
+--- gnome-core-1.1.1/panel/menu.c	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/panel/menu.c	Thu Jan 27 20:30:56 2000
+@@ -82,7 +82,7 @@
  	/*just load the menus from disk, don't make the widgets
  	  this just reads the .desktops of the top most directory
  	  and a level down*/
@@ -91,7 +168,7 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  	if(menu)
  		fr_read_dir(NULL,menu,NULL,2);
  	g_free(menu);
-@@ -67,13 +67,10 @@
+@@ -90,13 +90,10 @@
  	if(menu)
  		fr_read_dir(NULL,menu,NULL,2);
  	g_free(menu);
@@ -106,16 +183,35 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  }
  
  /*the most important dialog in the whole application*/
-@@ -130,7 +127,7 @@
+@@ -163,7 +160,7 @@
  {
  	char *s;
  	char *p;
 -	p = gnome_util_home_file("apps");
 +	p = gnome_util_home_file("applnk");
- 	s = g_strdup_printf("cp -r -f %s %s",item_loc,p);
+ 	s = g_strdup_printf("cp -r -f '%s' '%s'",item_loc,p);
  	g_free(p);
  	system(s);
-@@ -649,7 +646,7 @@
+@@ -460,18 +457,6 @@
+ 		MAIN_MENU_APPLETS_SUB | MAIN_MENU_PANEL_SUB |
+ 		MAIN_MENU_DESKTOP_SUB;
+ 	
+-	/*guess redhat menus*/
+-	if (g_file_exists(REDHAT_MENUDIR))
+-		flags |= MAIN_MENU_REDHAT_SUB;
+-
+-	/*guess KDE menus*/
+-	if(g_file_exists(kde_menudir))
+-		flags |= MAIN_MENU_KDE_SUB;
+-
+-	/*guess debian menus*/
+-	if (g_file_exists(DEBIAN_MENUDIR))
+-		flags |= MAIN_MENU_DEBIAN_SUB;
+-
+ 	if(mf)
+ 		load_menu_applet(mf->menudir, flags, current_panel, 0, FALSE);
+ 	else
+@@ -743,7 +728,7 @@
  						   GTK_SIGNAL_FUNC(add_app_to_personal),
  						   sim->item_loc);
  				/*ummmm slightly ugly but should work 99% of time*/
@@ -124,7 +220,7 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  					gtk_widget_set_sensitive(menuitem,FALSE);
  			}
  
-@@ -692,7 +689,7 @@
+@@ -786,7 +771,7 @@
  					   GTK_SIGNAL_FUNC(add_app_to_personal),
  					   sim->mf->menudir);
  			/*ummmm slightly ugly but should work 99% of time*/
@@ -133,7 +229,29 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  				gtk_widget_set_sensitive(menuitem,FALSE);
  
  			menuitem = gtk_menu_item_new ();
-@@ -2068,7 +2065,7 @@
+@@ -829,9 +814,6 @@
+ 	
+ 	gtk_widget_set_sensitive(sim->prop_item,FALSE);
+ 	if(sim->item_loc &&
+-	   /*A HACK: but it works, don't have it edittable if it's redhat
+-	     menus as they are auto generated!*/
+-	   !strstr(sim->item_loc,"/.gnome/apps-redhat/") &&
+ 	   /*if it's a kdelnk file, don't let it be editted*/
+ 	   !is_ext(sim->item_loc,".kdelnk") &&
+ 	   access(sim->item_loc,W_OK)==0) {
+@@ -843,10 +825,7 @@
+ 	} else if(!sim->item_loc || errno==ENOENT) {
+ 		/*the dentry isn't there, check if we can write the
+ 		  directory*/
+-		if(access(sim->mf->menudir,W_OK)==0 &&
+-		   /*A HACK: but it works, don't have it edittable if it's redhat
+-		     menus as they are auto generated!*/
+-		   !strstr(sim->mf->menudir,".gnome/apps-redhat/"))
++		if(access(sim->mf->menudir,W_OK)==0)
+ 			gtk_widget_set_sensitive(sim->prop_item,TRUE);
+ 	}
+ 	
+@@ -2255,7 +2234,7 @@
  static GtkWidget *
  create_system_menu(GtkWidget *menu, int fake_submenus, int fake)
  {
@@ -142,34 +260,163 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  	char *menudir;
  
  	menudir = g_concat_dir_and_file (menu_base, ".");
-@@ -2216,7 +2213,7 @@
- 				   menuitem);
+@@ -2307,45 +2286,6 @@
+ 	return menu;
+ }
+ 
+-static GtkWidget *
+-create_debian_menu(GtkWidget *menu, int fake_submenus, int fake)
+-{
+-	if (!fake || menu) {
+-		menu = create_menu_at (menu, DEBIAN_MENUDIR, FALSE,
+-				       _("Debian menus"), NULL,
+-				       fake_submenus, FALSE);
+-	} else {
+-		menu = create_fake_menu_at (DEBIAN_MENUDIR, FALSE,
+-					    _("Debian menus"), NULL);
+-	}
+-
+-	return menu;
+-}
+-
+-static GtkWidget *
+-create_kde_menu(GtkWidget *menu, int fake_submenus,
+-		int force, int fake)
+-{
+-	char *pixmap_name;
+-
+-	pixmap_name = g_concat_dir_and_file (kde_icondir, "exec.xpm");
+-
+-	if(!fake || menu) {
+-		menu = create_menu_at (menu, 
+-				       kde_menudir, FALSE,
+-				       _("KDE menus"), 
+-				       pixmap_name,
+-				       fake_submenus,
+-				       force);
+-	} else {
+-		menu = create_fake_menu_at (kde_menudir, FALSE,
+-					    _("KDE menus"),
+-					    pixmap_name);
+-	}
+-	g_free (pixmap_name);
+-	return menu;
+-}
+-
+ static void
+ status_unparent(GtkWidget *widget)
+ {
+@@ -3443,12 +3383,10 @@
+ 	GtkWidget *menuitem;
+ 
+ 	int has_inline = (flags & (MAIN_MENU_SYSTEM | MAIN_MENU_USER |
+-				   MAIN_MENU_APPLETS | MAIN_MENU_KDE |
+-				   MAIN_MENU_REDHAT | MAIN_MENU_DEBIAN));
++				   MAIN_MENU_APPLETS));
+ 
+ 	int has_subs = (flags & (MAIN_MENU_SYSTEM_SUB | MAIN_MENU_USER_SUB |
+-				 MAIN_MENU_APPLETS_SUB | MAIN_MENU_KDE_SUB |
+-				 MAIN_MENU_REDHAT_SUB | MAIN_MENU_DEBIAN_SUB));
++				 MAIN_MENU_APPLETS_SUB));
+ 
+ 	int has_inline2 = (flags & (MAIN_MENU_DESKTOP | MAIN_MENU_PANEL));
+ 	int has_subs2 = (flags & (MAIN_MENU_DESKTOP_SUB|MAIN_MENU_PANEL_SUB));
+@@ -3471,24 +3409,12 @@
+ 	if (flags & MAIN_MENU_SYSTEM)
+ 		create_system_menu(root_menu,fake_submenus,FALSE);
+ 	if (flags & MAIN_MENU_USER)
+-		create_user_menu(_("Favorites"), "apps",
++		create_user_menu(_("Favorites"), "applnk",
+ 				 root_menu, "gnome-favorites.png",
+ 				 fake_submenus, FALSE, FALSE);
+ 	if (flags & MAIN_MENU_APPLETS)
+ 		create_applets_menu(root_menu,fake_submenus);
+ 
+-	if (flags & MAIN_MENU_REDHAT) {
+-		rh_submenu_to_display(NULL,NULL);
+-		create_user_menu(_("AnotherLevel menus"), "apps-redhat",
+-				 root_menu, NULL, fake_submenus, FALSE,
+-				 FALSE);
+-	}
+-
+-	if (flags & MAIN_MENU_DEBIAN)
+-		create_debian_menu(root_menu, fake_submenus, FALSE);
+-	if (flags & MAIN_MENU_KDE)
+-		create_kde_menu(root_menu,fake_submenus,FALSE, FALSE);
+-
+ 	/*others here*/
+ 
+ 	if (has_subs && has_inline)
+@@ -3512,7 +3438,7 @@
  	}
  
--	menu = create_user_menu(_("Favorites"),"apps",NULL,
-+	menu = create_user_menu(_("Favorites"),"applnk",NULL,
- 				"gnome-favorites.png", TRUE, TRUE, TRUE);
- 	if(menu) {
- 		menuitem = gtk_menu_item_new ();
-@@ -3260,7 +3257,7 @@
- 		need_separ = TRUE;
- 	}
- 	if(flags&MAIN_MENU_USER && !(flags&MAIN_MENU_USER_SUB)) {
--		root_menu = create_user_menu(_("Favorites"), "apps",
-+		root_menu = create_user_menu(_("Favorites"), "applnk",
- 					     root_menu, "gnome-favorites.png",
- 					     fake_submenus, FALSE, FALSE);
- 		need_separ = TRUE;
-@@ -3311,7 +3308,7 @@
- 		if(need_separ)
- 			add_menu_separator(root_menu);
- 		need_separ = FALSE;
+ 	if (flags & MAIN_MENU_USER_SUB) {
 -		menu = create_user_menu(_("Favorites"), "apps", NULL,
 +		menu = create_user_menu(_("Favorites"), "applnk", NULL,
  					"gnome-favorites.png",
  					fake_submenus, TRUE, TRUE);
  		menuitem = gtk_menu_item_new ();
-@@ -3440,7 +3437,7 @@
+@@ -3539,59 +3465,6 @@
+ 				   GTK_SIGNAL_FUNC(submenu_to_display),
+ 				   menuitem);
+ 	}
+-	if (flags & MAIN_MENU_REDHAT_SUB) {
+-		menu = create_user_menu(_("AnotherLevel menus"), "apps-redhat",
+-					NULL, NULL, fake_submenus, TRUE, TRUE);
+-		menuitem = gtk_menu_item_new ();
+-		setup_menuitem_with_size (menuitem, NULL, 
+-					  _("AnotherLevel menus"),
+-					  size);
+-		gtk_menu_append (GTK_MENU (root_menu), menuitem);
+-		gtk_menu_item_set_submenu (GTK_MENU_ITEM (menuitem), menu);
+-		gtk_signal_connect(GTK_OBJECT(menu),"show",
+-				   GTK_SIGNAL_FUNC(rh_submenu_to_display),
+-				   menuitem);
+-		gtk_signal_connect(GTK_OBJECT(menu),"show",
+-				   GTK_SIGNAL_FUNC(submenu_to_display),
+-				   menuitem);
+-	}
+-	if (flags & MAIN_MENU_DEBIAN_SUB) {
+-		menu = create_debian_menu(NULL,fake_submenus, TRUE);
+-		menuitem = gtk_menu_item_new ();
+-		setup_menuitem_with_size (menuitem, 0, _("Debian menus"),
+-					  size);
+-		gtk_menu_append (GTK_MENU (root_menu), menuitem);
+-		if(menu) {
+-			gtk_menu_item_set_submenu (GTK_MENU_ITEM (menuitem),
+-						   menu);
+-			gtk_signal_connect(GTK_OBJECT(menu),"show",
+-					   GTK_SIGNAL_FUNC(submenu_to_display),
+-					   menuitem);
+-		}
+-	}
+-	if (flags & MAIN_MENU_KDE_SUB) {
+-		GtkWidget *pixmap = NULL;
+-		char *pixmap_path;
+-		menu = create_kde_menu(NULL, fake_submenus, TRUE, TRUE);
+-		pixmap_path = g_concat_dir_and_file (kde_icondir, "exec.xpm");
+-
+-		if (g_file_exists(pixmap_path)) {
+-			pixmap = gnome_stock_pixmap_widget_at_size (
+-				NULL, pixmap_path, size,
+-				size);
+-			if (pixmap)
+-				gtk_widget_show (pixmap);
+-		}
+-		g_free (pixmap_path);
+-		menuitem = gtk_menu_item_new ();
+-		setup_menuitem_with_size (menuitem, pixmap, _("KDE menus"),
+-					  size);
+-		gtk_menu_append (GTK_MENU (root_menu), menuitem);
+-		gtk_menu_item_set_submenu (GTK_MENU_ITEM (menuitem), menu);
+-		gtk_signal_connect(GTK_OBJECT(menu),"show",
+-				   GTK_SIGNAL_FUNC(submenu_to_display),
+-				   menuitem);
+-	}
+ 
+ 	menuitem = gtk_menu_item_new ();
+ 	setup_menuitem_try_pixmap (menuitem, "gnome-tigert.png", 
+@@ -3680,7 +3553,7 @@
  	current_panel = PANEL_WIDGET(menu->button->parent);
  
  	if(!menu->menu) {
@@ -178,7 +425,20 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  		char *this_menu = get_real_menu_path(menu->path,menu_base);
  		GSList *list = g_slist_append(NULL,this_menu);
  		
-@@ -3518,7 +3515,7 @@
+@@ -3690,12 +3563,6 @@
+ 		g_free(this_menu);
+ 
+ 		g_slist_free(list);
+-	} else {
+-		if(menu->main_menu_flags&MAIN_MENU_REDHAT &&
+-		   !(menu->main_menu_flags&MAIN_MENU_REDHAT_SUB))
+-			rh_submenu_to_display(NULL,NULL);
+-
+-		check_and_reread_applet(menu,main_menu);
+ 	}
+ 
+ 	/*so that the panel doesn't pop down until we're
+@@ -3758,7 +3625,7 @@
  	Menu *menu;
  	int main_menu;
  
@@ -187,10 +447,10 @@ diff -ruN gnome-core-1.1.0.orig/panel/menu.c gnome-core-1.1.0/panel/menu.c
  	char *this_menu = get_real_menu_path(arguments,menu_base);
  
  	if (!this_menu) {
-diff -ruN gnome-core-1.1.0.orig/panel/session.c gnome-core-1.1.0/panel/session.c
---- gnome-core-1.1.0.orig/panel/session.c	Thu Oct 21 04:48:41 1999
-+++ gnome-core-1.1.0/panel/session.c	Tue Jan 25 13:30:20 2000
-@@ -673,10 +673,10 @@
+diff -Nru gnome-core-1.1.1/panel/session.c gnome-core-1.1.1.new/panel/session.c
+--- gnome-core-1.1.1/panel/session.c	Thu Jan 27 20:28:29 2000
++++ gnome-core-1.1.1.new/panel/session.c	Thu Jan 27 20:27:54 2000
+@@ -717,10 +717,10 @@
  load_default_applets1(PanelWidget *panel)
  {
  	char *def_launchers[] =
@@ -204,4 +464,4 @@ diff -ruN gnome-core-1.1.0.orig/panel/session.c gnome-core-1.1.0/panel/session.c
 +		"applnk/Applications/Netscape.desktop",
  		NULL };
  	int i;
- 	int flags = MAIN_MENU_SYSTEM|MAIN_MENU_USER|
+ 	char *p;
