@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.1.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
@@ -37,6 +37,7 @@ Obsoletes:	gnome
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_applnkdir	%{_datadir}/applnk
+%define		_mandir		%{_prefix}/man
 
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
