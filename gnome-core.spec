@@ -141,7 +141,7 @@ export CFLAGS CXXFLAGS LDFLAGS
 	--without-included-gettext \
 	--disable-gtkhtml-help
 
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
