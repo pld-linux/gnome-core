@@ -1,0 +1,22 @@
+--- gnome-core-1.4.0.8/applets/fish/Makefile.am~	Thu Feb  6 05:55:15 2003
++++ gnome-core-1.4.0.8/applets/fish/Makefile.am	Thu Feb  6 05:55:15 2003
+@@ -12,6 +12,8 @@
+ #bin_PROGRAMS = fish_applet
+ #else
+ lib_LTLIBRARIES=libfish_applet.la
++
++libfish_applet_la_LDFLAGS = -avoid-version
+ #endif
+ 
+ libfish_applet_la_SOURCES = fish.c
+--- gnome-core-1.4.0.8/applets/gen_util/Makefile.am~	Thu Feb  6 05:58:08 2003
++++ gnome-core-1.4.0.8/applets/gen_util/Makefile.am	Thu Feb  6 05:58:08 2003
+@@ -22,6 +22,8 @@
+ 	remote-helper.c	\
+ 	remote-helper.h
+ 
++libgen_util_applet_la_LDFLAGS = -avoid-version
++
+ PRINTER_BITMAPS = print.xpm
+ MAILCHECK_BITMAPS = email.png email-e.png tux-anim.png email-eclouds.png \
+                     email-tiny.png eclouds.png
