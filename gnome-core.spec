@@ -4,7 +4,7 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.0.40
+Version:	1.0.41
 Release:	1
 Copyright:	LGPL
 Group:		X11/GNOME
@@ -14,6 +14,7 @@ Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-asclock.patch
 Patch1:		gnome-core-smallfont.patch
 Patch2:		gnome-core-nodisc.patch
+Patch3:		gnome-core-applnk.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -27,7 +28,7 @@ Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
-%define		_applnkdir	%{_datadir}/gnome/apps
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
@@ -108,13 +109,16 @@ GNOME core static libraries.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
+
 gettextize --copy --force
 CFLAGS="-DHAVE_CONTROL_CENTER $RPM_OPT_FLAGS"
 CXXFLAGS="$RPM_OPT_FLAGS"
 LDFLAGS="-s"
 export CFLAGS CXXFLAGS LDFLAGS
+automake
 %configure \
 	--without-included-gettext \
 	--with-window-manager=enlightenment
