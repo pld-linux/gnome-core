@@ -1,0 +1,95 @@
+diff -Nur gnome-core-1.4.2.orig/desktop-links/Makefile.am gnome-core-1.4.2/desktop-links/Makefile.am
+--- gnome-core-1.4.2.orig/desktop-links/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/desktop-links/Makefile.am	Wed Jun 18 13:50:22 2003
+@@ -1,4 +1,5 @@
+-appsdir = $(datadir)/applnk
++applnkdir = $(datadir)/applnk
++appsdir = $(applnkdir)
+ 
+ Rootdir           = $(appsdir)
+ Applicationsdir   = $(appsdir)/Applications
+diff -Nur gnome-core-1.4.2.orig/gmenu/Makefile.am gnome-core-1.4.2/gmenu/Makefile.am
+--- gnome-core-1.4.2.orig/gmenu/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/gmenu/Makefile.am	Wed Jun 18 13:49:22 2003
+@@ -44,7 +44,8 @@
+ 
+ EXTRA_DIST = gmenu.desktop.in top.xpm unknown.xpm $(man_MANS)
+ 
+-sysdir = $(datadir)/applnk/Settings/GNOME
++applnkdir = $(datadir)/applnk
++sysdir = $(applnkdir)/Settings/GNOME
+ sys_in_files = gmenu.desktop.in
+ sys_DATA = $(sys_in_files:.desktop.in=.desktop)
+ @XML_I18N_MERGE_DESKTOP_RULE@
+diff -Nur gnome-core-1.4.2.orig/gnome-hint/Makefile.am gnome-core-1.4.2/gnome-hint/Makefile.am
+--- gnome-core-1.4.2.orig/gnome-hint/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/gnome-hint/Makefile.am	Wed Jun 18 13:48:59 2003
+@@ -26,7 +26,8 @@
+ 	$(GNOME_CAPPLET_LIBS)	\
+ 	$(INTLLIBS)
+ 
+-utildir = $(datadir)/applnk/Utilities
++applnkdir = $(datadir)/applnk
++utildir = $(applnkdir)/Utilities
+ util_in_files = gnome-hint.desktop.in
+ util_DATA = $(util_in_files:.desktop.in=.desktop)
+ 
+@@ -46,5 +47,5 @@
+ 	gnome-hint.png		\
+ 	$(man_MANS)
+ 
+-desktopdir = $(datadir)/applnk/Settings/GNOME/Session
++desktopdir = $(applnkdir)/Settings/GNOME/Session
+ desktop_DATA = gnome-hint-properties.desktop
+diff -Nur gnome-core-1.4.2.orig/gnome-terminal/Makefile.am gnome-core-1.4.2/gnome-terminal/Makefile.am
+--- gnome-core-1.4.2.orig/gnome-terminal/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/gnome-terminal/Makefile.am	Wed Jun 18 13:49:43 2003
+@@ -42,7 +42,8 @@
+ gnorbadir = $(sysconfdir)/CORBA/servers
+ gnorba_DATA = gnome-terminal.gnorba
+ 
+-utildir = $(datadir)/applnk/Terminals
++applnkdir = $(datadir)/applnk
++utildir = $(applnkdir)/Terminals
+ util_in_files = gnome-terminal.desktop.in
+ util_DATA = $(util_in_files:.desktop.in=.desktop)
+ @XML_I18N_MERGE_DESKTOP_RULE@
+diff -Nur gnome-core-1.4.2.orig/gsm/Makefile.am gnome-core-1.4.2/gsm/Makefile.am
+--- gnome-core-1.4.2.orig/gsm/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/gsm/Makefile.am	Wed Jun 18 13:50:37 2003
+@@ -48,7 +48,8 @@
+ 
+ default_DATA = default.session default.wm
+ 
+-desktopdir = $(datadir)/applnk/GNOME/Settings/Session/
++applnkdir = $(datadir)/applnk
++desktopdir = $(applnkdir)/GNOME/Settings/Session/
+ desktop_DATA = save-session.desktop session.desktop
+ 
+ sysdir = $(datadir)/control-center/Session
+diff -Nur gnome-core-1.4.2.orig/help-browser/Makefile.am gnome-core-1.4.2/help-browser/Makefile.am
+--- gnome-core-1.4.2.orig/help-browser/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/help-browser/Makefile.am	Wed Jun 18 13:50:00 2003
+@@ -93,7 +93,8 @@
+ gnorbadir = $(sysconfdir)/CORBA/servers
+ gnorba_DATA = help-browser.gnorba
+ 
+-sysdir = $(datadir)/applnk/Help
++applnkdir = $(datadir)/applnk
++sysdir = $(applnkdir)/Help
+ sys_in_files = gnome-help.desktop.in
+ sys_DATA = $(sys_in_files:.desktop.in=.desktop)
+ @XML_I18N_MERGE_DESKTOP_RULE@
+diff -Nur gnome-core-1.4.2.orig/panel/Makefile.am gnome-core-1.4.2/panel/Makefile.am
+--- gnome-core-1.4.2.orig/panel/Makefile.am	Wed Jun 18 11:59:51 2003
++++ gnome-core-1.4.2/panel/Makefile.am	Wed Jun 18 13:47:09 2003
+@@ -303,7 +303,8 @@
+ sys_DATA = $(sys_in_files:.desktop.in=.desktop)
+ @XML_I18N_MERGE_DESKTOP_RULE@
+ 
+-deskdir = $(datadir)/applnk/Settings/GNOME/Desktop
++applnkdir = $(datadir)/applnk
++deskdir = $(applnkdir)/Settings/GNOME/Desktop
+ desk_in_files = gnome-panel-properties.desktop.in
+ desk_DATA = $(desk_in_files:.desktop.in=.desktop)
+ @XML_I18N_MERGE_DESKTOP_RULE@
