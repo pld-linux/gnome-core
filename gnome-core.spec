@@ -133,8 +133,8 @@ gettextize --copy --force
 autoheader
 automake
 autoconf
-CFLAGS="-DHAVE_CONTROL_CENTER %{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
-CXXFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g}"
+CFLAGS="-DHAVE_CONTROL_CENTER %{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
+CXXFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
 %configure \
 	--without-included-gettext \
 	--disable-gtkhtml-help
