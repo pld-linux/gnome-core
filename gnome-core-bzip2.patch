@@ -1,0 +1,40 @@
+--- gnome-core-1.2.0/configure.in.wiget	Sat May 20 07:35:04 2000
++++ gnome-core-1.2.0/configure.in	Wed May 31 21:32:37 2000
+@@ -292,11 +292,24 @@
+ oLIBS="$LIBS"
+ AC_CHECK_LIB(bz2, bzopen, [
+ 	AC_DEFINE(HAVE_LIBBZ2)
++	AC_DEFINE(bzopen,bzopen)
++	AC_DEFINE(bzclose,bzclose)
++	AC_DEFINE(bzread,bzread)
+ 	LIBS=$oLIBS
+ 	BZ_LIBS="-lbz2"
+ 	AC_SUBST(BZ_LIBS)
+ 	],[
+-	AC_MSG_WARN([Recent enough BZ2 library not found. Help-Browser will not be able to read bzipped man/info pages])
++	AC_CHECK_LIB(bz2, BZ2_bzopen, [
++		AC_DEFINE(HAVE_LIBBZ2)
++		AC_DEFINE(bzopen,BZ2_bzopen)
++		AC_DEFINE(bzclose,BZ2_bzclose)
++		AC_DEFINE(bzread,BZ2_bzread)
++		LIBS=$oLIBS
++		BZ_LIBS="-lbz2"
++		AC_SUBST(BZ_LIBS)
++		],[
++		AC_MSG_WARN([Recent enough BZ2 library not found. Help-Browser will not be able to read bzipped man/info pages])
++	])
+ ])
+ 
+ dnl
+--- gnome-core-1.2.0/acconfig.h.wiget	Fri May 12 03:48:29 2000
++++ gnome-core-1.2.0/acconfig.h	Wed May 31 21:31:07 2000
+@@ -44,6 +44,9 @@
+ #undef HAVE_HOSTS_ACCESS
+ 
+ #undef HAVE_LIBBZ2
++#undef bzopen
++#undef bzread
++#undef bzclose
+ 
+ #undef GNOME_ICONDIR
+ 
