@@ -1,15 +1,15 @@
-diff -Nru gnome-core-1.1.9/desktop-links/Makefile.am gnome-core-1.1.9.new/desktop-links/Makefile.am
---- gnome-core-1.1.9/desktop-links/Makefile.am	Thu Mar 30 09:03:29 2000
-+++ gnome-core-1.1.9.new/desktop-links/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/desktop-links/Makefile.am gnome-core-1.1.90.new/desktop-links/Makefile.am
+--- gnome-core-1.1.90/desktop-links/Makefile.am	Tue May  9 02:26:31 2000
++++ gnome-core-1.1.90.new/desktop-links/Makefile.am	Thu May 11 05:15:52 2000
 @@ -1,4 +1,4 @@
 -appsdir = $(datadir)/gnome/apps
 +appsdir = $(datadir)/applnk
  
  Rootdir           = $(appsdir)
  Applicationsdir   = $(appsdir)/Applications
-diff -Nru gnome-core-1.1.9/gmenu/Makefile.am gnome-core-1.1.9.new/gmenu/Makefile.am
---- gnome-core-1.1.9/gmenu/Makefile.am	Fri Mar 26 23:31:56 1999
-+++ gnome-core-1.1.9.new/gmenu/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/gmenu/Makefile.am gnome-core-1.1.90.new/gmenu/Makefile.am
+--- gnome-core-1.1.90/gmenu/Makefile.am	Fri Mar 26 23:31:56 1999
++++ gnome-core-1.1.90.new/gmenu/Makefile.am	Thu May 11 05:15:52 2000
 @@ -26,5 +26,5 @@
  
  EXTRA_DIST = gmenu.desktop top.xpm unknown.xpm
@@ -17,21 +17,21 @@ diff -Nru gnome-core-1.1.9/gmenu/Makefile.am gnome-core-1.1.9.new/gmenu/Makefile
 -sysdir = $(datadir)/gnome/apps/Settings
 +sysdir = $(datadir)/applnk/Settings
  sys_DATA = gmenu.desktop
-diff -Nru gnome-core-1.1.9/gmenu/main.c gnome-core-1.1.9.new/gmenu/main.c
---- gnome-core-1.1.9/gmenu/main.c	Fri Mar 10 06:15:35 2000
-+++ gnome-core-1.1.9.new/gmenu/main.c	Tue May  2 09:16:52 2000
-@@ -275,7 +275,7 @@
- 
+diff -Nru gnome-core-1.1.90/gmenu/main.c gnome-core-1.1.90.new/gmenu/main.c
+--- gnome-core-1.1.90/gmenu/main.c	Wed May 10 08:36:16 2000
++++ gnome-core-1.1.90.new/gmenu/main.c	Thu May 11 05:15:52 2000
+@@ -276,7 +276,7 @@
  	gnome_init ("GNOME menu editor", VERSION, argc, argv);
+ 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gmenu.png");
  
 -	system_apps_dir = gnome_datadir_file("gnome/apps");
 +	system_apps_dir = gnome_datadir_file("applnk");
  	system_applets_dir = gnome_datadir_file("applets");
  	system_pixmap_dir = gnome_datadir_file("pixmaps");
  	if (!system_apps_dir || !system_pixmap_dir || !system_applets_dir)
-diff -Nru gnome-core-1.1.9/gnome-hint/Makefile.am gnome-core-1.1.9.new/gnome-hint/Makefile.am
---- gnome-core-1.1.9/gnome-hint/Makefile.am	Mon Mar 27 23:17:10 2000
-+++ gnome-core-1.1.9.new/gnome-hint/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/gnome-hint/Makefile.am gnome-core-1.1.90.new/gnome-hint/Makefile.am
+--- gnome-core-1.1.90/gnome-hint/Makefile.am	Tue May  9 10:19:48 2000
++++ gnome-core-1.1.90.new/gnome-hint/Makefile.am	Thu May 11 05:15:52 2000
 @@ -37,7 +37,5 @@
  pixmapsdir = $(datadir)/pixmaps
  pixmaps_DATA = gnome-hint.png
@@ -42,9 +42,9 @@ diff -Nru gnome-core-1.1.9/gnome-hint/Makefile.am gnome-core-1.1.9.new/gnome-hin
 -
 +desktopdir = $(datadir)/applnk/Settings/Session
 +desktop_DATA = gnome-hint-properties.desktop
-diff -Nru gnome-core-1.1.9/gnome-terminal/Makefile.am gnome-core-1.1.9.new/gnome-terminal/Makefile.am
---- gnome-core-1.1.9/gnome-terminal/Makefile.am	Mon Apr  3 19:01:53 2000
-+++ gnome-core-1.1.9.new/gnome-terminal/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/gnome-terminal/Makefile.am gnome-core-1.1.90.new/gnome-terminal/Makefile.am
+--- gnome-core-1.1.90/gnome-terminal/Makefile.am	Mon Apr  3 19:01:53 2000
++++ gnome-core-1.1.90.new/gnome-terminal/Makefile.am	Thu May 11 05:15:52 2000
 @@ -46,5 +46,5 @@
  gnorbadir = $(sysconfdir)/CORBA/servers
  gnorba_DATA = gnome-terminal.gnorba
@@ -52,9 +52,9 @@ diff -Nru gnome-core-1.1.9/gnome-terminal/Makefile.am gnome-core-1.1.9.new/gnome
 -utildir = $(datadir)/gnome/apps/System
 +utildir = $(datadir)/applnk/System
  util_DATA = gnome-terminal.desktop
-diff -Nru gnome-core-1.1.9/gsm/Makefile.am gnome-core-1.1.9.new/gsm/Makefile.am
---- gnome-core-1.1.9/gsm/Makefile.am	Fri Apr 14 06:58:56 2000
-+++ gnome-core-1.1.9.new/gsm/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/gsm/Makefile.am gnome-core-1.1.90.new/gsm/Makefile.am
+--- gnome-core-1.1.90/gsm/Makefile.am	Fri Apr 14 06:58:56 2000
++++ gnome-core-1.1.90.new/gsm/Makefile.am	Thu May 11 05:15:52 2000
 @@ -11,7 +11,7 @@
  
  LDADD = $(GNOME_LIBDIR) $(GNOMEUI_LIBS) $(INTLLIBS)
@@ -73,9 +73,9 @@ diff -Nru gnome-core-1.1.9/gsm/Makefile.am gnome-core-1.1.9.new/gsm/Makefile.am
  desktop_DATA = save-session.desktop session.desktop
  
  default.session: default.in ../config.status
-diff -Nru gnome-core-1.1.9/help-browser/Makefile.am gnome-core-1.1.9.new/help-browser/Makefile.am
---- gnome-core-1.1.9/help-browser/Makefile.am	Thu Apr 20 08:07:17 2000
-+++ gnome-core-1.1.9.new/help-browser/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/help-browser/Makefile.am gnome-core-1.1.90.new/help-browser/Makefile.am
+--- gnome-core-1.1.90/help-browser/Makefile.am	Thu Apr 20 08:02:35 2000
++++ gnome-core-1.1.90.new/help-browser/Makefile.am	Thu May 11 05:15:52 2000
 @@ -89,7 +89,7 @@
  gnorbadir = $(sysconfdir)/CORBA/servers
  gnorba_DATA = help-browser.gnorba
@@ -85,9 +85,9 @@ diff -Nru gnome-core-1.1.9/help-browser/Makefile.am gnome-core-1.1.9.new/help-br
  sys_DATA = gnome-help.desktop
  
  install-exec-local:
-diff -Nru gnome-core-1.1.9/panel/Makefile.am gnome-core-1.1.9.new/panel/Makefile.am
---- gnome-core-1.1.9/panel/Makefile.am	Mon Mar 27 23:17:12 2000
-+++ gnome-core-1.1.9.new/panel/Makefile.am	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/Makefile.am gnome-core-1.1.90.new/panel/Makefile.am
+--- gnome-core-1.1.90/panel/Makefile.am	Mon Mar 27 23:17:12 2000
++++ gnome-core-1.1.90.new/panel/Makefile.am	Thu May 11 05:15:52 2000
 @@ -87,8 +87,6 @@
  	menu.h  		\
  	menu-fentry.c  		\
@@ -106,10 +106,10 @@ diff -Nru gnome-core-1.1.9/panel/Makefile.am gnome-core-1.1.9.new/panel/Makefile
  desk_DATA = gnome-panel-properties.desktop
  
  $(srcdir)/panel-util.c: $(CORBA_SRCLIST)
-diff -Nru gnome-core-1.1.9/panel/gnome-panel-properties.c gnome-core-1.1.9.new/panel/gnome-panel-properties.c
---- gnome-core-1.1.9/panel/gnome-panel-properties.c	Wed Apr 12 15:14:14 2000
-+++ gnome-core-1.1.9.new/panel/gnome-panel-properties.c	Tue May  2 09:16:52 2000
-@@ -108,9 +108,6 @@
+diff -Nru gnome-core-1.1.90/panel/gnome-panel-properties.c gnome-core-1.1.90.new/panel/gnome-panel-properties.c
+--- gnome-core-1.1.90/panel/gnome-panel-properties.c	Tue May  9 02:22:41 2000
++++ gnome-core-1.1.90.new/panel/gnome-panel-properties.c	Thu May 11 05:15:52 2000
+@@ -109,9 +109,6 @@
  	{ MAIN_MENU_SYSTEM,  MAIN_MENU_SYSTEM_SUB,  N_("Programs: ") },
  	{ MAIN_MENU_USER,    MAIN_MENU_USER_SUB,    N_("Favorites: ") },
  	{ MAIN_MENU_APPLETS, MAIN_MENU_APPLETS_SUB, N_("Applets: ") },
@@ -119,7 +119,7 @@ diff -Nru gnome-core-1.1.9/panel/gnome-panel-properties.c gnome-core-1.1.9.new/p
  	{ MAIN_MENU_PANEL,   MAIN_MENU_PANEL_SUB,   N_("Panel: ") },
  	{ MAIN_MENU_DESKTOP, MAIN_MENU_DESKTOP_SUB, N_("Desktop: ") },
  	{ 0 }
-@@ -1090,8 +1087,7 @@
+@@ -1108,8 +1105,7 @@
  
  	g_string_sprintf(buf,"menu_flags=%d", 
  			 (int)(MAIN_MENU_SYSTEM_SUB | MAIN_MENU_USER_SUB|
@@ -129,10 +129,10 @@ diff -Nru gnome-core-1.1.9/panel/gnome-panel-properties.c gnome-core-1.1.9.new/p
  			       MAIN_MENU_PANEL | MAIN_MENU_DESKTOP));
  	global_config.menu_flags = gnome_config_get_int(buf->str);
  
-diff -Nru gnome-core-1.1.9/panel/main.c gnome-core-1.1.9.new/panel/main.c
---- gnome-core-1.1.9/panel/main.c	Sat Apr 15 05:45:52 2000
-+++ gnome-core-1.1.9.new/panel/main.c	Tue May  2 09:16:52 2000
-@@ -43,10 +43,6 @@
+diff -Nru gnome-core-1.1.90/panel/main.c gnome-core-1.1.90.new/panel/main.c
+--- gnome-core-1.1.90/panel/main.c	Thu May  4 13:45:07 2000
++++ gnome-core-1.1.90.new/panel/main.c	Thu May 11 05:15:52 2000
+@@ -44,10 +44,6 @@
  /*a list of started extern applet child processes*/
  extern GList * children;
  
@@ -143,7 +143,7 @@ diff -Nru gnome-core-1.1.9/panel/main.c gnome-core-1.1.9.new/panel/main.c
  static int
  menu_age_timeout(gpointer data)
  {
-@@ -97,52 +93,6 @@
+@@ -98,52 +94,6 @@
  }
  
  static void
@@ -196,7 +196,7 @@ diff -Nru gnome-core-1.1.9/panel/main.c gnome-core-1.1.9.new/panel/main.c
  setup_visuals (void)
  {
  	gdk_rgb_init ();
-@@ -193,8 +143,6 @@
+@@ -195,8 +145,6 @@
  		break;
  	}
  	}
@@ -205,9 +205,9 @@ diff -Nru gnome-core-1.1.9/panel/main.c gnome-core-1.1.9.new/panel/main.c
  
  	client = gnome_master_client ();
  
-diff -Nru gnome-core-1.1.9/panel/menu-properties.c gnome-core-1.1.9.new/panel/menu-properties.c
---- gnome-core-1.1.9/panel/menu-properties.c	Tue Apr  4 01:03:29 2000
-+++ gnome-core-1.1.9.new/panel/menu-properties.c	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/menu-properties.c gnome-core-1.1.90.new/panel/menu-properties.c
+--- gnome-core-1.1.90/panel/menu-properties.c	Tue Apr  4 01:03:29 2000
++++ gnome-core-1.1.90.new/panel/menu-properties.c	Thu May 11 05:15:52 2000
 @@ -40,7 +40,7 @@
  		arguments = ".";
  
@@ -276,9 +276,9 @@ diff -Nru gnome-core-1.1.9/panel/menu-properties.c gnome-core-1.1.9.new/panel/me
  			      _("Desktop menu: "),"desktop",
  			      menu->main_menu_flags&MAIN_MENU_DESKTOP,
  			      menu->main_menu_flags&MAIN_MENU_DESKTOP_SUB);
-diff -Nru gnome-core-1.1.9/panel/menu-util.c gnome-core-1.1.9.new/panel/menu-util.c
---- gnome-core-1.1.9/panel/menu-util.c	Thu Mar 16 17:22:39 2000
-+++ gnome-core-1.1.9.new/panel/menu-util.c	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/menu-util.c gnome-core-1.1.90.new/panel/menu-util.c
+--- gnome-core-1.1.90/panel/menu-util.c	Thu Mar 16 17:22:39 2000
++++ gnome-core-1.1.90.new/panel/menu-util.c	Thu May 11 05:15:52 2000
 @@ -13,10 +13,6 @@
  
  /*#define PANEL_DEBUG 1*/
@@ -309,9 +309,9 @@ diff -Nru gnome-core-1.1.9/panel/menu-util.c gnome-core-1.1.9.new/panel/menu-uti
  	
  	return flags;
  }
-diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
---- gnome-core-1.1.9/panel/menu.c	Thu Apr 20 06:53:49 2000
-+++ gnome-core-1.1.9.new/panel/menu.c	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/menu.c gnome-core-1.1.90.new/panel/menu.c
+--- gnome-core-1.1.90/panel/menu.c	Sat May  6 03:26:07 2000
++++ gnome-core-1.1.90.new/panel/menu.c	Thu May 11 05:24:30 2000
 @@ -55,10 +55,6 @@
  
  extern int base_panels;
@@ -320,10 +320,10 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
 -extern char *kde_icondir;
 -extern char *kde_mini_icondir;
 -
+ extern GtkTooltips *panel_tooltips;
+ 
  typedef struct _TearoffMenu TearoffMenu;
- struct _TearoffMenu {
- 	GtkWidget *menu;
-@@ -80,7 +76,7 @@
+@@ -82,7 +78,7 @@
  	/*just load the menus from disk, don't make the widgets
  	  this just reads the .desktops of the top most directory
  	  and a level down*/
@@ -332,7 +332,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  	if(menu)
  		fr_read_dir(NULL,menu,NULL,2);
  	g_free(menu);
-@@ -88,13 +84,10 @@
+@@ -90,13 +86,10 @@
  	if(menu)
  		fr_read_dir(NULL,menu,NULL,2);
  	g_free(menu);
@@ -347,7 +347,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  }
  
  /*the most important dialog in the whole application*/
-@@ -161,7 +154,7 @@
+@@ -174,7 +167,7 @@
  	char *argv[6]={"cp","-r","-f"};
  	char *p;
  
@@ -356,7 +356,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  	argv[3] = item_loc;
  	argv[4] = p;
  	argv[5] = NULL;
-@@ -827,18 +820,6 @@
+@@ -843,18 +836,6 @@
  		MAIN_MENU_APPLETS_SUB | MAIN_MENU_PANEL_SUB |
  		MAIN_MENU_DESKTOP_SUB;
  	
@@ -375,7 +375,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  	panel = get_panel_from_menu_data (widget);
  
  	load_menu_applet (menudir, flags, panel, 0, FALSE);
-@@ -1085,7 +1066,7 @@
+@@ -1101,7 +1082,7 @@
  						   GTK_SIGNAL_FUNC(add_app_to_personal),
  						   sim->item_loc);
  				/*ummmm slightly ugly but should work 99% of time*/
@@ -384,7 +384,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  					gtk_widget_set_sensitive(menuitem,FALSE);
  			}
  
-@@ -1132,7 +1113,7 @@
+@@ -1148,7 +1129,7 @@
  					   GTK_SIGNAL_FUNC(add_app_to_personal),
  					   sim->mf->menudir);
  			/*ummmm slightly ugly but should work 99% of time*/
@@ -393,7 +393,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  				gtk_widget_set_sensitive(menuitem, FALSE);
  
  			menuitem = gtk_menu_item_new ();
-@@ -1177,9 +1158,6 @@
+@@ -1193,9 +1174,6 @@
  	
  	gtk_widget_set_sensitive(sim->prop_item,FALSE);
  	if(sim->item_loc &&
@@ -403,7 +403,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  	   /*if it's a kdelnk file, don't let it be editted*/
  	   !is_ext(sim->item_loc,".kdelnk") &&
  	   access(sim->item_loc,W_OK)==0) {
-@@ -1191,10 +1169,7 @@
+@@ -1207,10 +1185,7 @@
  	} else if(!sim->item_loc || errno==ENOENT) {
  		/*the dentry isn't there, check if we can write the
  		  directory*/
@@ -415,7 +415,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  			gtk_widget_set_sensitive(sim->prop_item,TRUE);
  	}
  	
-@@ -2655,7 +2630,7 @@
+@@ -2675,7 +2650,7 @@
  create_system_menu(GtkWidget *menu, gboolean fake_submenus, gboolean fake,
  		   gboolean title)
  {
@@ -424,7 +424,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  
  	if (menudir &&
  	    g_file_test (menudir, G_FILE_TEST_ISDIR)) {
-@@ -2710,47 +2685,6 @@
+@@ -2730,47 +2705,6 @@
  	return menu;
  }
  
@@ -472,18 +472,18 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  static void
  status_unparent(GtkWidget *widget)
  {
-@@ -3544,8 +3478,8 @@
+@@ -3564,8 +3498,8 @@
  	gtk_menu_append (GTK_MENU (submenu), submenuitem);
  	gtk_signal_connect(GTK_OBJECT(submenuitem), "activate",
  			   GTK_SIGNAL_FUNC(add_menu_to_panel),
 -			   "gnome/apps/");
 -	setup_internal_applet_drag(submenuitem, "MENU:gnome/apps/");
-+			   "applnk");
-+	setup_internal_applet_drag(submenuitem, "MENU:applnk");
++			   "applnk/");
++	setup_internal_applet_drag(submenuitem, "MENU:applnk/");
  
  	submenuitem = gtk_menu_item_new ();
  	gtk_widget_lock_accelerators (menuitem);
-@@ -3554,8 +3488,8 @@
+@@ -3574,8 +3508,8 @@
  	gtk_menu_append (GTK_MENU (submenu), submenuitem);
  	gtk_signal_connect(GTK_OBJECT(submenuitem), "activate",
  			   GTK_SIGNAL_FUNC(add_menu_to_panel),
@@ -494,7 +494,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  
  	menuitem = gtk_menu_item_new ();
  	gtk_widget_lock_accelerators (menuitem);
-@@ -4027,17 +3961,11 @@
+@@ -4047,17 +3981,11 @@
  
  	gboolean has_inline = (flags & (MAIN_MENU_SYSTEM |
  					MAIN_MENU_USER |
@@ -514,7 +514,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  
  	gboolean has_inline2 = (flags & (MAIN_MENU_DESKTOP |
  					 MAIN_MENU_PANEL));
-@@ -4061,24 +3989,12 @@
+@@ -4081,24 +4009,12 @@
  	if (flags & MAIN_MENU_SYSTEM)
  		create_system_menu(root_menu, fake_submenus, FALSE, title);
  	if (flags & MAIN_MENU_USER)
@@ -540,7 +540,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  	/*others here*/
  
  	if (has_subs && has_inline)
-@@ -4103,7 +4019,7 @@
+@@ -4123,7 +4039,7 @@
  	}
  
  	if (flags & MAIN_MENU_USER_SUB) {
@@ -549,7 +549,7 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  					"gnome-favorites.png",
  					fake_submenus, TRUE, TRUE, TRUE);
  		menuitem = gtk_menu_item_new ();
-@@ -4128,60 +4044,6 @@
+@@ -4148,61 +4064,6 @@
  				   GTK_SIGNAL_FUNC(submenu_to_display),
  				   NULL);
  	}
@@ -607,10 +607,11 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
 -		gtk_signal_connect(GTK_OBJECT(menu),"show",
 -				   GTK_SIGNAL_FUNC(submenu_to_display), NULL);
 -	}
- 
+-
  	menuitem = gtk_menu_item_new ();
  	gtk_widget_lock_accelerators (menuitem);
-@@ -4300,10 +4162,6 @@
+ 	setup_menuitem_try_pixmap (menuitem, "gnome-run.png", 
+@@ -4320,10 +4181,6 @@
  
  		g_slist_free(list);
  	} else {
@@ -621,9 +622,9 @@ diff -Nru gnome-core-1.1.9/panel/menu.c gnome-core-1.1.9.new/panel/menu.c
  		check_and_reread_applet(menu, main_menu);
  	}
  
-diff -Nru gnome-core-1.1.9/panel/menu.h gnome-core-1.1.9.new/panel/menu.h
---- gnome-core-1.1.9/panel/menu.h	Thu Apr 20 05:48:05 2000
-+++ gnome-core-1.1.9.new/panel/menu.h	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/menu.h gnome-core-1.1.90.new/panel/menu.h
+--- gnome-core-1.1.90/panel/menu.h	Wed Apr 19 09:08:35 2000
++++ gnome-core-1.1.90.new/panel/menu.h	Thu May 11 05:15:55 2000
 @@ -18,18 +18,12 @@
  	MAIN_MENU_USER_SUB = 1<<1,
  	MAIN_MENU_SYSTEM = 1<<2,
@@ -658,9 +659,9 @@ diff -Nru gnome-core-1.1.9/panel/menu.h gnome-core-1.1.9.new/panel/menu.h
  
  #define MENU_TYPES "types_menu"
  #define MENU_TYPE_EDGE "type-edge"
-diff -Nru gnome-core-1.1.9/panel/panel.c gnome-core-1.1.9.new/panel/panel.c
---- gnome-core-1.1.9/panel/panel.c	Mon Apr  3 00:54:55 2000
-+++ gnome-core-1.1.9.new/panel/panel.c	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/panel.c gnome-core-1.1.90.new/panel/panel.c
+--- gnome-core-1.1.90/panel/panel.c	Wed May  3 08:46:02 2000
++++ gnome-core-1.1.90.new/panel/panel.c	Thu May 11 05:15:55 2000
 @@ -45,11 +45,6 @@
  
  extern GtkTooltips *panel_tooltips;
@@ -673,7 +674,7 @@ diff -Nru gnome-core-1.1.9/panel/panel.c gnome-core-1.1.9.new/panel/panel.c
  /*the types of stuff we accept*/
  
  enum {
-@@ -877,12 +872,6 @@
+@@ -844,12 +839,6 @@
  {
  	int flags = MAIN_MENU_SYSTEM|MAIN_MENU_USER;
  
@@ -686,9 +687,9 @@ diff -Nru gnome-core-1.1.9/panel/panel.c gnome-core-1.1.9.new/panel/panel.c
  	load_menu_applet(dir, flags, panel, pos, TRUE);
  }
  
-diff -Nru gnome-core-1.1.9/panel/session.c gnome-core-1.1.9.new/panel/session.c
---- gnome-core-1.1.9/panel/session.c	Thu Apr 20 05:48:05 2000
-+++ gnome-core-1.1.9.new/panel/session.c	Tue May  2 09:16:52 2000
+diff -Nru gnome-core-1.1.90/panel/session.c gnome-core-1.1.90.new/panel/session.c
+--- gnome-core-1.1.90/panel/session.c	Sat May  6 11:45:49 2000
++++ gnome-core-1.1.90.new/panel/session.c	Thu May 11 05:15:55 2000
 @@ -42,10 +42,6 @@
  /*list of all panel widgets created*/
  extern GSList *panel_list;
@@ -700,7 +701,7 @@ diff -Nru gnome-core-1.1.9/panel/session.c gnome-core-1.1.9.new/panel/session.c
  int ss_cur_applet = 0;
  int ss_done_save = FALSE;
  gushort ss_cookie = 0;
-@@ -760,10 +756,10 @@
+@@ -777,10 +773,10 @@
  load_default_applets1(PanelWidget *panel)
  {
  	char *def_launchers[] =
@@ -715,7 +716,7 @@ diff -Nru gnome-core-1.1.9/panel/session.c gnome-core-1.1.9.new/panel/session.c
  		NULL };
  	int i;
  	char *p;
-@@ -963,15 +959,6 @@
+@@ -978,15 +974,6 @@
  					flags |= MAIN_MENU_SYSTEM_SUB|
  						MAIN_MENU_USER;
  				}
@@ -731,7 +732,7 @@ diff -Nru gnome-core-1.1.9/panel/session.c gnome-core-1.1.9.new/panel/session.c
  			}
  			if(old_style) {
  				/*this is needed to make panel properly
-@@ -982,15 +969,6 @@
+@@ -997,15 +984,6 @@
  				if(flags&MAIN_MENU_USER &&
  				   flags&MAIN_MENU_USER_SUB)
  					flags &=~ MAIN_MENU_USER;

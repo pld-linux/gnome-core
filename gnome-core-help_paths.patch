@@ -1,14 +1,14 @@
-diff -Nru gnome-core-1.1.8.1/help-browser/gnome-help-browser.c gnome-core-1.1.8.1.new/help-browser/gnome-help-browser.c
---- gnome-core-1.1.8.1/help-browser/gnome-help-browser.c	Wed Apr  5 11:55:18 2000
-+++ gnome-core-1.1.8.1.new/help-browser/gnome-help-browser.c	Fri Apr  7 05:16:34 2000
-@@ -80,14 +80,10 @@
+diff -Nru gnome-core-1.1.90/help-browser/gnome-help-browser.c gnome-core-1.1.90.new/help-browser/gnome-help-browser.c
+--- gnome-core-1.1.90/help-browser/gnome-help-browser.c	Thu May  4 13:54:32 2000
++++ gnome-core-1.1.90.new/help-browser/gnome-help-browser.c	Thu May 11 05:27:53 2000
+@@ -81,14 +81,10 @@
  void destroy_server(HelpWindow win);
  
  /* MANPATH should probably come from somewhere */
--#define DEFAULT_MANPATH   GNOME_PREFIX "/man:/usr/man:/usr/local/man:/usr/X11R6/man"
--#define DEFAULT_INFOPATH  GNOME_PREFIX "/info:/usr/info:/usr/local/info"
-+#define DEFAULT_MANPATH "/usr/share/man:/usr/X11R6/man:/usr/local/man"
-+#define DEFAULT_INFOPATH "/usr/share/info"
+-#define DEFAULT_MANPATH   GNOME_PREFIX "/man:/usr/man:/usr/share/man:/usr/local/man:/usr/X11R6/man"
+-#define DEFAULT_INFOPATH  GNOME_PREFIX "/info:/usr/info:/usr/share/man:/usr/local/info"
++#define DEFAULT_MANPATH   "/usr/share/man:/usr/X11R6/man:/usr/local/man"
++#define DEFAULT_INFOPATH  "/usr/share/info"
  /* GHELPPATH probably needs some automatic additions inside toc */
 -#define DEFAULT_GHELPPATH GNOME_PREFIX "/share/gnome/help:" \
 -                          "/opt/gnome/share/gnome/help:" \
