@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.0.8
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -208,7 +208,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %{_datadir}/applets
-%{_datadir}/control-center/Desktop
+%{_datadir}/control-center/Desktop/*.desktop
 %{_datadir}/control-center/Session/*.desktop
 
 %{_datadir}/gnome/hints
@@ -217,7 +217,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-terminal
 %{_datadir}/idl/*
 %{_omf_dest_dir}/%{name}
-%{_applnkdir}/Settings/GNOME
+%{_applnkdir}/Settings/GNOME/.directory
+%{_applnkdir}/Settings/GNOME/.order
+%{_applnkdir}/Settings/GNOME/*.desktop
+%{_applnkdir}/Settings/GNOME/Desktop/*.desktop
+%{_applnkdir}/Settings/GNOME/Session/*.desktop
 %{_applnkdir}/Terminals/gnome-terminal.desktop
 %{_applnkdir}/Utilities/gnome-hint.desktop
 %{_applnkdir}/Help/gnome-help.desktop
