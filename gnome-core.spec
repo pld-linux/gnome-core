@@ -54,9 +54,8 @@ BuildRequires:	libtool
 BuildRequires:	libxml-devel
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
-BuildRequires:	db3-devel
-Prereq:		/sbin/ldconfig
-Prereq:		scrollkeeper
+Requires(post,postun):	/sbin/ldconfig
+Requires(post,postun):	scrollkeeper
 Requires:	applnk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
