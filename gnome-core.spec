@@ -1,7 +1,8 @@
 Summary:     GNOME core programs
+Summary(pl): Programy podstawowe GNOME'a 
 Name:        gnome-core
 Version:     0.28.1
-Release:     1
+Release:     2
 Copyright:   LGPL
 Group:       X11/Libraries
 Source:      ftp://ftp.gnome.org/pub/%{name}-%{version}.tar.gz
@@ -20,16 +21,25 @@ GNOME is the GNU Network Object Model Environment.  That's a fancy name but
 really GNOME is a nice GUI desktop environment.  It makes using your
 computer easy, powerful, and easy to configure.
 
+%description -l pl
+Podstawowe programy i biblioteki, które s± niezbêdne przy ka¿dej instlacji
+GNOME.
+
 %package devel
 Summary:     GNOME core libraries, includes, etc
+Summary(pl): GNOME core - pliki nag³ówkowe, etc
 Group:       X11/Libraries
 Requires:    %{name} = %{version}
 
 %description devel
-Panel libraries and header files.
+Header files for gnome-libs.
+
+%description -l pl devel
+Pliki nag³ówkowe etc do GNOME core.
 
 %package static
 Summary:     GNOME core static libraries
+Summary(pl): Biblioteki statyczne GNOME core
 Group:       X11/gnome
 Requires:    %{name}-devel = %{version}
 
@@ -96,6 +106,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644, root, root) /usr/lib/*.a
 
 %changelog
+* Mon Aug 31 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
+  [0.28-2]
+- added pl translation.
+
 * Sat Aug 22 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.28-1]
 - more .mo files (sv, pt, ja, fi),
