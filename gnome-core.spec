@@ -206,15 +206,15 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/gnome/help/mini-commander_applet
 %{_datadir}/gnome/help/mini-commander_applet/C
 
+%dir %{_applnkdir}/Applications
+%dir %{_applnkdir}/Games
+%dir %{_applnkdir}/Internet
+%dir %{_applnkdir}/Multimedia
+%dir %{_applnkdir}/Settings
+%dir %{_applnkdir}/System
+%dir %{_applnkdir}/Utilities
 %{_applnkdir}/.order
 %{_applnkdir}/gnome-help.desktop
-%{_applnkdir}/Applications
-%{_applnkdir}/Games
-%{_applnkdir}/Internet
-%{_applnkdir}/Multimedia
-%{_applnkdir}/Settings
-%{_applnkdir}/System
-%{_applnkdir}/Utilities
 %{_applnkdir}/*/.directory
 %{_applnkdir}/*/.order
 
