@@ -9,7 +9,7 @@ Release:	1
 License:	LGPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/unsources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
 Patch0:		gnome-core-applnk.patch
 Patch1:		gnome-core-DESTDIR.patch
