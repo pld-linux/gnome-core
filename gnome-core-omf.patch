@@ -1148,7 +1148,7 @@ diff -ur gnome-core-1.4.0.8.orig/gnome-terminal/es/gnome-terminal-es.omf gnome-c
 +++ gnome-core-1.4.0.8/gnome-terminal/es/gnome-terminal-es.omf	Fri Oct  4 15:04:49 2002
 @@ -1,15 +1,23 @@
 -<?xml version="1.0" standalone="no"?>
-+<?xml version="1.0" encoding="ISO=8859-1"?>
++<?xml version="1.0" encoding="ISO-8859-1"?>
 +<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
  <omf>
    <resource>
