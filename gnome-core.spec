@@ -18,11 +18,19 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libgtop-devel >= 1.0.0
 BuildRequires:	gtk+ >= 1.2.0
+BuildRequires:	gtk+-devel
 BuildRequires:	gdk-pixbuf-devel >= 0.5.0
 BuildRequires:	control-center-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	ORBit-devel
 BuildRequires:	gettext-devel
+BuildRequires:	glib-devel
+BuildRequires:	libxml-devel
+BuildRequires:	zlib-devel
+BuildRequires:	esound-devel
+BuildRequires:	xpm-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng-devel
 Obsoletes:	gnome
 
 %define		_prefix		/usr/X11R6
