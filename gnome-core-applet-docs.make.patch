@@ -1,0 +1,12 @@
+diff -Nru gnome-core-1.2.0/applet-docs.make gnome-core-1.2.0.new/applet-docs.make
+--- gnome-core-1.2.0/applet-docs.make	Thu Apr 20 09:25:57 2000
++++ gnome-core-1.2.0.new/applet-docs.make	Sun May 28 06:55:17 2000
+@@ -46,7 +46,7 @@
+ 
+ install-data-am: index.html
+ 	-$(mkinstalldirs) $(DESTDIR)$(docdir)/stylesheet-images
+-	-cp $(srcdir)/topic.dat $(DESTDIR)$(helpdir)
++	-cp $(srcdir)/topic.dat $(DESTDIR)$(docdir)
+ 	-for file in \
+ 		$(applet)-applet/*.html	\
+ 		$(applet)-applet/*.css	\
