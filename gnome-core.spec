@@ -4,7 +4,7 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.3.1
+Version:	1.4.0
 Release:	1
 Epoch:		1
 License:	GPL
@@ -139,9 +139,9 @@ GNOME core static libraries.
 libtoolize --copy --force
 gettextize --copy --force
 xml-i18n-toolize --copy --force
-aclocal -I macros
+aclocal -I %{_aclocaldir}/gnome
 autoheader
-automake -a -c --force-missing
+automake -a -c --foreign
 autoconf
 CFLAGS="-DHAVE_CONTROL_CENTER %{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 CXXFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
