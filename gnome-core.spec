@@ -4,17 +4,14 @@ Summary(fr):	Les programmes de base de l'environnement graphique Gnome
 Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
-Version:	1.0.53
+Version:	1.1.0
 Release:	1
 Copyright:	LGPL
 Group:		X11/GNOME
 Group(pl):	X11/GNOME
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gnome-core/%{name}-%{version}.tar.gz
 Source1:	gnome-core-Settings.order
-Patch0:		gnome-core-asclock.patch
-Patch1:		gnome-core-smallfont.patch
-Patch2:		gnome-core-nodisc.patch
-Patch3:		gnome-core-applnk.patch
+Patch0:		gnome-core-applnk.patch
 Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -107,9 +104,6 @@ GNOME core static libraries.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 %build
 
@@ -129,7 +123,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 make DESTDIR=$RPM_BUILD_ROOT install
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/gnome/apps/Settings/.order
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Settings/.order
 
 strip --strip-unneeded $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
