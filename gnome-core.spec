@@ -5,7 +5,7 @@ Summary(pl):	Programy podstawowe GNOME'a
 Summary(wa):	Les maisses programes do scribanne grafike Gnome
 Name:		gnome-core
 Version:	1.4.0.6
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL
 Group:		X11/Applications
@@ -162,7 +162,7 @@ aclocal -I %{_aclocaldir}/gnome
 autoheader
 autoconf
 automake -a -c --foreign
-CFLAGS="-DHAVE_CONTROL_CENTER %{rpmcflags}"
+CFLAGS="-DHAVE_CONTROL_CENTER `gnome-config --cflags capplet` %{rpmcflags}"
 CXXFLAGS="%{rpmldflags}"
 %configure \
 	--without-included-gettext \
