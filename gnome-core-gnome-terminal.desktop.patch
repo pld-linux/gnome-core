@@ -1,0 +1,11 @@
+--- gnome-core-1.4.0.6/gnome-terminal/gnome-terminal.desktop	Sun Jan 27 00:24:39 2002
++++ gnome-core-1.4.0.6.new/gnome-terminal/gnome-terminal.desktop	Thu Mar  7 12:06:19 2002
+@@ -75,7 +75,7 @@
+ Comment[wa]=Purnea do terminå di Gnome
+ Comment[zh_CN]=GNOME ÖÕ¶Ë·ÂÕæ³ÌÐò
+ Comment[zh_TW]=GNOME ²×ºÝ¾÷¼ÒÀÀµ{¦¡
+-Exec=NO_XALF gnome-terminal --use-factory --start-factory-server
++Exec=gnome-terminal --use-factory --start-factory-server
+ Icon=gnome-terminal.png
+ Terminal=0
+ Type=Application
