@@ -1,44 +1,21 @@
-diff -Nru gnome-core-1.1.6/help-browser/gnome-help-browser.c gnome-core-1.1.6.new/help-browser/gnome-help-browser.c
---- gnome-core-1.1.6/help-browser/gnome-help-browser.c	Sun Mar 19 17:30:32 2000
-+++ gnome-core-1.1.6.new/help-browser/gnome-help-browser.c	Fri Mar 31 04:30:12 2000
-@@ -76,13 +76,11 @@
+diff -Nru gnome-core-1.1.8.1/help-browser/gnome-help-browser.c gnome-core-1.1.8.1.new/help-browser/gnome-help-browser.c
+--- gnome-core-1.1.8.1/help-browser/gnome-help-browser.c	Wed Apr  5 11:55:18 2000
++++ gnome-core-1.1.8.1.new/help-browser/gnome-help-browser.c	Fri Apr  7 05:16:34 2000
+@@ -80,14 +80,10 @@
  void destroy_server(HelpWindow win);
  
  /* MANPATH should probably come from somewhere */
--#define DEFAULT_MANPATH "/usr/man:/usr/local/man:/usr/X11R6/man"
--#define DEFAULT_INFOPATH "/usr/info:/usr/local/info"
+-#define DEFAULT_MANPATH   GNOME_PREFIX "/man:/usr/man:/usr/local/man:/usr/X11R6/man"
+-#define DEFAULT_INFOPATH  GNOME_PREFIX "/info:/usr/info:/usr/local/info"
 +#define DEFAULT_MANPATH "/usr/share/man:/usr/X11R6/man:/usr/local/man"
 +#define DEFAULT_INFOPATH "/usr/share/info"
  /* GHELPPATH probably needs some automatic additions inside toc */
--#define DEFAULT_GHELPPATH GNOMEHELPPATH ":/opt/gnome/share/gnome/help:" \
+-#define DEFAULT_GHELPPATH GNOME_PREFIX "/share/gnome/help:" \
+-                          "/opt/gnome/share/gnome/help:" \
 -                          "/usr/local/share/gnome/help:" \
 -			  "/usr/local/gnome/share/gnome/help:" \
--			  "/usr/share/gnome/help:" 
-+#define DEFAULT_GHELPPATH GNOMEHELPPATH ":/usr/X11R6/share/gnome/help:" \
-+			"/usr/share/gnome/help:"
+-			  "/usr/share/gnome/help" 
++#define DEFAULT_GHELPPATH GNOME_PREFIX "/share/gnome/help"
  #define DEFAULT_MEMCACHESIZE "1000000"
  #define DEFAULT_HISTORYLENGTH "1000"
  #define HELP_BROWSER_RC_DIR ".gnome-help-browser"
-diff -Nru gnome-core-1.1.6/help-browser/toc.c gnome-core-1.1.6.new/help-browser/toc.c
---- gnome-core-1.1.6/help-browser/toc.c	Sun Mar 19 17:30:32 2000
-+++ gnome-core-1.1.6.new/help-browser/toc.c	Fri Mar 31 04:29:15 2000
-@@ -19,14 +19,12 @@
- static int hideTocInt(GtkWidget *window);
- 
- struct _toc_config toc_config[] = {
--    { "/usr/man",              TOC_MAN_TYPE   },
--    { "/usr/local/man",        TOC_MAN_TYPE   },
--    { "/usr/X11R6/man",        TOC_MAN_TYPE   },
--    { "/usr/info",             TOC_INFO_TYPE  },
--    { "/opt/gnome/share/gnome/help",       TOC_GHELP_TYPE },
--    { "/usr/local/share/gnome/help",       TOC_GHELP_TYPE },
--    { "/usr/local/gnome/share/gnome/help", TOC_GHELP_TYPE },
-+    { "/usr/share/man",		TOC_MAN_TYPE   },
-+    { "/usr/X11R6/man",		TOC_MAN_TYPE   },
-+    { "/usr/share/info",	TOC_INFO_TYPE  },
-+    { "/usr/X11R6/share/gnome/help",       TOC_GHELP_TYPE },
-     { "/usr/share/gnome/help",             TOC_GHELP_TYPE },
-+    { "/usr/local/man",		TOC_MAN_TYPE   },
-     { NULL, 0 }
- };
- 
