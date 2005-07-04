@@ -15,7 +15,6 @@ Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
 Source3:	gnome-wm.1.da
 Patch0:		%{name}-applnk.patch
-Patch1:		%{name}-TERM.patch
 Patch2:		%{name}-help_paths.patch
 Patch3:		%{name}-make.patch
 Patch4:		%{name}-tasklist-ugly.patch
@@ -159,7 +158,6 @@ Statyczne biblioteki GNOME core.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
