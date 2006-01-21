@@ -29,7 +29,6 @@ Patch12:	%{name}-omf.patch
 Patch13:	%{name}-avoid-version.patch
 Patch14:	%{name}-applnkdir.patch
 Patch15:	%{name}-locale-sp.patch
-Icon:		gnome-core.gif
 URL:		http://www.gnome.org/
 BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
