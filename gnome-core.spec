@@ -57,12 +57,12 @@ BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 Requires:	applnk
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	gnome
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
-%define		_gtkdocdir	%{_defaultdocdir}/gtk-doc/html
+%define		_gtkdocdir	%{_docdir}/gtk-doc/html
 
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
