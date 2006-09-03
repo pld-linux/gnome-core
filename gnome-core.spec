@@ -53,6 +53,7 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng >= 1.0.8
 BuildRequires:	libtool
 BuildRequires:	libxml-devel
+BuildRequires:	rpmbuild(macros) >= 1.98
 BuildRequires:	scrollkeeper
 BuildRequires:	zlib-devel
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
@@ -62,7 +63,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/X11/GNOME
 %define		_omf_dest_dir	%(scrollkeeper-config --omfdir)
-%define		_gtkdocdir	%{_docdir}/gtk-doc/html
 
 %description
 GNOME (GNU Network Object Model Environment) is a user-friendly set of
