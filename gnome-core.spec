@@ -1,8 +1,8 @@
 Summary:	The core programs for the GNOME GUI desktop environment
-Summary(es):	Los programas de base del entorno gráfico de GNOME
-Summary(fr):	Les programmes de base de l'environnement graphique GNOME
-Summary(pl):	Programy podstawowe GNOME'a
-Summary(wa):	Les maisses programes do scribanne grafike GNOME
+Summary(es.UTF-8):   Los programas de base del entorno grÃ¡fico de GNOME
+Summary(fr.UTF-8):   Les programmes de base de l'environnement graphique GNOME
+Summary(pl.UTF-8):   Programy podstawowe GNOME'a
+Summary(wa.UTF-8):   Les maisses programes do scribanne grafike GNOME
 Name:		gnome-core
 Version:	1.4.2
 Release:	3
@@ -76,55 +76,55 @@ need to install the gnome-libs package. If you want to use linuxconf
 with a GNOME front end, you'll also need to install the
 gnome-linuxconf package.
 
-%description -l es
+%description -l es.UTF-8
 GNOME (Entorno de Modelos Objeto por Red de GNU) es un conjunto de
 aplicaciones y herramientas amistables para el escritorio, que se usan
 junto a un getionario de ventanas para el entorno X11. GNOME es
 similar en su objetivo a otros entorno de escritorio como CDE o KDE,
-pero GNOME está integralmente basado en programas y bibliotecas
+pero GNOME estÃ¡ integralmente basado en programas y bibliotecas
 libres. El paquete gnome-core incluye los programas de base y
 bibliotecas necesarias para instalar GNOME.
 
-%description -l fr
-GNOME (Environnement Modèle Objet par Réseau de GNU) est un ensemble
-d'applications et d'outils conviviaux pour le bureau graphique, à
-utiliser conjointemment avec un gestionnaire de fenêtres X11. GNOME
-est similaire dans ses buts et ses fonctionalités à d'autres
+%description -l fr.UTF-8
+GNOME (Environnement ModÃ¨le Objet par RÃ©seau de GNU) est un ensemble
+d'applications et d'outils conviviaux pour le bureau graphique, Ã 
+utiliser conjointemment avec un gestionnaire de fenÃªtres X11. GNOME
+est similaire dans ses buts et ses fonctionalitÃ©s Ã  d'autres
 environnements de bureau comme CDE ou KDE, mais GNOME est
-integralement basé sur des programmes et bibliothèques libres. Ce
-paquetage inclut les programmes et bibliothèques de base necessaires
+integralement basÃ© sur des programmes et bibliothÃ¨ques libres. Ce
+paquetage inclut les programmes et bibliothÃ¨ques de base necessaires
 pour installer GNOME.
 
-%description -l pl
-Podstawowe programy i biblioteki, które s± niezbêdne przy ka¿dej
+%description -l pl.UTF-8
+Podstawowe programy i biblioteki, ktÃ³re sÄ… niezbÄ™dne przy kaÅ¼dej
 instalacji GNOME.
 
-%description -l wa
+%description -l wa.UTF-8
 GNOME (Evironmint di Modeles Objet pa Rantoele di GNOME) est on
-insemble di programes èt d' usteyes grafikes pol scribanne, a-z eployi
-avou on manaedjeu di purneas do sistinme di purneas X11. Li såme di
-GNOME est l' minme ki d' ôtes evironmints di scribanne come CDE
-oudoben KDE, mins GNOME est tot etîr basé so des libes programes èt
-lîvreyes. Ci paketaedje chal a les maisses programes èt lîvreyes k' i
-gn a dadnjî po-z astaler GNOME.
+insemble di programes Ã¨t d' usteyes grafikes pol scribanne, a-z eployi
+avou on manaedjeu di purneas do sistinme di purneas X11. Li sÃ¥me di
+GNOME est l' minme ki d' Ã´tes evironmints di scribanne come CDE
+oudoben KDE, mins GNOME est tot etÃ®r basÃ© so des libes programes Ã¨t
+lÃ®vreyes. Ci paketaedje chal a les maisses programes Ã¨t lÃ®vreyes k' i
+gn a dadnjÃ® po-z astaler GNOME.
 
 %package libs
 Summary:	GNOME core panel libraries
-Summary(pl):	Biblioteki panelu z GNOME core
+Summary(pl.UTF-8):   Biblioteki panelu z GNOME core
 Group:		X11/Libraries
 Conflicts:	gnome-core < 1:1.4.2-3
 
 %description libs
 Panel libraries from GNOME core package.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteki panelu z pakietu GNOME core.
 
 %package devel
 Summary:	GNOME core includes, etc
-Summary(es):	Includes, etc de la base de gnome-core
-Summary(fr):	Bibliothèques, en-têtes, etc pour la base de gnome-core
-Summary(pl):	GNOME core - pliki nag³ówkowe itp
+Summary(es.UTF-8):   Includes, etc de la base de gnome-core
+Summary(fr.UTF-8):   BibliothÃ¨ques, en-tÃªtes, etc pour la base de gnome-core
+Summary(pl.UTF-8):   GNOME core - pliki nagÅ‚Ã³wkowe itp
 Group:		X11/Development/Libraries
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 Requires:	ORBit-devel
@@ -133,25 +133,25 @@ Requires:	gtk-doc-common
 %description devel
 Header files for gnome-libs.
 
-%description devel -l es
+%description devel -l es.UTF-8
 Bibliotecas y include de la base de gnome-core.
 
-%description devel -l fr
-Bibliothèques et fichiers d'en-tête pour la base de gnome-core.
+%description devel -l fr.UTF-8
+BibliothÃ¨ques et fichiers d'en-tÃªte pour la base de gnome-core.
 
-%description devel -l pl
-Pliki nag³ówkowe itp. do GNOME core.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe itp. do GNOME core.
 
 %package static
 Summary:	GNOME core static libraries
-Summary(pl):	Biblioteki statyczne GNOME core
+Summary(pl.UTF-8):   Biblioteki statyczne GNOME core
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
 %description static
 GNOME core static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki GNOME core.
 
 %prep
