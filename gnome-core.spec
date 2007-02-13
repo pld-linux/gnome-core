@@ -1,8 +1,8 @@
 Summary:	The core programs for the GNOME GUI desktop environment
-Summary(es.UTF-8):   Los programas de base del entorno gráfico de GNOME
-Summary(fr.UTF-8):   Les programmes de base de l'environnement graphique GNOME
-Summary(pl.UTF-8):   Programy podstawowe GNOME'a
-Summary(wa.UTF-8):   Les maisses programes do scribanne grafike GNOME
+Summary(es.UTF-8):	Los programas de base del entorno gráfico de GNOME
+Summary(fr.UTF-8):	Les programmes de base de l'environnement graphique GNOME
+Summary(pl.UTF-8):	Programy podstawowe GNOME'a
+Summary(wa.UTF-8):	Les maisses programes do scribanne grafike GNOME
 Name:		gnome-core
 Version:	1.4.2
 Release:	3
@@ -110,7 +110,7 @@ gn a dadnjî po-z astaler GNOME.
 
 %package libs
 Summary:	GNOME core panel libraries
-Summary(pl.UTF-8):   Biblioteki panelu z GNOME core
+Summary(pl.UTF-8):	Biblioteki panelu z GNOME core
 Group:		X11/Libraries
 Conflicts:	gnome-core < 1:1.4.2-3
 
@@ -122,9 +122,9 @@ Biblioteki panelu z pakietu GNOME core.
 
 %package devel
 Summary:	GNOME core includes, etc
-Summary(es.UTF-8):   Includes, etc de la base de gnome-core
-Summary(fr.UTF-8):   Bibliothèques, en-têtes, etc pour la base de gnome-core
-Summary(pl.UTF-8):   GNOME core - pliki nagłówkowe itp
+Summary(es.UTF-8):	Includes, etc de la base de gnome-core
+Summary(fr.UTF-8):	Bibliothèques, en-têtes, etc pour la base de gnome-core
+Summary(pl.UTF-8):	GNOME core - pliki nagłówkowe itp
 Group:		X11/Development/Libraries
 Requires:	%{name}-libs = %{epoch}:%{version}-%{release}
 Requires:	ORBit-devel
@@ -144,7 +144,7 @@ Pliki nagłówkowe itp. do GNOME core.
 
 %package static
 Summary:	GNOME core static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne GNOME core
+Summary(pl.UTF-8):	Biblioteki statyczne GNOME core
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 
