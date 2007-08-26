@@ -7,9 +7,9 @@ Name:		gnome-core
 Version:	1.4.2
 Release:	3
 Epoch:		1
-License:	GPL
+License:	GPL v2
 Group:		X11/Applications
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/gnome-core/1.4/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-core/1.4/%{name}-%{version}.tar.bz2
 # Source0-md5:	d2caf2e71afcc946d5bceaec1b7ba1d3
 Source1:	%{name}-Settings.order
 Source2:	%{name}-Settings.directory
@@ -177,7 +177,7 @@ mv -f po/{sp.po,sr@cyrillic.po}
 %build
 sed -e s/AM_GNOME_GETTEXT/AM_GNU_GETTEXT/ configure.in > configure.in.tmp
 mv -f configure.in.tmp configure.in
-rm -f missing acinclude.m4
+rm -f acinclude.m4
 %{__libtoolize}
 xml-i18n-toolize --copy --force
 %{__gettextize}
