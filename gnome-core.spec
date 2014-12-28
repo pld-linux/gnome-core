@@ -41,7 +41,7 @@ BuildRequires:	esound-devel
 BuildRequires:	flex
 BuildRequires:	freetype-devel >= 2.0.0
 BuildRequires:	gdk-pixbuf-gnome-devel >= 0.7.0
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gnome-libs-devel >= 1.2.13
 BuildRequires:	gtk+-devel >= 1.2.5
 BuildRequires:	gtk-doc
